@@ -1,0 +1,9 @@
+{
+	"menu_id" : "general_options",
+	"parent_menu_id" : "blt_options",
+	"title" : "RPDS_options_menu_title",
+	"description" : "RPDS_options_menu_desc",
+	"back_callback" : "RichPresenceDefinitive_callback_save",
+	"items" : [
+	]
+}

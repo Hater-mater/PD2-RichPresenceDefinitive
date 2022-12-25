@@ -1,0 +1,65 @@
+{
+	"menu_id" : "diffs_options",
+	"parent_menu_id" : "custom_names_editor",
+	"title" : "RPDS_diffs_title",
+	"description" : "RPDS_diffs_desc",
+	"back_callback" : "RichPresenceDefinitive_callback_save",
+	"items" : [
+		{
+            "type": "input",
+            "id": "nrml_input",
+            "title": "nrml_title",
+            "description": "how_to",
+            "callback": "nrml_save",
+            "value": "nrml"
+		},
+		{
+            "type": "input",
+            "id": "hrd_input",
+            "title": "hrd_title",
+            "description": "how_to",
+            "callback": "hrd_save",
+            "value": "hrd"
+		},
+		{
+            "type": "input",
+            "id": "vh_input",
+            "title": "vh_title",
+            "description": "how_to",
+            "callback": "vh_save",
+            "value": "vh"
+		},
+		{
+            "type": "input",
+            "id": "ovk_input",
+            "title": "ovk_title",
+            "description": "how_to",
+            "callback": "ovk_save",
+            "value": "ovk"
+		},
+		{
+            "type": "input",
+            "id": "mh_input",
+            "title": "mh_title",
+            "description": "how_to",
+            "callback": "mh_save",
+            "value": "mh"
+		},
+		{
+            "type": "input",
+            "id": "dw_input",
+            "title": "dw_title",
+            "description": "how_to",
+            "callback": "dw_save",
+            "value": "dw"
+		},
+		{
+            "type": "input",
+            "id": "ds_input",
+            "title": "ds_title",
+            "description": "how_to",
+            "callback": "ds_save",
+            "value": "ds"
+		}
+	]
+}

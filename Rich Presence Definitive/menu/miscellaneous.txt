@@ -1,0 +1,85 @@
+{
+	"menu_id" : "miscellaneous",
+	"parent_menu_id" : "custom_names_editor",
+	"title" : "RPDS_miscellaneous_title",
+	"description" : "RPDS_miscellaneous_desc",
+	"back_callback" : "RichPresenceDefinitive_callback_save",
+	"items" : [
+		{
+            "type": "input",
+            "id": "days_input",
+            "title": "days_title",
+            "description": "days_desc",
+            "callback": "days_save",
+            "value": "days"
+		},
+		{
+            "type": "input",
+            "id": "coma_input",
+            "title": "coma_title",
+            "description": "coma_desc",
+            "callback": "coma_save",
+            "value": "coma"
+		},
+		{
+            "type": "input",
+            "id": "bracket1_input",
+            "title": "bracket1_title",
+            "description": "bracket_desc",
+            "callback": "bracket1_save",
+            "value": "bracket1"
+		},
+		{
+            "type": "input",
+            "id": "bracket2_input",
+            "title": "bracket2_title",
+            "description": "bracket_desc",
+            "callback": "bracket2_save",
+            "value": "bracket2"
+		},
+		{
+            "type": "input",
+            "id": "players_input",
+            "title": "players_title",
+            "description": "players_desc",
+            "callback": "players_save",
+            "value": "players"
+		},
+		{
+			"type" : "toggle",
+			"id" : "bracket_counter",
+			"title" : "bracket_counter_title",
+			"description" : "bracket_counter_desc",
+			"callback" : "RichPresenceDefinitive_callback_toggle",
+			"value" : "bracket_counter",
+			"default_value" : true
+		},		
+		{
+			"type" : "toggle",
+			"id" : "bracket_days",
+			"title" : "bracket_days_title",
+			"description" : "bracket_days_desc",
+			"callback" : "RichPresenceDefinitive_callback_toggle",
+			"value" : "bracket_days",
+			"default_value" : true
+		},	
+		{
+			"type" : "toggle",
+			"id" : "bracket_diffs",
+			"title" : "bracket_diffs_title",
+			"description" : "bracket_diffs_desc",
+			"callback" : "RichPresenceDefinitive_callback_toggle",
+			"value" : "bracket_diffs",
+			"default_value" : true
+		},
+		{
+			"type" : "toggle",
+			"id" : "comas",
+			"title" : "comas_title",
+			"description" : "comas_desc",
+			"callback" : "RichPresenceDefinitive_callback_toggle",
+			"value" : "comas",
+			"default_value" : false
+		}		
+	]
+}

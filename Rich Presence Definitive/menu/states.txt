@@ -1,0 +1,33 @@
+{
+	"menu_id" : "states_options",
+	"parent_menu_id" : "custom_names_editor",
+	"title" : "RPDS_states_title",
+	"description" : "RPDS_states_desc",
+	"back_callback" : "RichPresenceDefinitive_callback_save",
+	"items" : [
+		{
+            "type": "input",
+            "id": "menu_input",
+            "title": "menu_title",
+            "description": "how_to",
+            "callback": "menu_save",
+            "value": "menu"
+		},
+		{
+            "type": "input",
+            "id": "private_input",
+            "title": "private_title",
+            "description": "how_to",
+            "callback": "private_save",
+            "value": "private"
+		},
+		{
+            "type": "input",
+            "id": "empty_input",
+            "title": "empty_title",
+            "description": "how_to",
+            "callback": "empty_save",
+            "value": "empty"
+		}
+	]
+}

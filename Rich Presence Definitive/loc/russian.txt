@@ -1,0 +1,62 @@
+{		
+		"how_to" : "Выбрать текст для этой строки.",		
+		
+		"RPDS_options_menu_title" : "Rich Presence Definitive",
+		"RPDS_options_menu_desc" : "Настройки Rich Presence Definitive",
+		
+		"RPDS_advanced_title" : "Опции",
+		"RPDS_advanced_desc" : "",
+		"tagless_title" : "Без тега",
+		"tagless_desc" : "Убирает тег ваниллы/оверхолов, типа [Vanilla]",
+		"anonymous_title" : "Анонимность",
+		"anonymous_desc" : "Убирает текст под PAYDAY 2",
+		"anonymous_tag_title" : "Анонимность с тегом",
+		"anonymous_tag_desc" : "Будет отображаться только тег (т.е. [Vanilla])",
+
+		
+		"RPDS_custom_title" : "Редактор текста",
+		"RPDS_custom_desc" : "Редактировать текст для всего.",		
+		
+		"RPDS_states_title" : "Статусы",
+		"RPDS_states_desc" : "",
+		"menu_title" : "Главное меню",
+		"private_title" : "Приватное лобби",
+		"empty_title" : "Пустое лобби",
+		
+		"RPDS_diffs_title" : "Сложность",
+		"RPDS_diffs_desc" : "",
+		"nrml_title" : "Нормально",
+		"hrd_title" : "Сложно",
+		"vh_title" : "Очень сложно",
+		"ovk_title" : "Overkill",
+		"mh_title" : "Хаос",
+		"dw_title" : "Жажда смерти",
+		"ds_title" : "Смертный приговор",
+		
+		"RPDS_modes_title" : "Режимы",
+		"RPDS_modes_desc" : "",
+		"cs_title" : "Серия преступлений",
+		"ho_title" : "Противостояние",
+		
+		
+		"RPDS_miscellaneous_title" : "Прочее",
+		"RPDS_miscellaneous_desc" : "",
+		"days_title" : "Дни",
+		"days_desc" : "Как будут отображаться дни, т.е. 'День 1'",
+		"coma_title" : "Разделитель",
+		"coma_desc" : "Как будет отображаться разделитель, т.е. 'Крысы, День 1, OVK' или 'Крысы | День 1 | OVK'",
+		"bracket1_title" : "Левый разделитель",
+		"bracket2_title" : "Правый разделитель",
+		"bracket_desc" : "Как будет отображаться сложность, т.е. '[OVK]' или '=OVK=' или просто 'OVK'",
+		"players_title" : "Счетчик игроков",
+		"players_desc" : "Счетчик игроков, т.е. [1/4], что должно быть написано после него, т.е. [4/4] игроков. Можно оставить пустым, если вам не нужна надпись.",
+		"bracket_counter_title" : "Разделители количества игроков",
+		"bracket_counter_desc" : "Отображать [1/4 игроков] или просто 1/4 игроков",
+		"bracket_days_title" : "Разделители дней",
+		"bracket_days_desc" : "Отображать [День 1] или просто День 1",	
+		"bracket_diffs_title" : "Разделители сложностей",
+		"bracket_diffs_desc" : "Отображать [Сложно] или просто Сложно",
+		"comas_title" : "Запятые",
+		"comas_desc" : "Включить или отключить запятые"		
+		 
+	}

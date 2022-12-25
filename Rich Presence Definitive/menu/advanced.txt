@@ -1,0 +1,36 @@
+{
+	"menu_id" : "advanced_options",
+	"parent_menu_id" : "general_options",
+	"title" : "RPDS_advanced_title",
+	"description" : "RPDS_advanced_desc",
+	"back_callback" : "RichPresenceDefinitive_callback_save",
+	"items" : [
+		{
+			"type" : "toggle",
+			"id" : "tagless",
+			"title" : "tagless_title",
+			"description" : "tagless_desc",
+			"callback" : "RichPresenceDefinitive_callback_toggle",
+			"value" : "tagless",
+			"default_value" : false
+		},
+		{
+			"type" : "toggle",
+			"id" : "anonymous",
+			"title" : "anonymous_title",
+			"description" : "anonymous_desc",
+			"callback" : "RichPresenceDefinitive_callback_toggle",
+			"value" : "anonymous",
+			"default_value" : false
+		},
+		{
+			"type" : "toggle",
+			"id" : "anonymous_tag",
+			"title" : "anonymous_tag_title",
+			"description" : "anonymous_tag_desc",
+			"callback" : "RichPresenceDefinitive_callback_toggle",
+			"value" : "anonymous_tag",
+			"default_value" : false
+		}
+	]
+}

@@ -1,0 +1,67 @@
+{		
+		"how_to" : "Set up a specific name for this entry.",		
+
+		
+	
+		"days_title" : "Day",
+
+		"RPDS_options_menu_title" : "Rich Presence Definitive",
+		"RPDS_options_menu_desc" : "Rich Presence Definitive Settings",
+		
+		"RPDS_advanced_title" : "Options",
+		"RPDS_advanced_desc" : "",
+		"tagless_title" : "No Tag Mode",
+		"tagless_desc" : "Determine if overhaul/vanilla tag should be displayed, such as [Vanilla]",
+		"anonymous_title" : "Anonymous Mode",
+		"anonymous_desc" : "Nothing will be displayed under PAYDAY 2",
+		"anonymous_tag_title" : "Anonymous Mode With Tag",
+		"anonymous_tag_desc" : "No status mode, nothing except your tag (e.g [Vanilla]) will be displayed",
+
+
+		"RPDS_custom_title" : "Custom Names Editor",
+		"RPDS_custom_desc" : "Set up the names of everything.",		
+		
+		"RPDS_states_title" : "States",
+		"RPDS_states_desc" : "",
+		"menu_title" : "Main Menu",
+		"private_title" : "Private Lobby",
+		"empty_title" : "Empty Lobby",
+		
+		"RPDS_diffs_title" : "Difficulty",
+		"RPDS_diffs_desc" : "",
+		"nrml_title" : "Normal",
+		"hrd_title" : "Hard",
+		"vh_title" : "Very Hard",
+		"ovk_title" : "Overkill",
+		"mh_title" : "Mayhem",
+		"dw_title" : "Death Wish",
+		"ds_title" : "Death Sentence",
+		
+		"RPDS_modes_title" : "Modes",
+		"RPDS_modes_desc" : "",
+		"cs_title" : "Crime Spree",
+		"ho_title" : "Holdout",
+		
+		
+
+		"RPDS_miscellaneous_title" : "Miscellaneous",
+		"RPDS_miscellaneous_desc" : "",
+		"days_title" : "Days",
+		"days_desc" : "Determine how days should be presented e.g 'Day 1'",
+		"coma_title" : "Separator",
+		"coma_desc" : "Determine how separators should be presented e.g 'Rats, Day 1, OVK' or 'Rats | Day 1 | OVK'",
+		"bracket1_title" : "Left Side Separator",
+		"bracket2_title" : "Right Side Separator",
+		"bracket_desc" : "Determine how difficulty should be presented e.g '[OVK]' or '=OVK=' or just 'OVK'",
+		"players_title" : "Player Counter",
+		"players_desc" : "Player counter e.g [1/4], determine what should be written after that e.g [4/4] players. Leave blank for just the brackets and numbers",
+		"bracket_counter_title" : "Player Counter Separators",
+		"bracket_counter_desc" : "Determine whether that thing should look like [1/4 ppl] or just 1/4 ppl",
+		"bracket_days_title" : "Heist Day Separators",
+		"bracket_days_desc" : "Determine whether that thing should look like [Day 1] or just Day 1",	
+		"bracket_diffs_title" : "Difficulty Separators",
+		"bracket_diffs_desc" : "Determine whether that thing should look like [Normal] or just Normal",
+		"comas_title" : "Commas",
+		"comas_desc" : "Enable or disable commas"				
+		
+	}

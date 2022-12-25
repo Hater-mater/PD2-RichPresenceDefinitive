@@ -1,0 +1,66 @@
+{		
+		"how_to" : "이 항목에 특정 이름을 설정합니다.",		
+
+		
+	
+		"days_title" : "일차",
+
+		"RPDS_options_menu_title" : "활동 상태 완전판",
+		"RPDS_options_menu_desc" : "활동 상태 완전판 설정",
+		
+		"RPDS_advanced_title" : "옵션",
+		"RPDS_advanced_desc" : "",
+		"tagless_title" : "태그 없음 모드",
+		"tagless_desc" : "[Vanilla]와 같은 오버홀/바닐라 태그를 표시할지 여부를 결정합니다.",
+		"anonymous_title" : "익명 모드",
+		"anonymous_desc" : "PAYDAY 2 외에는 아무것도 표시되지 않게 합니다.",
+		"anonymous_tag_title" : "태그가 있는 익명 모드",
+		"anonymous_tag_desc" : "상태 모드가 없어지고 태그 (예 [Vanilla]) 외에는 아무것도 표시되지 않게 합니다.",
+		
+		"RPDS_custom_title" : "커스텀 이름 편집기",
+		"RPDS_custom_desc" : "이름을 아무거나 변경합니다.",		
+		
+		"RPDS_states_title" : "상태",
+		"RPDS_states_desc" : "",
+		"menu_title" : "메인 화면",
+		"private_title" : "비공개 로비",
+		"empty_title" : "비어있는 로비",
+		
+		"RPDS_diffs_title" : "난이도",
+		"RPDS_diffs_desc" : "",
+		"nrml_title" : "보통",
+		"hrd_title" : "어려움",
+		"vh_title" : "매우 어려움",
+		"ovk_title" : "오버킬",
+		"mh_title" : "메이헴",
+		"dw_title" : "데스 위시",
+		"ds_title" : "데스 센텐스",
+		
+		"RPDS_modes_title" : "모드",
+		"RPDS_modes_desc" : "",
+		"cs_title" : "크라임 스프리",
+		"ho_title" : "홀드아웃",
+		
+		
+
+		"RPDS_miscellaneous_title" : "기타",
+		"RPDS_miscellaneous_desc" : "",
+		"days_title" : "일차",
+		"days_desc" : "일차 표시 방법의 여부를 결정합니다. (예: 'Day 1')",
+		"coma_title" : "구분 기호",
+		"coma_desc" : "구분 기호 표시 방법에 여부를 결정합니다. (예: 'Rats, Day 1, OVK' 혹은 'Rats | Day 1 | OVK')",
+		"bracket1_title" : "왼쪽 구분 기호",
+		"bracket2_title" : "오른쪽 구분 기호",
+		"bracket_desc" : "난이도 표시 방법에 여부를 결정합니다. (예: '[OVK]' 혹은 '=OVK=' 혹은 'OVK')",
+		"players_title" : "플레이어 카운터",
+		"players_desc" : "플레이어 카운터(예: [1/4])에서  플레이어 수 표시 (예: [4/4]) 뒤에 무엇을 써야 하는지 결정합니다. 대괄호와 숫자의 경우 공백으로 둡니다.",
+		"bracket_counter_title" : "플레이어 카운터 구분 기호",
+		"bracket_counter_desc" : "[1/4 명] 또는 1/4 명 처럼 보일지 결정합니다.",
+		"bracket_days_title" : "하이스트 일차 구분 기호",
+		"bracket_days_desc" : "[Day 1] 처럼 보일지 혹은 Day 1 처럼 보일지 결정합니다.",	
+		"bracket_diffs_title" : "난이도 구분 기호",
+		"bracket_diffs_desc" : "[보통] 처럼 보일지 보통 처럼 보일지 결정합니다.",
+		"comas_title" : "쉼표",
+		"comas_desc" : "쉼표를 활성화 또는 비활성화합니다."				
+		
+	}

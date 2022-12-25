@@ -1,9 +1,0 @@
-<mod name="Rich Presence Definitive">	
-    <Hooks>
-		<hook source_file="lib/states/menumainstate" file="RPD.lua"/>
-		<hook source_file="lib/managers/menumanager" file="RPD.lua"/>
-		<hook source_file="lib/managers/menu/menunodegui" file="RPD.lua"/>
-		<hook source_file="lib/managers/platformmanager" file="RichPresence.lua"/>
-    </Hooks>
-	
-</mod>

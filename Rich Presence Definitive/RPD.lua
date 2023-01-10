@@ -7,21 +7,17 @@ _G.RichPresenceDefinitive = {
 	settings = {
 		
 		
---	Overhauls. Planned support for renaming tags in-game
+--	Overhauls tags. Planned support for renaming tags in-game (kinda done)
 		tag = "",
-		--tag_res = "[ResMod]",
-		--tag_orig = "[Original Pack]",
-		--tag_hh =  "[Hyper Heisting]",
-		--tag_chr = "[Classic Heisting Reborn]",
-		--tag_crack = "[Crackdown]",
-		--tag_sh = "[Streamlined Heisting]",
-		--tag_pro = "[Eclipse]",
-		--tag_heatmod = "[HEAT]",
+		autotag = true,
+		customtag = "Vanilla",
+
 
 --	States		
 		menu = "Main Menu",
 		private = "Private Lobby",
 		empty = "Lobby",
+
 
 --	Various		
 		days = "Day",
@@ -332,7 +328,8 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 	MenuHelper:LoadFromJsonFile(RichPresenceDefinitive.mod_path.."menu/states.txt", RichPresenceDefinitive, RichPresenceDefinitive.settings)
 	MenuHelper:LoadFromJsonFile(RichPresenceDefinitive.mod_path.."menu/difficulties.txt", RichPresenceDefinitive, RichPresenceDefinitive.settings)
 	MenuHelper:LoadFromJsonFile(RichPresenceDefinitive.mod_path.."menu/modes.txt", RichPresenceDefinitive, RichPresenceDefinitive.settings)
-	MenuHelper:LoadFromJsonFile(RichPresenceDefinitive.mod_path.."menu/miscellaneous.txt", RichPresenceDefinitive, RichPresenceDefinitive.settings)	
+	MenuHelper:LoadFromJsonFile(RichPresenceDefinitive.mod_path.."menu/miscellaneous.txt", RichPresenceDefinitive, RichPresenceDefinitive.settings)
+	MenuHelper:LoadFromJsonFile(RichPresenceDefinitive.mod_path.."menu/tags.txt", RichPresenceDefinitive, RichPresenceDefinitive.settings)
 
 	MenuCallbackHandler.menu_save = function(self, item)
 		RichPresenceDefinitive.settings.menu = item:value()
@@ -344,6 +341,10 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 	
 	MenuCallbackHandler.empty_save = function(self, item)
 		RichPresenceDefinitive.settings.empty = item:value()
+	end
+	
+	MenuCallbackHandler.customtag_save = function(self, item)
+		RichPresenceDefinitive.settings.customtag = item:value()
 	end
 
 	MenuCallbackHandler.days_save = function(self, item)
@@ -441,76 +442,79 @@ Hooks:Add("LocalizationManagerPostInit", "RichPresenceDefinitive_LocalizationMan
 end)
 
 
+if  RichPresenceDefinitive.settings.autotag == true then
 local overhauls_detected = 0
 
 local resmod = BLT.Mods:GetModByName("RestorationMod")
 if resmod and resmod:IsEnabled() then
 	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "[ResMod]"
+	RichPresenceDefinitive.settings.tag = "ResMod"
 end
 
 local resgold_path = "mods/restoration-mod-gold/"
 if file.DirectoryExists(resgold_path) then
 	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "[ResMod Gold]"
+	RichPresenceDefinitive.settings.tag = "ResMod Gold"
 end
 
 local resdev_path = "mods/restoration-mod/"
 if file.DirectoryExists(resdev_path) then
 	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "[ResMod Dev]"
+	RichPresenceDefinitive.settings.tag = "ResMod Dev"
 end
 
 local op = BLT.Mods:GetModByName("OriginalPack") --ever since James removed mod.txt, this line is redundant
 local op_path = "mods/Original Pack/"
 if op and op:IsEnabled() then
 	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "[Original Pack]"
+	RichPresenceDefinitive.settings.tag = "Original Pack"
 elseif file.DirectoryExists(op_path) then
 	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "[Original Pack]"
+	RichPresenceDefinitive.settings.tag = "Original Pack"
 end
 
 local hh = BLT.Mods:GetModByName("Payday 2 Hyper Heisting Shin Shootout")
 if hh and hh:IsEnabled() then
 	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "[Hyper Heisting]"
+	RichPresenceDefinitive.settings.tag = "Hyper Heisting"
 end
 
 local crack = BLT.Mods:GetModByName("Crackdown")
 if crack and crack:IsEnabled() then
 	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "[Crackdown]"
+	RichPresenceDefinitive.settings.tag = "Crackdown"
 end
 
 local chr = BLT.Mods:GetModByName("Classic Heisting Reborn")
 if chr and chr:IsEnabled() then
 	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "[Classic Heisting Reborn]"
+	RichPresenceDefinitive.settings.tag = "Classic Heisting Reborn"
 end
 
 local sh = BLT.Mods:GetModByName("Streamlined Heisting")
 if sh and sh:IsEnabled() then
 	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "[Streamlined Heisting]"
+	RichPresenceDefinitive.settings.tag = "Streamlined Heisting"
 end
 
 local pro = BLT.Mods:GetModByName("Eclipse")
 if pro and pro:IsEnabled() then
 	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "[Eclipse]"
+	RichPresenceDefinitive.settings.tag = "Eclipse"
 end
 
 
 local heatmod = BLT.Mods:GetModByName("HeatMod")
 if heatmod and heatmod:IsEnabled() then
 	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "[HEAT]"
+	RichPresenceDefinitive.settings.tag = "HEAT"
 end
 
 
 
 
 if overhauls_detected<1  then
-	RichPresenceDefinitive.settings.tag = "[Vanilla]"
+	RichPresenceDefinitive.settings.tag = "Vanilla"
+end
+else RichPresenceDefinitive.settings.tag = RichPresenceDefinitive.settings.customtag
 end

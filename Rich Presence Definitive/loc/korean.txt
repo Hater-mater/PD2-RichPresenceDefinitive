@@ -40,9 +40,15 @@
 		"RPDS_modes_desc" : "",
 		"cs_title" : "크라임 스프리",
 		"ho_title" : "홀드아웃",
-		
-		
 
+
+		"RPDS_tags_title" : "태그",
+        		"RPDS_tags_desc" : "",
+        		"autotag_title" : "자동 태크",
+        		"autotag_desc" : "모드는 플레이 중인 오버홀 모드(혹은 바닐라)에 따라 태그 자체를 넣습니다.",
+        		"customtag_title" : "커스텀 태그",
+		
+		
 		"RPDS_miscellaneous_title" : "기타",
 		"RPDS_miscellaneous_desc" : "",
 		"days_title" : "일차",

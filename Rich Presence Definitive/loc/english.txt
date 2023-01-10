@@ -17,6 +17,12 @@
 		"anonymous_tag_title" : "Anonymous Mode With Tag",
 		"anonymous_tag_desc" : "No status mode, nothing except your tag (e.g [Vanilla]) will be displayed",
 
+                 
+                "RPDS_tags_title" : "Tag",
+		"RPDS_tags_desc" : "",
+		"autotag_title" : "Auto tag",
+		"autotag_desc" : "The mod will put the tag itself, depending on which overhaul you are playing (or vanilla)",
+		"customtag_title" : "Custom tag",
 
 		"RPDS_custom_title" : "Custom Names Editor",
 		"RPDS_custom_desc" : "Set up the names of everything.",		

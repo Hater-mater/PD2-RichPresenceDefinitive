@@ -13,6 +13,12 @@
 		"anonymous_tag_title" : "Анонимность с тегом",
 		"anonymous_tag_desc" : "Будет отображаться только тег (т.е. [Vanilla])",
 
+                "RPDS_tags_title" : "Тэг",
+		"RPDS_tags_desc" : "",
+		"autotag_title" : "Автотэг",
+		"autotag_desc" : "Мод будет сам ставить тэг, в зависимости в какой оверхол Вы сейчас играете (или ваниллу)",
+		"customtag_title" : "Кастомный тэг",
+
 		
 		"RPDS_custom_title" : "Редактор текста",
 		"RPDS_custom_desc" : "Редактировать текст для всего.",		

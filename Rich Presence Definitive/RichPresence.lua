@@ -180,7 +180,7 @@
 			if RPDC.settings.tagless and not RPDC.settings.anonymous and not RPDC.settings.anonymous_tag then
 				no_tag = "{#State_%game:state%}"
 			elseif not RPDC.settings.tagless and not RPDC.settings.anonymous and not RPDC.settings.anonymous_tag then
-				with_tag = RPDC.settings.tag.." {#State_%game:state%}"
+				with_tag = BRACKET_LEFT_1..RPDC.settings.tag..BRACKET_RIGHT_1.." {#State_%game:state%}"
 			elseif RPDC.settings.anonymous and not RPDC.settings.anonymous_tag and not RPDC.settings.tagless then
 				anonymous = " "..string.char(10).." " or string.char(10) or " "
 			elseif RPDC.settings.anonymous_tag and not RPDC.settings.anonymous and not RPDC.settings.tagless then

@@ -136,6 +136,9 @@
 			else
 				gap2 = ""
 			end
+			
+			BRACKET_LEFT_TAG = RPDC.settings.bracket1
+			BRACKET_RIGHT_TAG = RPDC.settings.bracket2
 
 			if RPDC.settings.bracket_counter then
 				BRACKET_LEFT_1 = RPDC.settings.bracket1
@@ -180,11 +183,11 @@
 			if RPDC.settings.tagless and not RPDC.settings.anonymous and not RPDC.settings.anonymous_tag then
 				no_tag = "{#State_%game:state%}"
 			elseif not RPDC.settings.tagless and not RPDC.settings.anonymous and not RPDC.settings.anonymous_tag then
-				with_tag = BRACKET_LEFT_1..RPDC.settings.tag..BRACKET_RIGHT_1.." {#State_%game:state%}"
+				with_tag = BRACKET_LEFT_TAG..RPDC.settings.tag..BRACKET_RIGHT_TAG.." {#State_%game:state%}"
 			elseif RPDC.settings.anonymous and not RPDC.settings.anonymous_tag and not RPDC.settings.tagless then
 				anonymous = " "..string.char(10).." " or string.char(10) or " "
 			elseif RPDC.settings.anonymous_tag and not RPDC.settings.anonymous and not RPDC.settings.tagless then
-				anonymous_tag = RPDC.settings.tag
+				anonymous_tag = BRACKET_LEFT_TAG..RPDC.settings.tag..BRACKET_RIGHT_TAG
 			else
 				error_detected = "Too many settings in 'Advanced' are enabled (2 or more)"
 			end

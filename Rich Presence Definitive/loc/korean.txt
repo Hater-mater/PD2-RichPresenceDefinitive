@@ -25,6 +25,9 @@
 		"menu_title" : "메인 화면",
 		"private_title" : "비공개 로비",
 		"empty_title" : "비어있는 로비",
+                "lobby_title" : "로비",
+                "ingame_title" : "게임 내",
+                "payday_title" : "월급 날",
 		
 		"RPDS_diffs_title" : "난이도",
 		"RPDS_diffs_desc" : "",

@@ -28,6 +28,30 @@
             "description": "how_to",
             "callback": "empty_save",
             "value": "empty"
+		},
+	        {
+            "type": "input",
+            "id": "lobby_input",
+            "title": "lobby_title",
+            "description": "how_to",
+            "callback": "lobby_save",
+            "value": "lobby"
+		},
+	        {
+            "type": "input",
+            "id": "ingame_input",
+            "title": "ingame_title",
+            "description": "how_to",
+            "callback": "ingame_save",
+            "value": "ingame"
+		},
+                {
+            "type": "input",
+            "id": "payday_input",
+            "title": "payday_title",
+            "description": "how_to",
+            "callback": "payday_save",
+            "value": "payday"
 		}
 	]
 }

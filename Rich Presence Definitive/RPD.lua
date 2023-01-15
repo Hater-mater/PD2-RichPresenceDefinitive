@@ -17,6 +17,9 @@ _G.RichPresenceDefinitive = {
 		menu = "Main Menu",
 		private = "Private Lobby",
 		empty = "Lobby",
+		lobby = "Lobby",
+		ingame = "In-game",
+		payday = "Payday",
 
 
 --	Various		
@@ -343,6 +346,18 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 		RichPresenceDefinitive.settings.empty = item:value()
 	end
 	
+	MenuCallbackHandler.lobby_save = function(self, item)
+		RichPresenceDefinitive.settings.lobby = item:value()
+	end
+	
+	MenuCallbackHandler.ingame_save = function(self, item)
+		RichPresenceDefinitive.settings.ingame = item:value()
+	end
+	
+	MenuCallbackHandler.payday_save = function(self, item)
+		RichPresenceDefinitive.settings.payday = item:value()
+	end
+	
 	MenuCallbackHandler.customtag_save = function(self, item)
 		RichPresenceDefinitive.settings.customtag = item:value()
 	end
@@ -442,7 +457,7 @@ Hooks:Add("LocalizationManagerPostInit", "RichPresenceDefinitive_LocalizationMan
 end)
 
 
-if  RichPresenceDefinitive.settings.autotag == true then
+if  RichPresenceDefinitive.settings.autotag then
 local overhauls_detected = 0
 
 local resmod = BLT.Mods:GetModByName("RestorationMod")

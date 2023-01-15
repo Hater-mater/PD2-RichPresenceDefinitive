@@ -172,9 +172,9 @@
 			
 
 			if Global.game_settings.single_player then
-				solo = " {#Mode_%game:mode%}"
+				playerstate = ": {#Mode_%game:mode%}"
 			else
-				coop = " {#Mode_%game:mode%}"..COMA.." "..BRACKET_LEFT_1..group_count.."/4"..gap..RPDC.settings.players..BRACKET_RIGHT_1				
+				playerstate = ": {#Mode_%game:mode%}"..COMA.." "..BRACKET_LEFT_1..group_count.."/4"..gap..RPDC.settings.players..BRACKET_RIGHT_1				
 			end
 			
 			RichPresenceDefinitive = _G.RichPresenceDefinitive
@@ -198,9 +198,10 @@
 				["#State_menu"] =				RPDC.settings.menu,
 				["#State_private"] =			RPDC.settings.private,
 				["#State_lobby_no_job"] =		RPDC.settings.empty..COMA.." "..BRACKET_LEFT_1..group_count.."/4"..gap..RPDC.settings.players..BRACKET_RIGHT_1,
-				["#State_lobby"] =				solo or coop,
-				["#State_playing"] =			solo or coop,
-				["#State_payday"] =				solo or coop,
+				
+				["#State_lobby"] =				RPDC.settings.lobby..playerstate,
+				["#State_playing"] =			RPDC.settings.ingame..playerstate,
+				["#State_payday"] =				RPDC.settings.payday..playerstate,
 
 				["#Mode_crime_spree"] =			RPDC.settings.cs..COMA.." {#Level_%game:heist%}"..COMA.." ".."(Lvl. %game:difficulty%)",
 				["#Mode_skirmish"] =			RPDC.settings.ho..COMA.." {#Level_%game:heist%}", --RPDC.settings.ho..COMA.." {#Level_%game:heist%}"..COMA.." ".."(Wave %game:difficulty%)",

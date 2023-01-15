@@ -32,6 +32,9 @@
 		"menu_title" : "Main Menu",
 		"private_title" : "Private Lobby",
 		"empty_title" : "Empty Lobby",
+                "lobby_title" : "Lobby",
+                "ingame_title" : "In-game",
+                "payday_title" : "Payday",
 		
 		"RPDS_diffs_title" : "Difficulty",
 		"RPDS_diffs_desc" : "",

@@ -28,6 +28,9 @@
 		"menu_title" : "Главное меню",
 		"private_title" : "Приватное лобби",
 		"empty_title" : "Пустое лобби",
+                "lobby_title" : "Лобби",
+                "ingame_title" : "В игре",
+                "payday_title" : "Подсчет наград",
 		
 		"RPDS_diffs_title" : "Сложность",
 		"RPDS_diffs_desc" : "",

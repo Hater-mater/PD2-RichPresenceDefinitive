@@ -587,6 +587,8 @@
 				["#Level_constantine_butcher_nar"] =    RPDC.settings.constantine_butcher_nar,
 				["#Job_constantine_resort_nar"] = RPDC.settings.constantine_resort_nar,
 				["#Level_constantine_resort_nar"] =    RPDC.settings.constantine_resort_nar,
+				["#Job_constantine_wintersniper_nar"] = RPDC.settings.constantine_wintersniper_nar,
+				["#Job_constantine_wintersniper_nar"] = RPDC.settings.constantine_wintersniper_nar,
 				
 				["#Job_ rusd"] =                            RPDC.settings.rusd,
 				["#Level_rusd"] =                          RPDC.settings.rusd,

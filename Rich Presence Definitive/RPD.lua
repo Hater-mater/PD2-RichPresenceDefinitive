@@ -237,6 +237,7 @@ _G.RichPresenceDefinitive = {
 		hardware_store = "Hardware Store",
 		jambank = "The Botched Bank Heist",
 		vrc = "A Very Richie Christmas",
+		tonmapjam22l = "Hard Cash",
 		alley = "Armsdeal: Alleyway",
 		cargo = "Cragoship Raid",
 		raiders = "Safehouse Raiders",

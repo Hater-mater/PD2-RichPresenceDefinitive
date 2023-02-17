@@ -1,7 +1,7 @@
 [
   {
     "ident": "pd2rpd",
-    "hash": "%HASH%",
+    "version" : "%VERSION%",
     "patchnotes_url": "https://modworkshop.net/mod/40647#changelog",
     "download_url": "https://github.com/Hater-mater/PD2-RichPresenceDefinitive/releases/download/refs%2Fheads%2Fmain/pd2rpd.zip"
   }

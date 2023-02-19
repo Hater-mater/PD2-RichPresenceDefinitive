@@ -3,7 +3,7 @@
 	"description" : "",
 	"author" : "Cocksuck Software",
 	"contact" : "DM Hater or send comment on MWS",
-	"version" : "1.310",
+	"version" : "1.31",
 	"image" : "cursed.png",
 "hooks": [
 		{"hook_id": "lib/states/menumainstate",	"script_path": "RPD.lua"},

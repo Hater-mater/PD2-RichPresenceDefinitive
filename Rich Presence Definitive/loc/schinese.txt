@@ -1,0 +1,77 @@
+{        
+        "how_to" : "为这个词条输入一个特定的名称",        
+
+
+
+        "days_title" : "天数",
+
+        "RPDS_options_menu_title" : "Rich Presence Definitive",
+        "RPDS_options_menu_desc" : "Rich Presence Definitive模组设置",
+
+        "RPDS_advanced_title" : "设置",
+        "RPDS_advanced_desc" : "",
+        "tagless_title" : "无标签模式",
+        "tagless_desc" : "选择是否应显示大修MOD/原版标签，例如：[Vanilla]",
+        "anonymous_title" : "匿名模式",
+        "anonymous_desc" : "你的STEAM除了显示正在玩PAYDAY 2外不会显示任何信息",
+        "anonymous_tag_title" : "仅标签匿名模式",
+        "anonymous_tag_desc" : "不显示游戏详细状态, 仅显示标签，例如：[Vanilla]",
+
+
+                "RPDS_tags_title" : "标签",
+        "RPDS_tags_desc" : "",
+        "autotag_title" : "自动获取标签",
+        "autotag_desc" : "模组将自动获取你正在游玩的大修MOD标签 (或者显示原版标签)",
+        "customtag_title" : "自定义标签",
+
+        "RPDS_custom_title" : "自定义名称编辑",
+        "RPDS_custom_desc" : "为所有条目编辑自定义名称",        
+
+        "RPDS_states_title" : "状态",
+        "RPDS_states_desc" : "",
+        "menu_title" : "主菜单",
+        "private_title" : "私人大厅",
+        "empty_title" : "空大厅",
+                "lobby_title" : "大厅",
+                "ingame_title" : " 游戏内",
+                "payday_title" : "收获日界面",
+
+        "RPDS_diffs_title" : "难度",
+        "RPDS_diffs_desc" : "",
+        "nrml_title" : "普通",
+        "hrd_title" : "困难",
+        "vh_title" : "非常困难",
+        "ovk_title" : "枪林弹雨",
+        "mh_title" : "祸乱横行",
+        "dw_title" : "死亡之愿",
+        "ds_title" : "死刑宣判",
+        "one_down_mod_title" : "即死绝境",
+
+        "RPDS_modes_title" : "模式",
+        "RPDS_modes_desc" : "",
+        "cs_title" : "罪无止境",
+        "ho_title" : "坚守模式",
+
+
+
+        "RPDS_miscellaneous_title" : "杂项",
+        "RPDS_miscellaneous_desc" : "",
+        "days_title" : "天数",
+        "days_desc" : "决定如何显示天数标签，例如 '天数 1'",
+        "coma_title" : "分隔符",
+        "coma_desc" : "决定如何显示分隔符，例如 '鼠辈, 天数 1, 枪林弹雨' 或者 '鼠辈 | 天数 1 | 枪林弹雨'",
+        "bracket1_title" : "左侧分隔符",
+        "bracket2_title" : "右侧分隔符",
+        "bracket_desc" : "决定如何显示难度，例如： '[枪林弹雨]' 或者 '=枪林弹雨=' 或者只是 '枪林弹雨'",
+        "players_title" : "玩家计数",
+        "players_desc" : "大厅玩家计数，例如： [1/4], 决定如何显示其后缀，例如： [4/4] 玩家。留空即为仅显示数字和括号",
+        "bracket_counter_title" : "玩家计数分隔符",
+        "bracket_counter_desc" : "决定如何显示玩家计数分隔符，使其显示为[1/4 ppl] 或者只是显示为 1/4 ppl",
+        "bracket_days_title" : "劫案天数分隔符",
+        "bracket_days_desc" : "决定如何显示劫案天数分隔符，是显示为 [天数 1] 或者只显示为 天数 1",  
+        "bracket_diffs_title" : "难度分隔符",
+        "bracket_diffs_desc" : "决定如何显示难度天数分隔符，是显示为 [普通] 或者只显示为 普通 ",
+        "comas_title" : "逗号",
+        "comas_desc" : "启用/禁用逗号显示"              
+
+    }

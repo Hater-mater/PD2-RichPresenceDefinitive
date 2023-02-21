@@ -171,7 +171,7 @@
 			end
 			
 			
-			if Global.game_settings.one_down then 
+			if Global.game_settings.one_down and RPDC.settings.one_down_mod ~= "" then 
 			    ONE_DOWN_MOD = " "..RPDC.settings.one_down_mod
 			else
 			    ONE_DOWN_MOD = ""

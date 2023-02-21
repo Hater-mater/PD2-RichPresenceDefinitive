@@ -113,6 +113,7 @@ _G.RichPresenceDefinitive = {
         pent = "Mountain Master",
 		ranc = "Midland Ranch",
 		trai = "Lost In Transit",
+		corp = "Hostile Takeover",
 
 --	Locke		
 		deal = "Alaskan Deal",

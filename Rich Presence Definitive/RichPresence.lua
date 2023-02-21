@@ -418,6 +418,8 @@
 				["#Level_ranc"] =				RPDC.settings.ranc,
 				["#Job_trai"] = 				RPDC.settings.trai,
 				["#Level_trai"] =				RPDC.settings.trai,
+				["#Job_corp"] = 				RPDC.settings.corp,
+				["#Level_corp"] =				RPDC.settings.corp,
 				
 				--resmod
 				["#Job_xmn_tag"] =				RPDC.settings.feds_xmas,

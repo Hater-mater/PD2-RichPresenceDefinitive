@@ -250,6 +250,7 @@ _G.RichPresenceDefinitive = {
 		lit_bonus = "Almir's Games",
 		gensecraid = "GenSec HQ Raid",
 		bnktower = "GenSec H.I.V.E",
+		skmc_ovengrill = "Ovengrill Hardware",
 		ahop = "A House Of Pleasure",
 		constantine_mobsterclub_nar = "Aurora Club",
 		constantine_butcher_nar = "Butchers Bay",

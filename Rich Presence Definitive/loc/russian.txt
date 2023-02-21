@@ -41,7 +41,7 @@
 		"mh_title" : "Хаос",
 		"dw_title" : "Жажда смерти",
 		"ds_title" : "Смертный приговор",
-		
+		"one_down_mod_title" : "Одно падение",	
 		"RPDS_modes_title" : "Режимы",
 		"RPDS_modes_desc" : "",
 		"cs_title" : "Серия преступлений",

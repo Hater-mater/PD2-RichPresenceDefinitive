@@ -45,6 +45,7 @@
 		"mh_title" : "Mayhem",
 		"dw_title" : "Death Wish",
 		"ds_title" : "Death Sentence",
+		"one_down_mod_title" : "One Down",
 		
 		"RPDS_modes_title" : "Modes",
 		"RPDS_modes_desc" : "",

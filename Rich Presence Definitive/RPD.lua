@@ -52,6 +52,7 @@ _G.RichPresenceDefinitive = {
 		mh = "MH",
 		dw = "DW",
 		ds = "DS",
+		one_down_mod = "OD",
 
 --	Bain		
 		art = "Art Gallery",
@@ -281,6 +282,10 @@ _G.RichPresenceDefinitive = {
 		
 	},
 }
+-- Different default settings for Resmod and Eclipse
+if SC or EclipseDebug then
+RichPresenceDefinitive.settings.one_down_mod = "PJ"
+end
 
 function RichPresenceDefinitive:json_encode(tab, path)
 	local file = io.open(path, "w+")
@@ -418,7 +423,11 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 
 	MenuCallbackHandler.ds_save = function(self, item)
 		RichPresenceDefinitive.settings.ds = item:value()
-	end	
+	end
+	
+	MenuCallbackHandler.one_down_mod_save = function(self, item)
+		RichPresenceDefinitive.settings.one_down_mod = item:value()
+	end
 	
 
 		
@@ -464,7 +473,7 @@ local overhauls_detected = 0
 
 if SC then
 	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "ResMod"
+	RichPresenceDefinitive.settings.tag = "ResMod"	
 end
 
 local resgold_path = "mods/restoration-mod-gold/"

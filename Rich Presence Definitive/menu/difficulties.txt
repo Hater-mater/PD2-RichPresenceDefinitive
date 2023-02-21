@@ -60,6 +60,14 @@
             "description": "how_to",
             "callback": "ds_save",
             "value": "ds"
+		},
+		{
+            "type": "input",
+            "id": "one_down_mod_input",
+            "title": "one_down_mod_title",
+            "description": "how_to",
+            "callback": "one_down_mod_save",
+            "value": "one_down_mod"
 		}
 	]
 }

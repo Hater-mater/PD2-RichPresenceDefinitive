@@ -38,7 +38,7 @@
 		"mh_title" : "메이헴",
 		"dw_title" : "데스 위시",
 		"ds_title" : "데스 센텐스",
-		
+		"one_down_mod_title" : "한 가을",		
 		"RPDS_modes_title" : "모드",
 		"RPDS_modes_desc" : "",
 		"cs_title" : "크라임 스프리",

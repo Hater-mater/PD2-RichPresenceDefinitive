@@ -170,6 +170,12 @@
 				COMA = ""
 			end
 			
+			
+			if Global.game_settings.one_down then 
+			    ONE_DOWN_MOD = " "..RPDC.settings.one_down_mod
+			else
+			    ONE_DOWN_MOD = ""
+			end
 
 			if Global.game_settings.single_player then
 				playerstate = ": {#Mode_%game:mode%}"
@@ -205,8 +211,8 @@
 
 				["#Mode_crime_spree"] =			RPDC.settings.cs..COMA.." {#Level_%game:heist%}"..COMA.." ".."(Lvl. %game:difficulty%)",
 				["#Mode_skirmish"] =			RPDC.settings.ho..COMA.." {#Level_%game:heist%}", --RPDC.settings.ho..COMA.." {#Level_%game:heist%}"..COMA.." ".."(Wave %game:difficulty%)",
-				["#Mode_heist"] =				"{#Job_%game:heist%}"..COMA.." "..BRACKET_LEFT_3.."{#Difficulty_%game:difficulty%}"..BRACKET_RIGHT_3,
-				["#Mode_heist_chain"] =			"{#Job_%game:heist%}"..COMA.." "..BRACKET_LEFT_2..RPDC.settings.days..gap2.."%game:heist_day%"..BRACKET_RIGHT_2..COMA.." "..BRACKET_LEFT_3.."{#Difficulty_%game:difficulty%}"..BRACKET_RIGHT_3,
+				["#Mode_heist"] =				"{#Job_%game:heist%}"..COMA.." "..BRACKET_LEFT_3.."{#Difficulty_%game:difficulty%}"..ONE_DOWN_MOD..BRACKET_RIGHT_3,
+				["#Mode_heist_chain"] =			"{#Job_%game:heist%}"..COMA.." "..BRACKET_LEFT_2..RPDC.settings.days..gap2.."%game:heist_day%"..BRACKET_RIGHT_2..COMA.." "..BRACKET_LEFT_3.."{#Difficulty_%game:difficulty%}"..ONE_DOWN_MOD..BRACKET_RIGHT_3,
 
 				["#Difficulty_easy"] =			"",
 				["#Difficulty_normal"] =		RPDC.settings.nrml,

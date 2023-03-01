@@ -436,8 +436,16 @@
 				["#Level_nmh_res"] = 			RPDC.settings.mercy,      
 				["#Job_junk"] = 				RPDC.settings.junk,
 				["#Level_junk"] = 			RPDC.settings.junk,
-                ["#Job_bluewave"] = 				RPDC.settings.bluewave,
+                ["#Job_bluewave"] = 			RPDC.settings.bluewave,
 				["#Level_bluewave"] = 			RPDC.settings.bluewave,
+				["#Job_narr_friday"] =	        RPDC.settings.narr_friday,
+				["#Level_narr_friday"] =	    RPDC.settings.narr_friday,
+				["#Job_nightmare_lvl"] =	    RPDC.settings.nightmare_lvl,
+				["#Level_nightmare_lvl"] =	    RPDC.settings.nightmare_lvl,
+				["#Job_skmc_mad"] =	    RPDC.settings.skmc_mad,
+				["#Level_skmc_mad"] =	    RPDC.settings.skmc_mad,
+				["#Job_street"] =	    RPDC.settings.heat,
+				["#Level_street"] =	    RPDC.settings.heat,
 
 		
 				--og pack
@@ -466,8 +474,7 @@
 				["kosugi_pro"] = 						 RPDC.settings.op_kosugi,
 				
 				--custom
-                ["#Job_narr_friday"] =	               RPDC.settings.narr_friday,
-				["#Level_narr_friday"] =	               RPDC.settings.narr_friday,
+               
 				["#Job_AllGhilliedUp"] =	               RPDC.settings.ghill,
 				["#Level_AllGhilliedUp"] =	               RPDC.settings.ghill,
 				["#Job_zm_kino"] =					RPDC.settings.zm_kino,

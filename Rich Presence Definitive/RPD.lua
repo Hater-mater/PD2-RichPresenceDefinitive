@@ -90,7 +90,7 @@ _G.RichPresenceDefinitive = {
 		ckr = "Cursed Kill Room",
 		lab = "Lab Rats",
 		prison = "Prison Nightmare",
-		shn = "Safehouse Nightclub",
+		shn = "Safehouse Nightmare",
 
 --	Miscellaneous		
 		tut1 = "Tutorial - Stealth",
@@ -176,6 +176,8 @@ _G.RichPresenceDefinitive = {
         junk = "Watchful Eyes",
         bluewave = "Bluewave",
 		narr_friday = "Crashing Capitol",
+		nightmare_lvl = "The Old Safehouse",
+		skmc_mad = "DRAK R&D Laboratories",
 		
 --	OG Pack
 		op_bank_gold = "Bank Heist: Gold",

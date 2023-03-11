@@ -519,6 +519,8 @@
 				["#Level_tonmapjam22n"] =				RPDC.settings.tonmapjam22n,
 				["#Job_Underground_Bargains"] =		RPDC.settings.ub,
 				["#Level_Gambling_room"] =			RPDC.settings.ub,
+				["#Job_lpb"] =		RPDC.settings.lpb,
+				["#Level_lpb"] =			RPDC.settings.lpb,
 				["#Job_red_money"] =				RPDC.settings.red_money,
 				["#Level_red_money_stage_001"] =	RPDC.settings.red_money,
 				["#Job_hidden_vault"] =				RPDC.settings.hidden_vault,

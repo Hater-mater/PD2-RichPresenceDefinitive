@@ -421,7 +421,7 @@
 				["#Job_corp"] = 				RPDC.settings.corp,
 				["#Level_corp"] =				RPDC.settings.corp,
 				
-				--resmod
+				--resmod and Heat
 				["#Job_xmn_tag"] =				RPDC.settings.feds_xmas,
 				["#Level_xmn_tag"] = 			RPDC.settings.feds_xmas,
 				["#Job_xmn_hox"] = 				RPDC.settings.hox_xmas,
@@ -446,6 +446,17 @@
 				["#Level_skmc_mad"] =	    RPDC.settings.skmc_mad,
 				["#Job_street"] =	    RPDC.settings.heat,
 				["#Level_street"] =	    RPDC.settings.heat,
+				
+				["#Job_bex_heat"] =	    RPDC.settings.bex_heat,
+				["#Level_bex_heat"] =	    RPDC.settings.bex_heat,
+				["#Job_firestarter_heat"] =	    RPDC.settings.firestarter_heat,
+				["#Level_firestarter_heat"] =	    RPDC.settings.firestarter_heat,
+				["#Job_alex_remix"] =	    RPDC.settings.alex_remix,
+				["#Level_alex_remix"] =	    RPDC.settings.alex_remix,
+				["#Job_ukrainian_job_prof"] =	    RPDC.settings.ukrainian_job_prof,
+				["#Level_ukrainian_job_prof"] =	    RPDC.settings.ukrainian_job_prof,
+				["#Job_welcome_to_the_jungle_wrapper_prof_remix"] =	    RPDC.settings.welcome_to_the_jungle_wrapper_prof_remix,
+				["#Level_welcome_to_the_jungle_wrapper_prof_remix"] =	    RPDC.settings.welcome_to_the_jungle_wrapper_prof_remix,
 
 		
 				--og pack

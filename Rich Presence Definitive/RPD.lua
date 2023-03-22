@@ -167,7 +167,7 @@ _G.RichPresenceDefinitive = {
 		job = "Ukrainian Job",
 		xmas = "White Xmas",
 		
---	ResMod		
+--	ResMod and Heat
 		feds_xmas = "Breakin' Feds Xmas",
 		hox_xmas = "Hoxton Breakout Xmas",
 		burn = "Burnout",
@@ -178,6 +178,12 @@ _G.RichPresenceDefinitive = {
 		narr_friday = "Crashing Capitol",
 		nightmare_lvl = "The Old Safehouse",
 		skmc_mad = "DRAK R&D Laboratories",
+		bex_heat = "San Martin Remixed",
+		firestarter_heat = "Firestarter Remixed",
+		alex_remix = "Rats Remixed",
+		ukrainian_job_prof = "Ukrainian Job Remixed",
+		welcome_to_the_jungle_wrapper_prof_remix = "Big Oil Remixed",
+		
 		
 --	OG Pack
 		op_bank_gold = "Bank Heist: Gold",

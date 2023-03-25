@@ -6,7 +6,7 @@ _G.RichPresenceDefinitive = {
 	revision = "",	
 	settings = {
 		
-		
+		use_save_file = 1,
 --	Overhauls tags. Planned support for renaming tags in-game (kinda done)
 		tag = "",
 		autotag = true,
@@ -31,14 +31,12 @@ _G.RichPresenceDefinitive = {
 		bracket_counter = true,
 		bracket_days = true,
 		bracket_diffs = true,
-		comas = false,
+		bracket_tag = true,
 		
 --	Advanced		
 		tagless = false,
 		anonymous = false,
-		anonymous_tag = false,		
-		rng_label = true,
-		label_toggle = true,
+		anonymous_tag = false,			
 		--vtag = true, -- maybe I made support for vanilla AI changing mods
 --	Modes		
 		cs = "[Crime Spree]",
@@ -337,6 +335,10 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 	MenuCallbackHandler.RichPresenceDefinitive_callback_toggle = function(self, item)
 		RichPresenceDefinitive.settings[item:name()] = item:value() == "on"
 	end
+	
+	MenuCallbackHandler.RichPresenceDefinitive_callback_savefilechoice = function(self, item)
+		RichPresenceDefinitive.settings.use_save_file = item:value()
+	end
 
 	MenuCallbackHandler.RichPresenceDefinitive_callback_save = function(self, item)
 		RichPresenceDefinitive:save_settings()
@@ -350,7 +352,11 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 	MenuHelper:LoadFromJsonFile(RichPresenceDefinitive.mod_path.."menu/modes.txt", RichPresenceDefinitive, RichPresenceDefinitive.settings)
 	MenuHelper:LoadFromJsonFile(RichPresenceDefinitive.mod_path.."menu/miscellaneous.txt", RichPresenceDefinitive, RichPresenceDefinitive.settings)
 	MenuHelper:LoadFromJsonFile(RichPresenceDefinitive.mod_path.."menu/tags.txt", RichPresenceDefinitive, RichPresenceDefinitive.settings)
-
+	
+	MenuCallbackHandler.use_save_file = function(self, item)
+		RichPresenceDefinitive.settings.use_save_file = item:value()
+	end
+	
 	MenuCallbackHandler.menu_save = function(self, item)
 		RichPresenceDefinitive.settings.menu = item:value()
 	end

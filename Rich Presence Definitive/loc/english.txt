@@ -7,6 +7,12 @@
 
 		"RPDS_options_menu_title" : "Rich Presence Definitive",
 		"RPDS_options_menu_desc" : "Rich Presence Definitive Settings",
+
+		"RPDS_use_save_file_title": "Heist names",
+		"RPDS_use_save_file_desc": "Decide what RPD will use as a source for the names of the heists",
+		
+		"menu_use_save_file_on" : "RPD's save file",
+		"menu_use_save_file_off" : "Game loc",
 		
 		"RPDS_advanced_title" : "Options",
 		"RPDS_advanced_desc" : "",
@@ -22,6 +28,8 @@
 		"RPDS_tags_desc" : "",
 		"autotag_title" : "Auto tag",
 		"autotag_desc" : "The mod will put the tag itself, depending on which overhaul you are playing (or vanilla)",
+		"bracket_tag_title" : "Enable brackets for tag",
+		"bracket_tag_desc" : "",
 		"customtag_title" : "Custom tag",
 
 		"RPDS_custom_title" : "Custom Names Editor",

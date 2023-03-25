@@ -32,5 +32,6 @@
 			"value" : "anonymous_tag",
 			"default_value" : false
 		}
+		
 	]
 }

@@ -13,6 +13,14 @@
 			"value" : "autotag",
 			"default_value" : true
 		},
+		{	"type" : "toggle",
+			"id" : "bracket_tag",
+			"title" : "bracket_tag_title",
+			"description" : "bracket_tag_desc",
+			"callback" : "RichPresenceDefinitive_callback_toggle",
+			"value" : "bracket_tag",
+			"default_value" : true
+		},
 		{
             "type": "input",
             "id": "customtag_input",

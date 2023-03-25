@@ -71,15 +71,6 @@
 			"callback" : "RichPresenceDefinitive_callback_toggle",
 			"value" : "bracket_diffs",
 			"default_value" : true
-		},
-		{
-			"type" : "toggle",
-			"id" : "comas",
-			"title" : "comas_title",
-			"description" : "comas_desc",
-			"callback" : "RichPresenceDefinitive_callback_toggle",
-			"value" : "comas",
-			"default_value" : false
 		}		
 	]
 }

@@ -52,6 +52,14 @@
             "description": "how_to",
             "callback": "payday_save",
             "value": "payday"
+		},
+		{
+            "type": "input",
+            "id": "preplanning_input",
+            "title": "preplanning_title",
+            "description": "how_to",
+            "callback": "preplanning_save",
+            "value": "preplanning"
 		}
 	]
 }

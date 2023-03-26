@@ -39,6 +39,7 @@
                 "lobby_title" : "Лобби",
                 "ingame_title" : "В игре",
                 "payday_title" : "Подсчет наград",
+                "preplanning_title" : "Препланнинг",
 		
 		"RPDS_diffs_title" : "Сложность",
 		"RPDS_diffs_desc" : "",

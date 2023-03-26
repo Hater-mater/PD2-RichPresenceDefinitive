@@ -32,14 +32,18 @@
 							local session = managers.network:session()
 							group_count = tostring(session and #session:all_peers() or 1)
 						end
+						
+						local num_winners = managers.network:session():amount_of_alive_players()
 
 						-- Determine game state
 						if _G.game_state_machine and (_G.game_state_machine:current_state_name() == "menu_main" or _G.game_state_machine:current_state_name() == "ingame_lobby_menu") then
 							game_state = "lobby"
 						elseif self._current_rich_presence == "SPEnd" or self._current_rich_presence == "MPEnd" then
 							game_state = "payday"
-						else
+						elseif num_winners > 0 then
 							game_state = "playing"
+							
+						else game_state = "preplanning"
 						end
 						
 						local job_data = managers.job:current_job_data()
@@ -240,6 +244,7 @@
 				["#State_lobby"] =				RPDC.settings.lobby..playerstate,
 				["#State_playing"] =			RPDC.settings.ingame..playerstate,
 				["#State_payday"] =				RPDC.settings.payday..playerstate,
+				["#State_preplanning"] =		RPDC.settings.preplanning..playerstate,
 
 				["#Mode_crime_spree"] =			RPDC.settings.cs..COMA.." {#Level_%game:heist%}"..COMA.." ".."(Lvl. %game:difficulty%)",
 				["#Mode_skirmish"] =			RPDC.settings.ho..COMA.." {#Level_%game:heist%}", --RPDC.settings.ho..COMA.." {#Level_%game:heist%}"..COMA.." ".."(Wave %game:difficulty%)",

@@ -43,6 +43,7 @@
                 "lobby_title" : "Lobby",
                 "ingame_title" : "In-game",
                 "payday_title" : "Payday",
+                "preplanning_title" : "Preplanning",
 		
 		"RPDS_diffs_title" : "Difficulty",
 		"RPDS_diffs_desc" : "",

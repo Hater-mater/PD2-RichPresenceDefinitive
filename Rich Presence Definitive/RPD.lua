@@ -20,6 +20,7 @@ _G.RichPresenceDefinitive = {
 		lobby = "Lobby",
 		ingame = "In-game",
 		payday = "Payday",
+		preplanning = "Preplanning",
 
 
 --	Various		
@@ -379,6 +380,10 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 	
 	MenuCallbackHandler.payday_save = function(self, item)
 		RichPresenceDefinitive.settings.payday = item:value()
+	end
+	
+	MenuCallbackHandler.preplanning_save = function(self, item)
+		RichPresenceDefinitive.settings.preplanning = item:value()
 	end
 	
 	MenuCallbackHandler.customtag_save = function(self, item)

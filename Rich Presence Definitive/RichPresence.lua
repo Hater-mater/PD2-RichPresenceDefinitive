@@ -693,6 +693,7 @@
 			["#State_lobby"] =				RPDC.settings.lobby..playerstate,
 			["#State_playing"] =			RPDC.settings.ingame..playerstate,
 			["#State_payday"] =				RPDC.settings.payday..playerstate,
+			["#State_preplanning"] =		RPDC.settings.preplanning..playerstate,
 
 			-- Game modes
 			

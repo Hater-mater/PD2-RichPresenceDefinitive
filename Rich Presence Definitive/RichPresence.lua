@@ -599,6 +599,12 @@
 				["#Job_Tonis2"] =   RPDC.settings.tonis2,
 				["#Level_Tonis2"] =   RPDC.settings.tonis2,
 				
+				["#Job_Despacito2Redux"] =   RPDC.settings.despacito2redux,
+				["#Level_Despacito2Redux"] =   RPDC.settings.despacito2redux,
+				["#Job_just_uno"] =   RPDC.settings.just_uno,
+				["#Level_just_uno"] =   RPDC.settings.just_uno,
+				["#Job_physics"] =   RPDC.settings.physics,
+				["#Level_physics"] =   RPDC.settings.physics,
 				["#Job_hardware_store"] =   RPDC.settings.hardware_store,
 				["#Level_hardware_store"] =   RPDC.settings.hardware_store,				
 				["#Job_Armsdeal Alleyway"] =			   RPDC.settings.alley,

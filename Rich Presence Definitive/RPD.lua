@@ -264,6 +264,7 @@ _G.RichPresenceDefinitive = {
 		gensecraid = "GenSec HQ Raid",
 		bnktower = "GenSec H.I.V.E",
 		skmc_ovengrill = "Ovengrill Hardware",
+		ganado = "The Village",
 		ahop = "A House Of Pleasure",
 		constantine_mobsterclub_nar = "Aurora Club",
 		constantine_butcher_nar = "Butchers Bay",

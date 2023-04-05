@@ -633,6 +633,8 @@
 				["#Level_bnktower"] =                          RPDC.settings.bnktower,
 				["#Job_skmc_ovengrill"] =                            RPDC.settings.skmc_ovengrill,
 				["#Level_skmc_ovengrill"] =                          RPDC.settings.skmc_ovengrill,
+				["#Job_ganado_narrative"] =                            RPDC.settings.ganado,
+				["#Level_ganado_narrative"] =                          RPDC.settings.ganado,
 
 	            ["#Job_lit_bonus"] =                            RPDC.settings.lit_bonus,
 				["#Level_lit_bonus"] =                          RPDC.settings.lit_bonus,

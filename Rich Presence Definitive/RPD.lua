@@ -250,6 +250,7 @@ _G.RichPresenceDefinitive = {
 		tonmapjam22n = "Hard Cash",
 		despacito2redux = "A Strange Underpass",
 		just_uno = "Legally I Cannot Call This UNO",
+		just_uno_comfy = "LICCT UNO Comfy Edition",
 		physics = "Boworks",
 		alley = "Armsdeal: Alleyway",
 		cargo = "Cragoship Raid",

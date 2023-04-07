@@ -603,6 +603,8 @@
 				["#Level_Despacito2Redux"] =   RPDC.settings.despacito2redux,
 				["#Job_just_uno"] =   RPDC.settings.just_uno,
 				["#Level_just_uno"] =   RPDC.settings.just_uno,
+				["#Job_just_uno_comfy"] =   RPDC.settings.just_uno_comfy,
+				["#Level_just_uno_comfy"] =   RPDC.settings.just_uno_comfy,
 				["#Job_physics"] =   RPDC.settings.physics,
 				["#Level_physics"] =   RPDC.settings.physics,
 				["#Job_hardware_store"] =   RPDC.settings.hardware_store,

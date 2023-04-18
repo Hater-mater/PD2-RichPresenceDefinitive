@@ -490,6 +490,8 @@
 				["#Level_firestarter_heat"] =	    RPDC.settings.firestarter_heat,
 				["#Job_alex_remix"] =	    RPDC.settings.alex_remix,
 				["#Level_alex_remix"] =	    RPDC.settings.alex_remix,
+				["#Job_four_stores_remixed"] =	    RPDC.settings.four_stores_remixed,
+				["#Level_four_stores_remixed"] =	    RPDC.settings.four_stores_remixed,
 				["#Job_ukrainian_job_prof"] =	    RPDC.settings.ukrainian_job_prof,
 				["#Level_ukrainian_job_prof"] =	    RPDC.settings.ukrainian_job_prof,
 				["#Job_welcome_to_the_jungle_wrapper_prof_remix"] =	    RPDC.settings.welcome_to_the_jungle_wrapper_prof_remix,

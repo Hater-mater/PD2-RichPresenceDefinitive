@@ -181,6 +181,7 @@ _G.RichPresenceDefinitive = {
 		firestarter_heat = "Firestarter Remixed",
 		alex_remix = "Rats Remixed",
 		ukrainian_job_prof = "Ukrainian Job Remixed",
+		four_stores_remixed = "Four Stores: Remixed",
 		welcome_to_the_jungle_wrapper_prof_remix = "Big Oil Remixed",
 		
 		
@@ -552,8 +553,7 @@ elseif pro and pro:IsEnabled() then
 end
 
 
-local heatmod = BLT.Mods:GetModByName("HeatMod")
-if heatmod and heatmod:IsEnabled() then
+if heat then
 	overhauls_detected = overhauls_detected + 1
 	RichPresenceDefinitive.settings.tag = "HEAT"
 end

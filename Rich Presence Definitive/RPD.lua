@@ -183,6 +183,7 @@ _G.RichPresenceDefinitive = {
 		ukrainian_job_prof = "Ukrainian Job Remixed",
 		four_stores_remixed = "Four Stores: Remixed",
 		welcome_to_the_jungle_wrapper_prof_remix = "Big Oil Remixed",
+		train_rant = "Train Heist: Encore",
 		
 		
 --	OG Pack

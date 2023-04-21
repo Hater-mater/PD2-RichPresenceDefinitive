@@ -496,6 +496,8 @@
 				["#Level_ukrainian_job_prof"] =	    RPDC.settings.ukrainian_job_prof,
 				["#Job_welcome_to_the_jungle_wrapper_prof_remix"] =	    RPDC.settings.welcome_to_the_jungle_wrapper_prof_remix,
 				["#Level_welcome_to_the_jungle_wrapper_prof_remix"] =	    RPDC.settings.welcome_to_the_jungle_wrapper_prof_remix,
+				["#Job_tRain_II"] =	    RPDC.settings.train_rant,
+				["#Level_tRain_II"] =	    RPDC.settings.train_rant,
 
 		
 				--og pack

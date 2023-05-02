@@ -498,6 +498,22 @@
 				["#Level_welcome_to_the_jungle_wrapper_prof_remix"] =	    RPDC.settings.welcome_to_the_jungle_wrapper_prof_remix,
 				["#Job_tRain_II"] =	    RPDC.settings.train_rant,
 				["#Level_tRain_II"] =	    RPDC.settings.train_rant,
+				
+				--Crackdown
+				["#Job_branchbank_cash_cd"]= RPDC.settings.branchbank_cash_cd,
+				["#Level_branchbank_cash_cd"]=RPDC.settings.branchbank_cash_cd,
+				["#Job_family_cd"] = RPDC.settings.family_cd,
+				["#Level_family_cd"]=RPDC.settings.family_cd,
+				["#Job_kosugi_cd"] = RPDC.settings.kosugi_cd,
+				["#Level_kosugi_cd"]=RPDC.settings.kosugi_cd,
+				["#Job_jolly_cd"] = RPDC.settings.jolly_cd,
+				["#Level_jolly_cd"]=RPDC.settings.jolly_cd,
+				["#Job_spa_cd"] = RPDC.settings.spa_cd,
+				["#Level_spa_cd"]=RPDC.settings.spa_cd,
+				["#Job_no_mercy_ranted_290"] = RPDC.settings.no_mercy_ranted_290,
+				["#Level_no_mercy_ranted_290"]=RPDC.settings.no_mercy_ranted_290,
+				["#Job_wwh_cd"] = RPDC.settings.wwh_cd,
+				["#Level_wwh_cd"]=RPDC.settings.wwh_cd,
 
 		
 				--og pack
@@ -641,6 +657,8 @@
 				["#Level_skmc_ovengrill"] =                          RPDC.settings.skmc_ovengrill,
 				["#Job_ganado_narrative"] =                            RPDC.settings.ganado,
 				["#Level_ganado_narrative"] =                          RPDC.settings.ganado,
+				["#Job_Shore Deal Bank"] =   RPDC.settings.shore_deal_bank,
+				["#Level_Shore Deal Bank"] = RPDC.settings.shore_deal_bank,
 
 	            ["#Job_lit_bonus"] =                            RPDC.settings.lit_bonus,
 				["#Level_lit_bonus"] =                          RPDC.settings.lit_bonus,

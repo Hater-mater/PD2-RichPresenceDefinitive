@@ -185,7 +185,15 @@ _G.RichPresenceDefinitive = {
 		welcome_to_the_jungle_wrapper_prof_remix = "Big Oil Remixed",
 		train_rant = "Train Heist: Encore",
 		
-		
+--	Crackdown
+		branchbank_cash_cd = "Bank Heist Cash: Cracked",
+		family_cd = "Diamond Store: Cracked",
+		kosugi_cd = "Shadow Raid: Cracked",
+		jolly_cd = "Aftershock: Cracked",
+		spa_cd = "Brooklyn 10-10: Cracked",
+		no_mercy_ranted_290 = "No Mercy: Cracked",
+		wwh_cd = "Alaskan Deal: Cracked",
+
 --	OG Pack
 		op_bank_gold = "Bank Heist: Gold",
 		op_bank = "Bank Heist",
@@ -268,6 +276,7 @@ _G.RichPresenceDefinitive = {
 		bnktower = "GenSec H.I.V.E",
 		skmc_ovengrill = "Ovengrill Hardware",
 		ganado = "The Village",
+		shore_deal_bank = "Shore Deal Bank",
 		ahop = "A House Of Pleasure",
 		constantine_mobsterclub_nar = "Aurora Club",
 		constantine_butcher_nar = "Butchers Bay",

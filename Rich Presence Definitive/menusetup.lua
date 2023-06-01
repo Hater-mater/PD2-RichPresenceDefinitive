@@ -4,6 +4,7 @@ local standard_str = 'NetworkMatchMakingSTEAM._BUILD_SEARCH_INTEREST_KEY = \"'
 --Debug
 --RichPresenceDefinitive.settings.tag = current_key:gsub("payday2", "vanilla"):gsub("_", " "):capitalize()
 RichPresenceDefinitive.settings.tag = "Vanilla"
+RichPresenceDefinitive:save_settings()
 
 local function find_key(page, str)
 	local _, st = string.find(tostring(page), str)
@@ -13,9 +14,14 @@ local function find_key(page, str)
 	return key
 end
 
+local function save_tag(tag)
+	RichPresenceDefinitive.settings.tag = tag
+	RichPresenceDefinitive:save_settings()
+end
+
 local function set_tag(tag, mod_key)
 	if current_key == mod_key then
-		RichPresenceDefinitive.settings.tag = tag
+		save_tag(tag)
 		return
 	end
 end
@@ -34,7 +40,7 @@ if PD2THHSHIN then
 --dohttpreq("https://raw.githubusercontent.com/fuglore/PD2-Hyper-Heisting/master/lua/networking/networkmatchmakingsteam.lua", function(page)
 --	set_tag("Hyper Heisting", find_key(page, standard_str))
 --end)
-	RichPresenceDefinitive.settings.tag = "Eclipse"
+	save_tag("Eclipse")
 	return
 end
 
@@ -74,25 +80,25 @@ end)
 end
 
 if OriginalPackOptions then
-	RichPresenceDefinitive.settings.tag = "Original Pack"
+	save_tag("Original Pack")
 	return
 end
 
 --None MM check because main branch dead since Oct 2022
 local pro = BLT.Mods:GetModByName("Eclipse")
 if EclipseDebug then
-	RichPresenceDefinitive.settings.tag = "Eclipse"
+	save_tag("Eclipse")
 	return
 elseif pro and pro:IsEnabled() then
-	RichPresenceDefinitive.settings.tag = "Eclipse"
+	save_tag("Eclipse")
 	return
 end
 
 --Need add MM check during Heat release
 if heat then
-	RichPresenceDefinitive.settings.tag = "HEAT"
+	save_tag("HEAT")
 	return
 end
 
-else RichPresenceDefinitive.settings.tag = RichPresenceDefinitive.settings.customtag
+else save_tag(RichPresenceDefinitive.settings.customtag)
 end

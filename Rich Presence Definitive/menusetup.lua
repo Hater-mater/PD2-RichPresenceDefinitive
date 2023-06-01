@@ -100,5 +100,5 @@ if heat then
 	return
 end
 
-else save_tag(RichPresenceDefinitive.settings.customtag)
+else save_tag(tostring(RichPresenceDefinitive.settings.customtag))
 end

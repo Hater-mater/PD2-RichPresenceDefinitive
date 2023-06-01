@@ -2,8 +2,6 @@ _G.RichPresenceDefinitive = {
 	mod_path = ModPath,
 	save_path = SavePath,
 	save_name = "RichPresenceDefinitive.txt",
-	promo_text = "",
-	revision = "",	
 	settings = {
 		
 		use_save_file = 1,
@@ -506,75 +504,3 @@ Hooks:Add("LocalizationManagerPostInit", "RichPresenceDefinitive_LocalizationMan
 	end
 end)
 
-
-if  RichPresenceDefinitive.settings.autotag then
-local overhauls_detected = 0
-
-if SC then
-	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "ResMod"	
-end
-
-local resgold_path = "mods/restoration-mod-gold/"
-if file.DirectoryExists(resgold_path) then
-	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "ResMod Gold"
-end
-
-local resdev_path = "mods/restoration-mod/"
-if file.DirectoryExists(resdev_path) then
-	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "ResMod Dev"
-end
-
-
-if OriginalPackOptions then
-	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "Original Pack"
-end
-
-if PD2THHSHIN then
-	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "Hyper Heisting"
-end
-
-
-if deathvox then
-	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "Crackdown"
-end
-
-
-if ch_settings then
-	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "Classic Heisting Reborn"
-end
-
-if StreamHeist then
-	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "Streamlined Heisting"
-end
-
-local pro = BLT.Mods:GetModByName("Eclipse")
-if EclipseDebug then
-	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "Eclipse"
-elseif pro and pro:IsEnabled() then
-	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "Eclipse"
-end
-
-
-if heat then
-	overhauls_detected = overhauls_detected + 1
-	RichPresenceDefinitive.settings.tag = "HEAT"
-end
-
-
-
-
-if overhauls_detected<1  then
-	RichPresenceDefinitive.settings.tag = "Vanilla"
-end
-else RichPresenceDefinitive.settings.tag = RichPresenceDefinitive.settings.customtag
-end

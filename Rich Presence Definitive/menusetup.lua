@@ -40,7 +40,7 @@ if PD2THHSHIN then
 --dohttpreq("https://raw.githubusercontent.com/fuglore/PD2-Hyper-Heisting/master/lua/networking/networkmatchmakingsteam.lua", function(page)
 --	set_tag("Hyper Heisting", find_key(page, standard_str))
 --end)
-	save_tag("Eclipse")
+	save_tag("Hyper Heisting")
 	return
 end
 

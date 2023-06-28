@@ -457,6 +457,8 @@
 				["#Level_trai"] =				RPDC.settings.trai,
 				["#Job_corp"] = 				RPDC.settings.corp,
 				["#Level_corp"] =				RPDC.settings.corp,
+				["#Job_deep"] = 				RPDC.settings.deep,
+				["#Level_deep"] =				RPDC.settings.deep,
 				
 				--Resmod and Heat
 				["#Job_xmn_tag"] =				RPDC.settings.feds_xmas,

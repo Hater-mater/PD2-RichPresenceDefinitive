@@ -111,6 +111,7 @@ _G.RichPresenceDefinitive = {
 		ranc = "Midland Ranch",
 		trai = "Lost In Transit",
 		corp = "Hostile Takeover",
+		deep = "Crude Awakening",
 
 --	Locke		
 		deal = "Alaskan Deal",

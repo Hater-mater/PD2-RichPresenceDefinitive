@@ -22,7 +22,6 @@ end
 local function set_tag(tag, mod_key)
 	if current_key == mod_key then
 		save_tag(tag)
-		return
 	end
 end
 
@@ -66,17 +65,17 @@ dohttpreq("https://raw.githubusercontent.com/segabl/pd2-streamlined-heisting/mas
 	set_tag("Streamlined Heisting", mod_key)
 end)
 
-dohttpreq("https://raw.githubusercontent.com/segabl/pd2-streamlined-heisting/dev/mod.txt", function(page)
-	local ext = "_sh_v" .. find_key(page, '"version" : \"')
-	local mod_key = current_key:gsub(ext, "") .. ext
-	set_tag("Streamlined Heisting Dev", mod_key)
-end)
+--dohttpreq("https://raw.githubusercontent.com/segabl/pd2-streamlined-heisting/dev/mod.txt", function(page)
+--	local ext = "_sh_v" .. find_key(page, '"version" : \"')
+--	local mod_key = current_key:gsub(ext, "") .. ext
+--	set_tag("Streamlined Heisting Dev", mod_key)
+--end)
 
-dohttpreq("https://raw.githubusercontent.com/segabl/pd2-streamlined-heisting/zombie/mod.txt", function(page)
-	local ext = "_sh_v" .. find_key(page, '"version" : \"')
-	local mod_key = current_key:gsub(ext, "") .. ext
-	set_tag("Streamlined Heisting Zombie", mod_key)
-end)
+--dohttpreq("https://raw.githubusercontent.com/segabl/pd2-streamlined-heisting/zombie/mod.txt", function(page)
+--	local ext = "_sh_v" .. find_key(page, '"version" : \"')
+--	local mod_key = current_key:gsub(ext, "") .. ext
+--	set_tag("Streamlined Heisting Zombie", mod_key)
+--end)
 end
 
 if OriginalPackOptions then

@@ -698,7 +698,7 @@
 				["#Level_constantine_resort_nar"] =    RPDC.settings.constantine_resort_nar,
 				["#Job_constantine_wintersniper_nar"] = RPDC.settings.constantine_wintersniper_nar,
 				["#Level_constantine_wintersniper_nar"] = RPDC.settings.constantine_wintersniper_nar,
-				["#Job_ rusd"] =                            RPDC.settings.rusd,
+				["#Job_rusd"] =                            RPDC.settings.rusd,
 				["#Level_rusd"] =                          RPDC.settings.rusd,
 				["#Job_deadcargo"] =   RPDC.settings.deadcargo,
 				["#Level_deadcargo"] =   RPDC.settings.deadcargo,
@@ -732,8 +732,8 @@
 				["#Level_constantine_suburbia_nar"] = RPDC.settings.constantine_suburbia_nar,
 				["#Job_constantine_fiesta_nar"] = RPDC.settings.constantine_fiesta_nar,
 				["#Level_constantine_fiesta_nar"] = RPDC.settings.constantine_fiesta_nar,
-				["#Job_constantine_yacht_nar"]= RPDC.settings.constantine_yacht_nar,
-				["#Level_constantine_yacht_nar"]= RPDC.settings.constantine_yacht_nar,
+				["#Job_constantine_yacht_nar"] = RPDC.settings.constantine_yacht_nar,
+				["#Level_constantine_yacht_nar"] = RPDC.settings.constantine_yacht_nar
 				
 				
 			}

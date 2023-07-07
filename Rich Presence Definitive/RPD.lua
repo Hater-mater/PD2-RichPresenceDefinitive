@@ -278,7 +278,7 @@ _G.RichPresenceDefinitive = {
 		skmc_ovengrill = "Ovengrill Hardware",
 		ganado = "The Village",
 		shore_deal_bank = "Shore Deal Bank",
-		agencyrun "Rundown Agency",
+		agencyrun = "Rundown Agency",
 		ahop = "A House Of Pleasure",
 		constantine_mobsterclub_nar = "Aurora Club",
 		constantine_butcher_nar = "Butchers Bay",

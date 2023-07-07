@@ -278,6 +278,7 @@ _G.RichPresenceDefinitive = {
 		skmc_ovengrill = "Ovengrill Hardware",
 		ganado = "The Village",
 		shore_deal_bank = "Shore Deal Bank",
+		agencyrun "Rundown Agency",
 		ahop = "A House Of Pleasure",
 		constantine_mobsterclub_nar = "Aurora Club",
 		constantine_butcher_nar = "Butchers Bay",
@@ -305,6 +306,14 @@ _G.RichPresenceDefinitive = {
 		constantine_murkyairport_nar = "Murky Airport",
 		constantine_resort_nar = "Scarlett Resort",
 		constantine_penthouse_nar = "Penthouse Crasher",
+		constantine_jungle_nar = "Welcome To The Jungle",
+		constantine_cart_con_nar = "Cartel Transport: Construction Site",
+		constantine_cart_dwn_nar = "Cartel Transport: Downtown",
+		constantine_cart_train_nar = "Cartel Transport: Train",
+		constantine_dwtd_nar = "Dance With The Devil",
+		constantine_suburbia_nar = "Early Birds",
+		constantine_fiesta_nar = "Fiesta",
+		constantine_yacht_nar = "Showdown",
 		
 	},
 }

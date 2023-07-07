@@ -665,6 +665,8 @@
 				["#Level_ganado_narrative"] =                          RPDC.settings.ganado,
 				["#Job_Shore Deal Bank"] =   RPDC.settings.shore_deal_bank,
 				["#Level_Shore Deal Bank"] = RPDC.settings.shore_deal_bank,
+				["#Job_agencyrun"] =   RPDC.settings.agencyrun,
+				["#Level_agencyrun"] = RPDC.settings.agencyrun,
 
 	            ["#Job_lit_bonus"] =                            RPDC.settings.lit_bonus,
 				["#Level_lit_bonus"] =                          RPDC.settings.lit_bonus,
@@ -696,7 +698,6 @@
 				["#Level_constantine_resort_nar"] =    RPDC.settings.constantine_resort_nar,
 				["#Job_constantine_wintersniper_nar"] = RPDC.settings.constantine_wintersniper_nar,
 				["#Level_constantine_wintersniper_nar"] = RPDC.settings.constantine_wintersniper_nar,
-				
 				["#Job_ rusd"] =                            RPDC.settings.rusd,
 				["#Level_rusd"] =                          RPDC.settings.rusd,
 				["#Job_deadcargo"] =   RPDC.settings.deadcargo,
@@ -717,6 +718,22 @@
 				["#Level_constantine_gunrunnerclubhouse_nar"] =                          RPDC.settings.constantine_gunrunnerclubhouse_nar,
 				["#Level_constantine_gold_nar"] =  RPDC.settings.constantine_gold_nar,
 				["#Job_constantine_gold_nar"] =    RPDC.settings.constantine_gold_nar,
+				["#Job_constantine_jungle_nar"] = RPDC.settings.constantine_jungle_nar,
+				["#Level_constantine_jungle_nar"] = RPDC.settings.constantine_jungle_nar,
+				["#Job_constantine_cart_con_nar"] = RPDC.settings.constantine_cart_con_nar,
+				["#Level_constantine_cart_con_nar"] = RPDC.settings.constantine_cart_con_nar,
+				["#Job_constantine_cart_dwn_nar"] = RPDC.settings.constantine_cart_dwn_nar,
+				["#Level_constantine_cart_dwn_nar"] = RPDC.settings.constantine_cart_dwn_nar,
+				["#Job_constantine_cart_train_nar"] = RPDC.settings.constantine_cart_train_nar,
+				["#Level_constantine_cart_train_nar"] = RPDC.settings.constantine_cart_train_nar,
+				["#Job_constantine_dwtd_nar"] = RPDC.settings.constantine_dwtd_nar,
+				["#Level_constantine_dwtd_nar"] = RPDC.settings.constantine_dwtd_nar,
+				["#Job_constantine_suburbia_nar"] = RPDC.settings.constantine_suburbia_nar,
+				["#Level_constantine_suburbia_nar"] = RPDC.settings.constantine_suburbia_nar,
+				["#Job_constantine_fiesta_nar"] = RPDC.settings.constantine_fiesta_nar,
+				["#Level_constantine_fiesta_nar"] = RPDC.settings.constantine_fiesta_nar,
+				["#Job_constantine_yacht_nar"]= RPDC.settings.constantine_yacht_nar,
+				["#Level_constantine_yacht_nar"]= RPDC.settings.constantine_yacht_nar,
 				
 				
 			}

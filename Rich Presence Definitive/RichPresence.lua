@@ -378,6 +378,7 @@
 				["#Level_help"] = 				RPDC.settings.prison,
 				["#Job_big"] = 					RPDC.settings.big,
 				["#Level_big"] = 				RPDC.settings.big,
+				["#Level_big2"] = 				RPDC.settings.big,
 				["#Job_cane"] = 				RPDC.settings.santa,
 				["#Level_cane"] = 				RPDC.settings.santa,
 				["#Job_spa"] = 					RPDC.settings.tenten,

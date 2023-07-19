@@ -610,6 +610,8 @@
 				["#Level_Harvest and Trustee North"] =   RPDC.settings.north,
 				["#Job_office_strike"] =   RPDC.settings.csoffice,
 				["#Level_office_strike"] =   RPDC.settings.csoffice,
+				["#Job_Avalon's Shadow"] =   RPDC.settings.avalonshadow,
+				["#Level_Avalon's Shadow"] =   RPDC.settings.avalonshadow,
 				["#Job_dwn"] =   RPDC.settings.dwn,
 				["#Level_dwn"] =   RPDC.settings.dwn,
 				["#Job_snp"] =   RPDC.settings.snp,

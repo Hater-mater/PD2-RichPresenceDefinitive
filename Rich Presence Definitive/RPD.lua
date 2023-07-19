@@ -254,6 +254,7 @@ _G.RichPresenceDefinitive = {
 		toncont = "Armored Transport: Atrium Redux",
 		tonis2 = "Triple Threat",
 		hardware_store = "Hardware Store",
+		avalonshadow = "Avalon's Shadow",
 		jambank = "The Botched Bank Heist",
 		vrc = "A Very Richie Christmas",
 		tonmapjam22n = "Hard Cash",

@@ -33,14 +33,14 @@
 							group_count = tostring(session and #session:all_peers() or 1)
 						end
 						
-						local num_winners = managers.network:session():amount_of_alive_players()
+						local num_players = managers.network:session():amount_of_alive_players()
 
 						-- Determine game state
 						if _G.game_state_machine and (_G.game_state_machine:current_state_name() == "menu_main" or _G.game_state_machine:current_state_name() == "ingame_lobby_menu") then
 							game_state = "lobby"
 						elseif self._current_rich_presence == "SPEnd" or self._current_rich_presence == "MPEnd" then
 							game_state = "payday"
-						elseif num_winners > 0 then
+						elseif num_players > 0 then
 							game_state = "playing"
 							
 						else game_state = "preplanning"

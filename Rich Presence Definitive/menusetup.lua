@@ -83,14 +83,14 @@ if OriginalPackOptions then
 	return
 end
 
---None MM check because main branch dead since Oct 2022
-local pro = BLT.Mods:GetModByName("Eclipse")
+
 if EclipseDebug then
-	save_tag("Eclipse")
-	return
-elseif pro and pro:IsEnabled() then
-	save_tag("Eclipse")
-	return
+	local ext_main = "_eclipse_main"
+	local ext_dev = "_eclipse_dev"
+	local mod_key_main = current_key:gsub(ext_main, "")..ext_main
+	local mod_key_dev = current_key:gsub(ext_dev, "")..ext_dev
+	set_tag("Eclipse", mod_key_main)
+	set_tag("Eclipse Dev", mod_key_dev)	
 end
 
 --Need add MM check during Heat release

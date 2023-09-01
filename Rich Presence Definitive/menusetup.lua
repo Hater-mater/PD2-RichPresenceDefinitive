@@ -25,10 +25,15 @@ local function set_tag(tag, mod_key)
 	end
 end
 
+if BLE and BLE:RunningFix() then
+	save_tag("BeardLib Editor")
+end
+
 if SC then
-dohttpreq("https://raw.githubusercontent.com/payday-restoration/restoration-mod/gold/lua/sc/network/matchmaking/networkmatchmakingsteam.lua", function(page)
-	set_tag("ResMod", find_key(page, standard_str))
-end)
+save_tag("ResMod")
+--dohttpreq("https://raw.githubusercontent.com/payday-restoration/restoration-mod/gold/lua/sc/network/matchmaking/networkmatchmakingsteam.lua", function(page)
+	--set_tag("ResMod", find_key(page, standard_str))
+--end)
 dohttpreq("https://raw.githubusercontent.com/payday-restoration/restoration-mod/dev/lua/sc/network/matchmaking/networkmatchmakingsteam.lua", function(page)
 	set_tag("ResMod Dev", find_key(page, standard_str))
 end)
@@ -40,30 +45,32 @@ if PD2THHSHIN then
 --	set_tag("Hyper Heisting", find_key(page, standard_str))
 --end)
 	save_tag("Hyper Heisting")
-	return
 end
 
 if deathvox then
+save_tag("Crackdown")
 dohttpreq("https://raw.githubusercontent.com/Crackdown-PD2/deathvox/master/coredeathvox.lua", function(page)
-	set_tag("Crackdown", find_key(page, 'deathvox.mm_key_default = \"'))
+	--set_tag("Crackdown", find_key(page, 'deathvox.mm_key_default = \"'))
 	set_tag("Crackdown Dev", find_key(page, 'deathvox.mm_key_overhaul = \"'))
 end)
 end
 
 if ch_settings then
+save_tag("Classic Heisting")
 dohttpreq("https://raw.githubusercontent.com/gorgbus/Classic-Heisting-Reborn/main/Classic%20Heisting/states/menumainstate.lua", function(page)
 	local mod_key = "payday2_classic_heisting_" .. find_key(page, '_G._new_version = \"')
-	set_tag("Classic Heisting", mod_key)
+	--set_tag("Classic Heisting", mod_key)
 	set_tag("Classic Heisting U24 Mode", mod_key .. "u24")
 end)
 end
 
 if StreamHeist then
-dohttpreq("https://raw.githubusercontent.com/segabl/pd2-streamlined-heisting/master/mod.txt", function(page)
+save_tag("Streamlined Heisting")
+--[[dohttpreq("https://raw.githubusercontent.com/segabl/pd2-streamlined-heisting/master/mod.txt", function(page)
 	local ext = "_sh_v" .. find_key(page, '"version" : \"')
 	local mod_key = current_key:gsub(ext, "") .. ext
 	set_tag("Streamlined Heisting", mod_key)
-end)
+end)--]]
 
 --dohttpreq("https://raw.githubusercontent.com/segabl/pd2-streamlined-heisting/dev/mod.txt", function(page)
 --	local ext = "_sh_v" .. find_key(page, '"version" : \"')
@@ -80,23 +87,22 @@ end
 
 if OriginalPackOptions then
 	save_tag("Original Pack")
-	return
 end
 
 
 if EclipseDebug then
-	local ext_main = "_eclipse_main"
+	save_tag("Eclipse")
+	--local ext_main = "_eclipse_main"
 	local ext_dev = "_eclipse_dev"
-	local mod_key_main = current_key:gsub(ext_main, "")..ext_main
+	--local mod_key_main = current_key:gsub(ext_main, "")..ext_main
 	local mod_key_dev = current_key:gsub(ext_dev, "")..ext_dev
-	set_tag("Eclipse", mod_key_main)
+	--set_tag("Eclipse", mod_key_main)
 	set_tag("Eclipse Dev", mod_key_dev)	
 end
 
 --Need add MM check during Heat release
 if heat then
 	save_tag("HEAT")
-	return
 end
 
 else save_tag(tostring(RichPresenceDefinitive.settings.customtag))

@@ -3,7 +3,7 @@
 	"description" : "",
 	"author" : "Cocksuck Software",
 	"contact" : "DM Hater or send comment on MWS",
-	"version" : "1.63",
+	"version" : "1.64",
 	"image" : "cursed.png",
 "hooks": [
 

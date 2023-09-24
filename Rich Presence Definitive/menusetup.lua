@@ -25,16 +25,12 @@ local function set_tag(tag, mod_key)
 	end
 end
 
-if BLE and BLE:RunningFix() then
-	save_tag("BeardLib Editor")
-end
-
 if SC then
 save_tag("ResMod")
---dohttpreq("https://raw.githubusercontent.com/payday-restoration/restoration-mod/gold/lua/sc/network/matchmaking/networkmatchmakingsteam.lua", function(page)
+--dohttpreq("https://raw.githubusercontent.com/payday-restoration/restoration-mod/dev/lua/sc/network/base/networkmanager.lua", function(page)
 	--set_tag("ResMod", find_key(page, standard_str))
 --end)
-dohttpreq("https://raw.githubusercontent.com/payday-restoration/restoration-mod/dev/lua/sc/network/matchmaking/networkmatchmakingsteam.lua", function(page)
+dohttpreq("https://raw.githubusercontent.com/payday-restoration/restoration-mod/dev/lua/sc/network/base/networkmanager.lua", function(page)
 	set_tag("ResMod Dev", find_key(page, standard_str))
 end)
 end
@@ -103,6 +99,10 @@ end
 --Need add MM check during Heat release
 if heat then
 	save_tag("HEAT")
+end
+
+if BLE and BLE:RunningFix() then
+	save_tag("BeardLib Editor")
 end
 
 else save_tag(tostring(RichPresenceDefinitive.settings.customtag))

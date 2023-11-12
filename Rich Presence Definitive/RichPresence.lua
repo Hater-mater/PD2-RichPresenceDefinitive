@@ -5,8 +5,8 @@
 		function WinPlatformManager:set_rich_presence(name, ...)
 			set_rich_presence_original(self, name or self._current_rich_presence, ...)
 			
-			RPDC = _G.RichPresenceDefinitive
-
+			local RPDC = _G.RichPresenceDefinitive
+			
 			if SystemInfo:distribution() == Idstring("STEAM") then
 				-- Default config
 				local display = "#raw_status" --"#DisplayMe"
@@ -46,11 +46,9 @@
 						else game_state = "preplanning"
 						end
 						
-						local job_data = managers.job:current_job_data()
-						local job_name = job_data and managers.localization:text(job_data.name_id)
 
 						-- Popululate gamemode, heist and difficulty
-						if RPDC.settings.use_save_file == 1 then -- RPD Save File
+						if RPDC.settings.use_save_file == 1 or RPDC.settings.use_save_file == 3 then -- RPD Save File
 						if managers.crime_spree and managers.crime_spree:is_active() then		-- Crime Spree
 							game_mode = "crime_spree"
 							game_heist = self:get_current_level_id()
@@ -58,7 +56,7 @@
 							game_difficulty = spree_lvl and managers.money:add_decimal_marks_to_string(tostring(spree_lvl)) or "(N/A)"
 						elseif managers.skirmish and managers.skirmish:is_skirmish() then		-- Holdout
 							game_mode = "skirmish"
-							game_heist = self:get_current_level_id()
+							game_heist = self:get_current_job_id()
 							game_difficulty = string.format("%i/%i", managers.skirmish:current_wave_number() or 1, tweak_data and #tweak_data.skirmish.ransom_amounts or 9)
 						elseif managers.job:has_active_job() then								-- Heists
 							game_heist = self:get_current_job_id()
@@ -75,24 +73,28 @@
 							-- Overwrite game state if nothing is selected
 							game_state = "lobby_no_job"		
 						end
+						
 						else -- Game loc
+						
+						local job_data = managers.job:current_job_data()
+						local job_name = job_data and managers.localization:text(job_data.name_id)
 						if managers.crime_spree and managers.crime_spree:is_active() then		-- Crime Spree
-						local level_id = Global.game_settings.level_id
-						local name_id = level_id and _G.tweak_data.levels[level_id] and _G.tweak_data.levels[level_id].name_id
+							local level_id = Global.game_settings.level_id
+							local name_id = level_id and _G.tweak_data.levels[level_id] and _G.tweak_data.levels[level_id].name_id
 
-						if name_id then
-							job_name = managers.localization:text(name_id) or job_name
-						end
-						game_mode = "crime_spree"
-						game_heist = job_name
-						local spree_lvl = managers.crime_spree:server_spree_level()
-						game_difficulty = spree_lvl and managers.money:add_decimal_marks_to_string(tostring(spree_lvl)) or "(N/A)"
-					elseif managers.skirmish and managers.skirmish:is_skirmish() then		-- Holdout
-						game_mode = "skirmish"
-						game_heist = job_name
-						game_difficulty = string.format("%i/%i", managers.skirmish:current_wave_number() or 1, tweak_data and #tweak_data.skirmish.ransom_amounts or 9)
-					elseif managers.job:has_active_job() then
-						game_heist = job_name
+							if name_id then
+								job_name = managers.localization:text(name_id) or job_name
+							end
+							game_mode = "crime_spree"
+							game_heist = job_name
+							local spree_lvl = managers.crime_spree:server_spree_level()
+							game_difficulty = spree_lvl and managers.money:add_decimal_marks_to_string(tostring(spree_lvl)) or "(N/A)"
+						elseif managers.skirmish and managers.skirmish:is_skirmish() then		-- Holdout
+							game_mode = "skirmish"
+							game_heist = job_name
+							game_difficulty = string.format("%i/%i", managers.skirmish:current_wave_number() or 1, tweak_data and #tweak_data.skirmish.ransom_amounts or 9)
+						elseif managers.job:has_active_job() then
+							game_heist = job_name
 
 						if #(managers.job:current_job_chain_data() or {}) > 1 then
 							game_mode = "heist_chain"
@@ -130,15 +132,23 @@
 			"_prof$",
 			"_day$",
 			"_night$",
-			"_wrapper$",
-			"^skm_"
+			"_wrapper$"
+			--"^skm_"
 		}
 		local ignoreSuffix = {
 			["election_day"] = true
 		}
 
 		function WinPlatformManager:get_current_job_id()
+			local RPDC = _G.RichPresenceDefinitive
 			local job_id = managers.job:current_job_id()
+			if job_id == nil then
+				return self:get_current_level_id() -- in case that tutorial level was launched
+			end
+			
+			if job_id == "tag" then 
+				job_id = "tag_job"
+			end
 
 			if job_id and not ignoreSuffix[job_id] then
 				for _, suffix in ipairs(suffixList) do
@@ -146,26 +156,36 @@
 				end
 			end
 
-			return job_id or "UNKNOWN"
+			if RPDC.settings.use_save_file == 1 then
+				return RPDC.settings[job_id]
+			else
+				return job_id
+			end
 		end
 
 		function WinPlatformManager:get_current_level_id()
+			local RPDC = _G.RichPresenceDefinitive
 			local level_id = Global.game_settings.level_id
-
+			if level_id == nil then
+				return self:get_current_job_id() -- if smh non crime spree level was requested
+			end
+			
 			if level_id and not ignoreSuffix[level_id] then
 				for _, suffix in ipairs(suffixList) do
 					level_id = level_id:gsub(suffix, "")
 				end
 			end
-
-			return level_id or self:get_current_job_id()
+			if RPDC.settings.use_save_file == 1 then
+				level_id = "level_"..level_id
+				return RPDC.settings[level_id]
+			else
+				return level_id
+			end
 		end
-			
-			
 
 		function WinPlatformManager:build_status_string(display, state, mode, heist, day, difficulty, group_count)
 			
-			RPDC = _G.RichPresenceDefinitive
+			local RPDC = _G.RichPresenceDefinitive
 		
 			if string.len(tostring(RPDC.settings.players)) > 0 then
 				gap = " "
@@ -233,10 +253,11 @@
 			
 			local tokens = {}
 			
-			if RPDC.settings.use_save_file == 1 then -- RPD Save File
+			if RPDC.settings.use_save_file == 3 then -- Old RPD Save File
 			tokens = {
 				["#raw_status"] =				tag_state,
 
+				-- Game states
 				["#State_menu"] =				RPDC.settings.menu,
 				["#State_private"] =			RPDC.settings.private,
 				["#State_lobby_no_job"] =		RPDC.settings.empty..COMA.." "..BRACKET_LEFT_1..group_count.."/4"..gap..RPDC.settings.players..BRACKET_RIGHT_1,
@@ -246,11 +267,13 @@
 				["#State_payday"] =				RPDC.settings.payday..playerstate,
 				["#State_preplanning"] =		RPDC.settings.preplanning..playerstate,
 
+				-- Game modes
 				["#Mode_crime_spree"] =			RPDC.settings.cs..COMA.." {#Level_%game:heist%}"..COMA.." ".."(Lvl. %game:difficulty%)",
 				["#Mode_skirmish"] =			RPDC.settings.ho..COMA.." {#Level_%game:heist%}", --RPDC.settings.ho..COMA.." {#Level_%game:heist%}"..COMA.." ".."(Wave %game:difficulty%)",
 				["#Mode_heist"] =				"{#Job_%game:heist%}"..COMA.." "..BRACKET_LEFT_3.."{#Difficulty_%game:difficulty%}"..ONE_DOWN_MOD..BRACKET_RIGHT_3,
 				["#Mode_heist_chain"] =			"{#Job_%game:heist%}"..COMA.." "..BRACKET_LEFT_2..RPDC.settings.days..gap2.."%game:heist_day%"..BRACKET_RIGHT_2..COMA.." "..BRACKET_LEFT_3.."{#Difficulty_%game:difficulty%}"..ONE_DOWN_MOD..BRACKET_RIGHT_3,
 
+				-- Difficulties
 				["#Difficulty_easy"] =			"",
 				["#Difficulty_normal"] =		RPDC.settings.nrml,
 				["#Difficulty_hard"] =			RPDC.settings.hrd,
@@ -744,7 +767,7 @@
 				
 				
 			}
-			else -- Game loc
+			else -- Game loc and auto-generating RPD save file
 			tokens = {
 			["#raw_status"] =				tag_state,
 
@@ -774,7 +797,8 @@
 			["#Difficulty_easy_wish"] =		RPDC.settings.mh,
 			["#Difficulty_overkill_290"] =	RPDC.settings.dw,
 			["#Difficulty_sm_wish"] =		RPDC.settings.ds,
-		}
+			}
+			
 			end
 
 			

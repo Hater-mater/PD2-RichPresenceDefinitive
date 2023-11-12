@@ -3,13 +3,12 @@ _G.RichPresenceDefinitive = {
 	save_path = SavePath,
 	save_name = "RichPresenceDefinitive.txt",
 	settings = {
-		
+		show_message = true,
 		use_save_file = 1,
---	Overhauls tags. Planned support for renaming tags in-game (kinda done)
+--	Overhauls tags
 		tag = "",
 		autotag = true,
 		customtag = "Vanilla",
-
 
 --	States		
 		menu = "Main Menu",
@@ -36,7 +35,7 @@ _G.RichPresenceDefinitive = {
 		tagless = false,
 		anonymous = false,
 		anonymous_tag = false,			
-		--vtag = true, -- maybe I made support for vanilla AI changing mods
+
 --	Modes		
 		cs = "[Crime Spree]",
 		ho = "[Holdout]",
@@ -51,8 +50,10 @@ _G.RichPresenceDefinitive = {
 		ds = "DS",
 		one_down_mod = "OD",
 
+		--Old reduntant stuff
+
 --	Bain		
-		art = "Art Gallery",
+		--[[art = "Art Gallery",
 		rand = "Bank Heist: Random",
 		gold = "Bank Heist: Gold",
 		depo = "Bank Heist: Deposit",
@@ -317,7 +318,7 @@ _G.RichPresenceDefinitive = {
 		constantine_suburbia_nar = "Early Birds",
 		constantine_fiesta_nar = "Fiesta",
 		constantine_yacht_nar = "Showdown",
-		
+		--]]
 	},
 }
 -- Different default settings for Resmod and Eclipse
@@ -361,6 +362,8 @@ else
 	RichPresenceDefinitive:save_settings()
 end
 
+
+
 Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerInitialize", function(menu_manager)
 	MenuCallbackHandler.RichPresenceDefinitive_callback_toggle = function(self, item)
 		RichPresenceDefinitive.settings[item:name()] = item:value() == "on"
@@ -382,6 +385,10 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 	MenuHelper:LoadFromJsonFile(RichPresenceDefinitive.mod_path.."menu/modes.txt", RichPresenceDefinitive, RichPresenceDefinitive.settings)
 	MenuHelper:LoadFromJsonFile(RichPresenceDefinitive.mod_path.."menu/miscellaneous.txt", RichPresenceDefinitive, RichPresenceDefinitive.settings)
 	MenuHelper:LoadFromJsonFile(RichPresenceDefinitive.mod_path.."menu/tags.txt", RichPresenceDefinitive, RichPresenceDefinitive.settings)
+	
+	MenuCallbackHandler.heist_save = function(self, item)
+		RichPresenceDefinitive.settings[item:name()] = item:value()
+	end
 	
 	MenuCallbackHandler.use_save_file = function(self, item)
 		RichPresenceDefinitive.settings.use_save_file = item:value()
@@ -479,10 +486,109 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 		RichPresenceDefinitive.settings.one_down_mod = item:value()
 	end
 	
-
+	Hooks:Add("MenuManagerBuildCustomMenus", "RichPresenceDefinitive_hook_MenuManagerBuildCustomMenus", function(menu_manager, nodes)
+		RichPresenceDefinitive:load_settings()
 		
+		local suffixList = {
+			"_prof$",
+			"_day$",
+			"_night$",
+			"_wrapper$"
+		}
+		
+		local ignoreSuffix = {
+			["election_day"] = true
+		}
+		
+		MenuHelper:NewMenu("RPDS_heists_options")
+		MenuHelper:NewMenu("RPDS_levels_options")
+		MenuHelper:NewMenu("RPDS_skirmish_options")
+
+		--Generating settings for heists and skirmish levels
+		local job_tweak = tweak_data.narrative
+		for _, job_id in ipairs(job_tweak:get_jobs_index()) do
+			local job_data = job_tweak.jobs[job_id]
+			local job_string = job_data and managers.localization:text(job_data.name_id)
+			if job_id and job_id ~= "crime_spree" and job_string ~= "" then
+				if job_id and not ignoreSuffix[job_id] then
+					for _, suffix in ipairs(suffixList) do
+						job_id = job_id:gsub(suffix, "")
+					end
+				end
+				-- **sigh** Since we already have "tag" for Steam status purpose I made this check to avoid conflict with Breaking Feds ID. Dumb but still
+				if job_id == "tag" then
+					job_id = "tag_job"
+				end
+				
+				if RichPresenceDefinitive.settings[job_id] == nil  then
+					RichPresenceDefinitive.settings[job_id] = job_string
+				end
+				
+				local menu_id = "RPDS_heists_options"
+				local custom_job_name = RichPresenceDefinitive.settings[job_id]
+				
+				if job_id:find("skm_") or job_id:find("skmc_") then
+					menu_id = "RPDS_skirmish_options"
+				end
+
+				MenuHelper:AddInput({
+					id = job_id,
+					title = job_data.name_id,
+					desc = "how_to",
+					callback = "heist_save",
+					value = custom_job_name,
+					menu_id = menu_id
+				})
+			end
+		end
+		
+		--Generating settings for CS levels
+		local level_data = tweak_data.levels
+		for _, level_id in ipairs(level_data:get_level_index()) do
+			local level = level_data[level_id]
+			local level_string = level and managers.localization:text(level.name_id)
+			--exclude skirmish levels
+			if level_id:find("skm_") or level_id:find("skmc_") then
+				level = nil
+			end
+			if level then
+				local og_level_id = level_id
+				for _, suffix in ipairs(suffixList) do
+					level_id = level_id:gsub(suffix, "")
+				end
+				if og_level_id ~= level_id then -- allow to avoid dublicating (except Election Day D3. For some fucking reason it's not working for this day even with "_skip$" suffix in suffixList)
+				else
+				level_id = "level_"..level_id
+				if RichPresenceDefinitive.settings[level_id] == nil then
+					RichPresenceDefinitive.settings[level_id] = level_string
+				end
+
+				local custom_level_name = RichPresenceDefinitive.settings[level_id]
+
+				MenuHelper:AddInput({
+					id = level_id,
+					title = level.name_id,
+					desc = "how_to",
+					callback = "heist_save",
+					value = custom_level_name,
+					menu_id = "RPDS_levels_options"
+				})
+				end
+			end
+		end
+		
+		RichPresenceDefinitive:save_settings()
+
+		nodes["RPDS_heists_options"] = MenuHelper:BuildMenu("RPDS_heists_options", {back_callback = "RichPresenceDefinitive_callback_save"})
+		MenuHelper:AddMenuItem(nodes["custom_names_editor"], "RPDS_heists_options", "RPDS_heists_title")
+		nodes["RPDS_levels_options"] = MenuHelper:BuildMenu("RPDS_levels_options", {back_callback = "RichPresenceDefinitive_callback_save"})
+		MenuHelper:AddMenuItem(nodes["custom_names_editor"], "RPDS_levels_options", "RPDS_levels_title")
+		nodes["RPDS_skirmish_options"] = MenuHelper:BuildMenu("RPDS_skirmish_options", {back_callback = "RichPresenceDefinitive_callback_save"})
+		MenuHelper:AddMenuItem(nodes["custom_names_editor"], "RPDS_skirmish_options", "menu_cn_skirmish")
+	end)
 	
-	MenuCallbackHandler.RPDC_OP_info_clbk = function(self)
+	
+	--[[MenuCallbackHandler.RPDC_OP_info_clbk = function(self)
 		local op_info_title_id
 		local op_info_desc_id
 		if managers.player then
@@ -496,7 +602,7 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 				is_cancel_button = true
 			}
 		},true)
-	end			
+	end--]]	
 
 end)
 

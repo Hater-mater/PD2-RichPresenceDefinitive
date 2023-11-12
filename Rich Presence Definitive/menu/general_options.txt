@@ -4,7 +4,7 @@
 	"title" : "RPDS_options_menu_title",
 	"description" : "RPDS_options_menu_desc",
 	"back_callback" : "RichPresenceDefinitive_callback_save",
-	"items" : [{               "type" : "multiple_choice",
+	"items" : [{    "type" : "multiple_choice",
 			"id" : "use_save_file",
 			"title" : "RPDS_use_save_file_title",
 			"description" : "RPDS_use_save_file_desc",
@@ -12,6 +12,7 @@
 			"items" : [
 				"menu_use_save_file_on",
 				"menu_use_save_file_off",
+				"menu_use_save_file_old"
 			],
 			"value" : "use_save_file",
 			"default_value" : 1

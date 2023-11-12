@@ -1,8 +1,12 @@
 {		
 		"how_to" : "Set up a specific name for this entry.",		
-
 		
-	
+		"RPDS_heists_title" : "Heists",
+		"RPDS_levels_title" : "Levels (for Crime Spree)",
+
+		"RPDS_greetings_title" : "Hello there. Thank you for installing and using RPD!",
+		"RPDS_greetings_desc" : "WARNING!!!\nThe latest major update generates a list of heist and level names automatically, the names of which can be edited in the mod settings. If you have used this mod before and changed a lot of heist/level names - use \"Heist names -> (Old method) RPD's save file\", because the old way of Steam status formation will be no longer supported",
+		"RPDS_greetings_message_confirm":  "Got it",
 		"days_title" : "Day",
 
 		"RPDS_options_menu_title" : "Rich Presence Definitive",
@@ -13,6 +17,7 @@
 		
 		"menu_use_save_file_on" : "RPD's save file",
 		"menu_use_save_file_off" : "Game loc",
+		"menu_use_save_file_old" : "(Old method) RPD's save file",
 		
 		"RPDS_advanced_title" : "Options",
 		"RPDS_advanced_desc" : "",

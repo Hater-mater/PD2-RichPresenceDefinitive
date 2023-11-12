@@ -2,11 +2,24 @@
 		"how_to" : "이 항목에 특정 이름을 설정합니다.",		
 
 		
-	
+		"RPDS_heists_title" : "하이스트",
+		"RPDS_levels_title" : "레벨 (크라임 스프리용)",
+
+		"RPDS_greetings_title" : "안녕하세요. RPD를 설치하고 사용해 주셔서 감사합니다!",
+		"RPDS_greetings_desc" : "경고!!!!!!\n최신 대규모 업데이트에서는 하이스트 및 레벨 이름 목록을 자동으로 생성하며 해당 이름은 모드 설정에서 편집할 수 있습니다. 이전에 이 모드를 사용했고 하이스트 혹은 레벨 이름을 많이 변경한 경우 \"하이스트 이름 -> (기존 방법) RPD의 저장 파일\"을 사용해주세요. 왜냐하면 이전 방식의 Steam 활동 상태 편성이 더 이상 지원되지 않기 때문입니다.",
+		"RPDS_greetings_message_confirm":  "알겠어요",
+
 		"days_title" : "일차",
 
 		"RPDS_options_menu_title" : "활동 상태 완전판",
 		"RPDS_options_menu_desc" : "활동 상태 완전판 설정",
+		
+		"RPDS_use_save_file_title": "하이스트 이름",
+		"RPDS_use_save_file_desc": "RPD가 하이스트 이름의 정보로 사용하는지 결정합니다.",
+		
+		"menu_use_save_file_on" : "RPD의 세이브 파일",
+		"menu_use_save_file_off" : "게임 내 언어",
+		"menu_use_save_file_old" : "(기존 방식) (기존 방법) RPD의 저장 파일",
 		
 		"RPDS_advanced_title" : "옵션",
 		"RPDS_advanced_desc" : "",
@@ -28,6 +41,7 @@
                 "lobby_title" : "로비",
                 "ingame_title" : "게임 내",
                 "payday_title" : "월급 날",
+		"preplanning_title" : "사전 계획",
 		
 		"RPDS_diffs_title" : "난이도",
 		"RPDS_diffs_desc" : "",
@@ -50,6 +64,7 @@
         		"autotag_title" : "자동 태크",
         		"autotag_desc" : "모드는 플레이 중인 오버홀 모드(혹은 바닐라)에 따라 태그 자체를 넣습니다.",
         		"customtag_title" : "커스텀 태그",
+			"bracket_tag_title" : "태그에 대괄호 사용",
 		
 		
 		"RPDS_miscellaneous_title" : "기타",

@@ -1,6 +1,13 @@
 {		
 		"how_to" : "Выбрать текст для этой строки.",		
 		
+		"RPDS_heists_title" : "Ограбления",
+		"RPDS_levels_title" : "Уровни (для серии ограблений)",
+
+		"RPDS_greetings_title" : "Приветствую. Спасибо за установку и использование RPD!",
+		"RPDS_greetings_desc" : "ВНИМАНИЕ!!!\nПоследнее обновление позволяет генерировать список ограблений и уровней автоматически, названия которых можно изменить в настройках мода. Если Вы использовали этот мод ранее и изменили множество названий ограблений/уровней - используйте \"Имена ограблений -> (Старый метод) Сейв RPD\", потому что старый способ образования Steam статуса не будет более поддерживаться",
+		"RPDS_greetings_message_confirm":  "Окей",
+
 		"RPDS_options_menu_title" : "Rich Presence Definitive",
 		"RPDS_options_menu_desc" : "Настройки Rich Presence Definitive",
 
@@ -9,6 +16,7 @@
 
 		"menu_use_save_file_on" : "Сейв RPD",
 		"menu_use_save_file_off" : "Локализация игры",
+		"menu_use_save_file_old" : "(Старый метод) Сейв RPD",
 		
 		"RPDS_advanced_title" : "Опции",
 		"RPDS_advanced_desc" : "",

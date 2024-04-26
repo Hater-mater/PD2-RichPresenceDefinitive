@@ -1,8 +1,5 @@
-local short = MenuMainState.at_enter
-function MenuMainState:at_enter(old_state)
-	short(self, old_state)
-	
-	if RichPresenceDefinitive.settings.show_message then
+Hooks:PostHook(MenuMainState, "at_enter", "at_enter_RPD", function (self,old_state)
+if RichPresenceDefinitive.settings.show_message then
 	RichPresenceDefinitive.settings.show_message = false
 	RichPresenceDefinitive:save_settings()
 	local my_advanced_message = {
@@ -21,4 +18,4 @@ function MenuMainState:at_enter(old_state)
 
 	managers.menu:show_video_message_dialog(my_advanced_message)
 	end
-end
+end)

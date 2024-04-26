@@ -1,20 +1,6 @@
-local function find_key(page, str)
-	local _, st = string.find(tostring(page), str)
-	local en, _ = string.find(tostring(page), '"', st + 1)
-	local key = string.sub(tostring(page), st + 1, en - 1)
-	
-	return key
-end
-
 local function save_tag(tag)
 	RichPresenceDefinitive.settings.tag = tag
 	RichPresenceDefinitive:save_settings()
-end
-
-local function set_tag(tag, mod_key)
-	if current_key == mod_key then
-		save_tag(tag)
-	end
 end
 
 if RichPresenceDefinitive.settings.autotag then
@@ -24,6 +10,20 @@ local standard_str = 'NetworkMatchMakingSTEAM._BUILD_SEARCH_INTEREST_KEY = \"'
 --RichPresenceDefinitive.settings.tag = current_key:gsub("payday2", "vanilla"):gsub("_", " "):capitalize()
 RichPresenceDefinitive.settings.tag = "Vanilla"
 RichPresenceDefinitive:save_settings()
+
+local function find_key(page, str)
+	local _, st = string.find(tostring(page), str)
+	local en, _ = string.find(tostring(page), '"', st + 1)
+	local key = string.sub(tostring(page), st + 1, en - 1)
+	
+	return key
+end
+
+local function set_tag(tag, mod_key)
+	if current_key == mod_key then
+		save_tag(tag)
+	end
+end
 
 if SC then
 save_tag("ResMod")

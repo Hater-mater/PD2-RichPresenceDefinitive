@@ -26,13 +26,17 @@ local function set_tag(tag, mod_key)
 end
 
 if SC then
-save_tag("ResMod")
---dohttpreq("https://raw.githubusercontent.com/payday-restoration/restoration-mod/dev/lua/sc/network/base/networkmanager.lua", function(page)
-	--set_tag("ResMod", find_key(page, standard_str))
---end)
-dohttpreq("https://raw.githubusercontent.com/payday-restoration/restoration-mod/dev/lua/sc/network/base/networkmanager.lua", function(page)
-	set_tag("ResMod Dev", find_key(page, standard_str))
-end)
+	dohttpreq("https://raw.githubusercontent.com/payday-restoration/restoration-mod/gold/lua/sc/network/base/networkmanager.lua", function(page)
+		set_tag("ResMod", find_key(page, standard_str))
+	end)
+	
+	dohttpreq("https://raw.githubusercontent.com/payday-restoration/restoration-mod/dev/lua/sc/network/base/networkmanager.lua", function(page)
+		if current_key == find_key(page, standard_str) then
+			-- Remain ResMod tag
+		else
+			set_tag("ResMod Dev", find_key(page, standard_str))
+		end
+	end)
 end
 
 if PD2THHSHIN then
@@ -44,24 +48,24 @@ if PD2THHSHIN then
 end
 
 if deathvox then
-save_tag("Crackdown")
-dohttpreq("https://raw.githubusercontent.com/Crackdown-PD2/deathvox/master/coredeathvox.lua", function(page)
-	--set_tag("Crackdown", find_key(page, 'deathvox.mm_key_default = \"'))
-	set_tag("Crackdown Dev", find_key(page, 'deathvox.mm_key_overhaul = \"'))
-end)
+	save_tag("Crackdown")
+	dohttpreq("https://raw.githubusercontent.com/Crackdown-PD2/deathvox/master/coredeathvox.lua", function(page)
+		--set_tag("Crackdown", find_key(page, 'deathvox.mm_key_default = \"'))
+		set_tag("Crackdown Dev", find_key(page, 'deathvox.mm_key_overhaul = \"'))
+	end)
 end
 
 if ch_settings then
-save_tag("Classic Heisting")
-dohttpreq("https://raw.githubusercontent.com/gorgbus/Classic-Heisting-Reborn/main/Classic%20Heisting/states/menumainstate.lua", function(page)
-	local mod_key = "payday2_classic_heisting_" .. find_key(page, '_G._new_version = \"')
-	--set_tag("Classic Heisting", mod_key)
-	set_tag("Classic Heisting U24 Mode", mod_key .. "u24")
-end)
+	save_tag("Classic Heisting")
+	dohttpreq("https://raw.githubusercontent.com/gorgbus/Classic-Heisting-Reborn/main/Classic%20Heisting/states/menumainstate.lua", function(page)
+		local mod_key = "payday2_classic_heisting_" .. find_key(page, '_G._new_version = \"')
+		--set_tag("Classic Heisting", mod_key)
+		set_tag("Classic Heisting U24 Mode", mod_key .. "u24")
+	end)
 end
 
 if StreamHeist then
-save_tag("Streamlined Heisting")
+	save_tag("Streamlined Heisting")
 --[[dohttpreq("https://raw.githubusercontent.com/segabl/pd2-streamlined-heisting/master/mod.txt", function(page)
 	local ext = "_sh_v" .. find_key(page, '"version" : \"')
 	local mod_key = current_key:gsub(ext, "") .. ext

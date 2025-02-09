@@ -321,10 +321,6 @@ _G.RichPresenceDefinitive = {
 		--]]
 	},
 }
--- Different default settings for Resmod and Eclipse
-if SC or EclipseDebug then
-RichPresenceDefinitive.settings.one_down_mod = "PJ"
-end
 
 function RichPresenceDefinitive:json_encode(tab, path)
 	local file = io.open(path, "w+")

@@ -208,15 +208,29 @@
 				BRACKET_RIGHT_TAG = ""
 			end
 
-			BRACKET_LEFT_1 = RPDC.settings.bracket1
-			BRACKET_RIGHT_1 = RPDC.settings.bracket2
+			if RPDC.settings.bracket_counter then
+				BRACKET_LEFT_1 = RPDC.settings.bracket1
+				BRACKET_RIGHT_1 = RPDC.settings.bracket2
+			else
+				BRACKET_LEFT_1 = ""
+				BRACKET_RIGHT_1 = ""
+			end
 			
-			BRACKET_LEFT_2 = RPDC.settings.bracket1
-			BRACKET_RIGHT_2 = RPDC.settings.bracket2
+			if RPDC.settings.bracket_days then
+				BRACKET_LEFT_2 = RPDC.settings.bracket1
+				BRACKET_RIGHT_2 = RPDC.settings.bracket2
+			else
+				BRACKET_LEFT_2 = ""
+				BRACKET_RIGHT_2 = ""
+			end
 			
-			BRACKET_LEFT_3 = RPDC.settings.bracket1
-			BRACKET_RIGHT_3 = RPDC.settings.bracket2
-	
+			if RPDC.settings.bracket_diffs then
+				BRACKET_LEFT_3 = RPDC.settings.bracket1
+				BRACKET_RIGHT_3 = RPDC.settings.bracket2
+			else
+				BRACKET_LEFT_3 = ""
+				BRACKET_RIGHT_3 = ""
+			end
 		
 			if RPDC.settings.coma ~= "" then
 				COMA = " "..RPDC.settings.coma

@@ -321,7 +321,7 @@ _G.RichPresenceDefinitive = {
 		--]]
 	},
 }
-
+-- Save/Load functions
 function RichPresenceDefinitive:json_encode(tab, path)
 	local file = io.open(path, "w+")
 	if file then
@@ -359,7 +359,7 @@ else
 end
 
 
-
+-- Mod menu related stuff
 Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerInitialize", function(menu_manager)
 	MenuCallbackHandler.RichPresenceDefinitive_callback_toggle = function(self, item)
 		RichPresenceDefinitive.settings[item:name()] = item:value() == "on"
@@ -602,6 +602,7 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 
 end)
 
+--Loading loc files dynamically
 Hooks:Add("LocalizationManagerPostInit", "RichPresenceDefinitive_LocalizationManagerPostInit", function(loc)
 	local loc_path = RichPresenceDefinitive.mod_path .. "loc/"
 

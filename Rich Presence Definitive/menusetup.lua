@@ -6,6 +6,7 @@ end
 if RichPresenceDefinitive.settings.autotag then
 local current_key = NetworkMatchMakingSTEAM._BUILD_SEARCH_INTEREST_KEY
 local standard_str = 'NetworkMatchMakingSTEAM._BUILD_SEARCH_INTEREST_KEY = \"'
+local gold_detected = false -- fucking crutch
 --Debug
 --RichPresenceDefinitive.settings.tag = current_key:gsub("payday2", "vanilla"):gsub("_", " "):capitalize()
 RichPresenceDefinitive.settings.tag = "Vanilla"
@@ -22,23 +23,24 @@ end
 local function set_tag(tag, mod_key)
 	if current_key == mod_key then
 		save_tag(tag)
+		gold_detected = true
 	end
 end
 
+-- Restoration Mod
 if SC then
 	dohttpreq("https://raw.githubusercontent.com/payday-restoration/restoration-mod/gold/lua/sc/network/base/networkmanager.lua", function(page)
 		set_tag("ResMod", find_key(page, standard_str))
 	end)
 	
 	dohttpreq("https://raw.githubusercontent.com/payday-restoration/restoration-mod/dev/lua/sc/network/base/networkmanager.lua", function(page)
-		if current_key == find_key(page, standard_str) then
-			-- Remain ResMod tag
-		else
+		if not gold_detected then
 			set_tag("ResMod Dev", find_key(page, standard_str))
 		end
 	end)
 end
 
+-- Hyper Heisting
 if PD2THHSHIN then
 --MM check disabled because both branches use same key
 --dohttpreq("https://raw.githubusercontent.com/fuglore/PD2-Hyper-Heisting/master/lua/networking/networkmatchmakingsteam.lua", function(page)
@@ -47,6 +49,7 @@ if PD2THHSHIN then
 	save_tag("Hyper Heisting")
 end
 
+-- Crackdown
 if deathvox then
 	save_tag("Crackdown")
 	dohttpreq("https://raw.githubusercontent.com/Crackdown-PD2/deathvox/master/coredeathvox.lua", function(page)
@@ -55,6 +58,7 @@ if deathvox then
 	end)
 end
 
+-- Classic Heisting
 if ch_settings then
 	save_tag("Classic Heisting")
 	dohttpreq("https://raw.githubusercontent.com/gorgbus/Classic-Heisting-Reborn/main/Classic%20Heisting/states/menumainstate.lua", function(page)
@@ -64,6 +68,7 @@ if ch_settings then
 	end)
 end
 
+-- Streamlined Heisting
 if StreamHeist then
 	save_tag("Streamlined Heisting")
 --[[dohttpreq("https://raw.githubusercontent.com/segabl/pd2-streamlined-heisting/master/mod.txt", function(page)
@@ -85,11 +90,12 @@ end)--]]
 --end)
 end
 
+-- Original Pack
 if OriginalPackOptions then
 	save_tag("Original Pack")
 end
 
-
+--Eclipse
 if EclipseDebug then
 	save_tag("Eclipse")
 	--local ext_main = "_eclipse_main"
@@ -105,6 +111,7 @@ if heat then
 	save_tag("HEAT")
 end
 
+--BeardLib editor just in case
 if BLE and BLE:RunningFix() then
 	save_tag("BeardLib Editor")
 end

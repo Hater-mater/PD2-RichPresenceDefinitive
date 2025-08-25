@@ -78,6 +78,7 @@
 						
 						local job_data = managers.job:current_job_data()
 						local job_name = job_data and managers.localization:text(job_data.name_id)
+						
 						if managers.crime_spree and managers.crime_spree:is_active() then		-- Crime Spree
 							local level_id = Global.game_settings.level_id
 							local name_id = level_id and _G.tweak_data.levels[level_id] and _G.tweak_data.levels[level_id].name_id
@@ -102,7 +103,7 @@
 						else
 							game_mode = "heist"
 						end
-
+						
 						game_difficulty = tweak_data and tweak_data:index_to_difficulty(managers.job:current_difficulty_stars() + 2) or Global.game_settings.difficulty or "easy"
 					else
 						-- Overwrite game state if nothing is selected
@@ -110,6 +111,26 @@
 					end
 						end
 						
+					end
+				end
+				
+				-- Any Day Any Heist compatibility (Random Heist Button works on its own)
+				-- Basically load level names for that when you're in preplanning/in-game
+				if _G.AnyDayAnyHeist and game_state ~= "lobby" and game_state ~= "private" then
+					local current_job = managers.job:current_job_id()
+					current_job = tostring(current_job)
+					if string.find(current_job, "dayselect_random_") then
+						if RPDC.settings.use_save_file == 1 or RPDC.settings.use_save_file == 3 then -- RPD Save File
+							game_heist = self:get_current_level_id()
+						else
+							local level_id = Global.game_settings.level_id
+							local name_id = level_id and _G.tweak_data.levels[level_id] and _G.tweak_data.levels[level_id].name_id
+
+							if name_id then
+								job_name = managers.localization:text(name_id) or job_name
+							end
+							game_heist = job_name
+						end
 					end
 				end
 
@@ -167,7 +188,7 @@
 			local RPDC = _G.RichPresenceDefinitive
 			local level_id = Global.game_settings.level_id
 			if level_id == nil then
-				return self:get_current_job_id() -- if smh non crime spree level was requested
+				return self:get_current_job_id() -- if smh non crime spree level was requested or CS lobby didn't load on level
 			end
 			
 			if level_id and not ignoreSuffix[level_id] then
@@ -250,7 +271,6 @@
 			else
 				playerstate = ": {#Mode_%game:mode%}"..COMA.." "..BRACKET_LEFT_1..group_count.."/4"..gap..RPDC.settings.players..BRACKET_RIGHT_1				
 			end
-						
 
 		
 			if RPDC.settings.tagless and not RPDC.settings.anonymous and not RPDC.settings.anonymous_tag then
@@ -782,35 +802,35 @@
 				
 			}
 			else -- Game loc and auto-generating RPD save file
-			tokens = {
-			["#raw_status"] =				tag_state,
+				tokens = {
+				["#raw_status"] =				tag_state,
 
-			-- Game states
-			["#State_menu"] =				RPDC.settings.menu,
-			["#State_private"] =			RPDC.settings.private,
-			["#State_lobby_no_job"] =		RPDC.settings.empty..COMA.." "..BRACKET_LEFT_1..group_count.."/4"..gap..RPDC.settings.players..BRACKET_RIGHT_1,
-			["#State_lobby"] =				RPDC.settings.lobby..playerstate,
-			["#State_playing"] =			RPDC.settings.ingame..playerstate,
-			["#State_payday"] =				RPDC.settings.payday..playerstate,
-			["#State_preplanning"] =		RPDC.settings.preplanning..playerstate,
+				-- Game states
+				["#State_menu"] =				RPDC.settings.menu,
+				["#State_private"] =			RPDC.settings.private,
+				["#State_lobby_no_job"] =		RPDC.settings.empty..COMA.." "..BRACKET_LEFT_1..group_count.."/4"..gap..RPDC.settings.players..BRACKET_RIGHT_1,
+				["#State_lobby"] =				RPDC.settings.lobby..playerstate,
+				["#State_playing"] =			RPDC.settings.ingame..playerstate,
+				["#State_payday"] =				RPDC.settings.payday..playerstate,
+				["#State_preplanning"] =		RPDC.settings.preplanning..playerstate,
 
-			-- Game modes
+				-- Game modes
 			
-			["#Mode_crime_spree"] =			RPDC.settings.cs..COMA.." %game:heist%"..COMA.." ".."(Lvl. %game:difficulty%)",
-			["#Mode_skirmish"] =			RPDC.settings.ho..COMA.." %game:heist%", --RPDC.settings.ho..COMA.." {#Level_%game:heist%}"..COMA.." ".."(Wave %game:difficulty%)",
-			["#Mode_heist"] =				"%game:heist%"..COMA.." "..BRACKET_LEFT_3.."{#Difficulty_%game:difficulty%}"..ONE_DOWN_MOD..BRACKET_RIGHT_3,
-			["#Mode_heist_chain"] =			"%game:heist%"..COMA.." "..BRACKET_LEFT_2..RPDC.settings.days..gap2.."%game:heist_day%"..BRACKET_RIGHT_2..COMA.." "..BRACKET_LEFT_3.."{#Difficulty_%game:difficulty%}"..ONE_DOWN_MOD..BRACKET_RIGHT_3,
+				["#Mode_crime_spree"] =			RPDC.settings.cs..COMA.." %game:heist%"..COMA.." ".."(Lvl. %game:difficulty%)",
+				["#Mode_skirmish"] =			RPDC.settings.ho..COMA.." %game:heist%", --RPDC.settings.ho..COMA.." {#Level_%game:heist%}"..COMA.." ".."(Wave %game:difficulty%)",
+				["#Mode_heist"] =				"%game:heist%"..COMA.." "..BRACKET_LEFT_3.."{#Difficulty_%game:difficulty%}"..ONE_DOWN_MOD..BRACKET_RIGHT_3,
+				["#Mode_heist_chain"] =			"%game:heist%"..COMA.." "..BRACKET_LEFT_2..RPDC.settings.days..gap2.."%game:heist_day%"..BRACKET_RIGHT_2..COMA.." "..BRACKET_LEFT_3.."{#Difficulty_%game:difficulty%}"..ONE_DOWN_MOD..BRACKET_RIGHT_3,
 
 
-			-- Difficulties
-			["#Difficulty_easy"] =			"",
-			["#Difficulty_normal"] =		RPDC.settings.nrml,
-			["#Difficulty_hard"] =			RPDC.settings.hrd,
-			["#Difficulty_overkill"] =		RPDC.settings.vh,
-			["#Difficulty_overkill_145"] =	RPDC.settings.ovk,
-			["#Difficulty_easy_wish"] =		RPDC.settings.mh,
-			["#Difficulty_overkill_290"] =	RPDC.settings.dw,
-			["#Difficulty_sm_wish"] =		RPDC.settings.ds,
+				-- Difficulties
+				["#Difficulty_easy"] =			"",
+				["#Difficulty_normal"] =		RPDC.settings.nrml,
+				["#Difficulty_hard"] =			RPDC.settings.hrd,
+				["#Difficulty_overkill"] =		RPDC.settings.vh,
+				["#Difficulty_overkill_145"] =	RPDC.settings.ovk,
+				["#Difficulty_easy_wish"] =		RPDC.settings.mh,
+				["#Difficulty_overkill_290"] =	RPDC.settings.dw,
+				["#Difficulty_sm_wish"] =		RPDC.settings.ds,
 			}
 			
 			end

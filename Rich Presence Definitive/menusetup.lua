@@ -96,7 +96,7 @@ if OriginalPackOptions then
 end
 
 --Eclipse
-if EclipseDebug then
+if EclipseDebug or Eclipse then
 	save_tag("Eclipse")
 	--local ext_main = "_eclipse_main"
 	local ext_dev = "_eclipse_dev"

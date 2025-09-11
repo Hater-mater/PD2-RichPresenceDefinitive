@@ -133,6 +133,11 @@
 						end
 					end
 				end
+				
+				--Eclipse: change Mayhem string to DW
+				if game_difficulty == "easy_wish" and _G.Eclipse then
+					game_difficulty = "overkill_290"
+				end
 
 				-- Send our data to Steam
 				Steam:set_rich_presence("steam_display", display)		-- Currently not usable, only Overkill can setup required localized strings here...

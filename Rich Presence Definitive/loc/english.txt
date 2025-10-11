@@ -27,6 +27,8 @@
 		"anonymous_desc" : "Nothing will be displayed under PAYDAY 2",
 		"anonymous_tag_title" : "Anonymous Mode With Tag",
 		"anonymous_tag_desc" : "No status mode, nothing except your tag (e.g [Vanilla]) will be displayed",
+		"game_state_status_title": "Show game state (Stealth or Loud)",
+		"game_state_status_desc": "Show heist state depends on in-game situation (will be displayed before heist info)",
 
                  
                 "RPDS_tags_title" : "Tag",
@@ -49,6 +51,8 @@
                 "ingame_title" : "In-game",
                 "payday_title" : "Payday",
                 "preplanning_title" : "Preplanning",
+		"game_state_loud_title": "Loud",
+		"game_state_stealth_title": "Stealth",
 		
 		"RPDS_diffs_title" : "Difficulty",
 		"RPDS_diffs_desc" : "",

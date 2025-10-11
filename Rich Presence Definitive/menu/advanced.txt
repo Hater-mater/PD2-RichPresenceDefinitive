@@ -31,6 +31,15 @@
 			"callback" : "RichPresenceDefinitive_callback_toggle",
 			"value" : "anonymous_tag",
 			"default_value" : false
+		},
+		{
+			"type" : "toggle",
+			"id" : "game_state_status",
+			"title" : "game_state_status_title",
+			"description" : "game_state_status_desc",
+			"callback" : "RichPresenceDefinitive_callback_toggle",
+			"value" : "game_state_status",
+			"default_value" : true
 		}
 		
 	]

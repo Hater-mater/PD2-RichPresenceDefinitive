@@ -114,6 +114,17 @@
 					end
 				end
 				
+				local whisper_state = ""
+				if game_state == "playing" and RPDC.settings.game_state_status then
+					if managers and managers.groupai then
+						if managers.groupai:state():whisper_mode() then
+							whisper_state = " ("..RPDC.settings.game_state_stealth..") "
+						else
+							whisper_state = " ("..RPDC.settings.game_state_loud..") "
+						end
+					end
+				end
+				
 				-- Any Day Any Heist compatibility (Random Heist Button works on its own)
 				-- Basically load level names for that when you're in preplanning/in-game
 				if _G.AnyDayAnyHeist and game_state ~= "lobby" and game_state ~= "private" then
@@ -150,7 +161,7 @@
 				Steam:set_rich_presence("game:heist_day", game_heistday)
 				Steam:set_rich_presence("game:difficulty", game_difficulty)
 
-				Steam:set_rich_presence("status", self:build_status_string(display, game_state, game_mode, game_heist, game_heistday, game_difficulty, group_count))
+				Steam:set_rich_presence("status", self:build_status_string(display, game_state, game_mode, game_heist, game_heistday, game_difficulty, group_count, whisper_state))
 			end
 		end
 
@@ -208,10 +219,30 @@
 				return level_id
 			end
 		end
+		
+		function WinPlatformManager:change_game_state_string()
+			
+		end
 
-		function WinPlatformManager:build_status_string(display, state, mode, heist, day, difficulty, group_count)
+		function WinPlatformManager:build_status_string(display, state, mode, heist, day, difficulty, group_count, whisper_state)
 			
 			local RPDC = _G.RichPresenceDefinitive
+			
+			local gap = ""
+			local gap2 = ""
+			local BRACKET_LEFT_TAG = ""
+			local BRACKET_RIGHT_TAG = ""
+			local BRACKET_LEFT_1 = ""
+			local BRACKET_RIGHT_1 = ""
+			local BRACKET_LEFT_2 = ""
+			local BRACKET_RIGHT_2 = ""
+			local BRACKET_LEFT_3 = ""
+			local BRACKET_RIGHT_3 = ""
+			local COMA = ""
+			local ONE_DOWN_MOD = ""
+			local ingame_state_status = ""
+			local playerstate = ""
+			local tag_state = ""
 		
 			if string.len(tostring(RPDC.settings.players)) > 0 then
 				gap = " "
@@ -277,7 +308,7 @@
 				playerstate = ": {#Mode_%game:mode%}"..COMA.." "..BRACKET_LEFT_1..group_count.."/4"..gap..RPDC.settings.players..BRACKET_RIGHT_1				
 			end
 
-		
+			
 			if RPDC.settings.tagless and not RPDC.settings.anonymous and not RPDC.settings.anonymous_tag then
 				tag_state = "{#State_%game:state%}"
 			elseif not RPDC.settings.tagless and not RPDC.settings.anonymous and not RPDC.settings.anonymous_tag then
@@ -302,7 +333,7 @@
 				["#State_lobby_no_job"] =		RPDC.settings.empty..COMA.." "..BRACKET_LEFT_1..group_count.."/4"..gap..RPDC.settings.players..BRACKET_RIGHT_1,
 				
 				["#State_lobby"] =				RPDC.settings.lobby..playerstate,
-				["#State_playing"] =			RPDC.settings.ingame..playerstate,
+				["#State_playing"] =			RPDC.settings.ingame..whisper_state..playerstate,
 				["#State_payday"] =				RPDC.settings.payday..playerstate,
 				["#State_preplanning"] =		RPDC.settings.preplanning..playerstate,
 
@@ -815,7 +846,7 @@
 				["#State_private"] =			RPDC.settings.private,
 				["#State_lobby_no_job"] =		RPDC.settings.empty..COMA.." "..BRACKET_LEFT_1..group_count.."/4"..gap..RPDC.settings.players..BRACKET_RIGHT_1,
 				["#State_lobby"] =				RPDC.settings.lobby..playerstate,
-				["#State_playing"] =			RPDC.settings.ingame..playerstate,
+				["#State_playing"] =			RPDC.settings.ingame..whisper_state..playerstate,
 				["#State_payday"] =				RPDC.settings.payday..playerstate,
 				["#State_preplanning"] =		RPDC.settings.preplanning..playerstate,
 

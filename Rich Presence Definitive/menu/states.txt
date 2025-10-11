@@ -60,6 +60,22 @@
             "description": "how_to",
             "callback": "preplanning_save",
             "value": "preplanning"
-		}
+		},
+		{
+            "type": "input",
+            "id": "game_state_loud_input",
+            "title": "game_state_loud_title",
+            "description": "how_to",
+            "callback": "game_state_loud_save",
+            "value": "game_state_loud"
+		},
+		{
+            "type": "input",
+            "id": "game_state_stealth_input",
+            "title": "game_state_stealth_title",
+            "description": "how_to",
+            "callback": "game_state_stealth_save",
+            "value": "game_state_stealth"
+		},
 	]
 }

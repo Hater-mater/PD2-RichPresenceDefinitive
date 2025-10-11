@@ -18,7 +18,8 @@ _G.RichPresenceDefinitive = {
 		ingame = "In-game",
 		payday = "Payday",
 		preplanning = "Preplanning",
-
+		game_state_loud = "Loud",
+		game_state_stealth = "Stealth",
 
 --	Various		
 		days = "Day",
@@ -34,7 +35,8 @@ _G.RichPresenceDefinitive = {
 --	Advanced		
 		tagless = false,
 		anonymous = false,
-		anonymous_tag = false,			
+		anonymous_tag = false,
+		game_state_status = true,
 
 --	Modes		
 		cs = "[Crime Spree]",
@@ -418,6 +420,14 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 		RichPresenceDefinitive.settings.preplanning = item:value()
 	end
 	
+	MenuCallbackHandler.game_state_loud_save = function(self, item)
+		RichPresenceDefinitive.settings.game_state_loud = item:value()
+	end
+	
+	MenuCallbackHandler.game_state_stealth_save = function(self, item)
+		RichPresenceDefinitive.settings.game_state_stealth = item:value()
+	end
+	
 	MenuCallbackHandler.customtag_save = function(self, item)
 		RichPresenceDefinitive.settings.customtag = item:value()
 	end
@@ -554,7 +564,7 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 				end
 				if og_level_id ~= level_id then -- allow to avoid dublicating (except Election Day D3. For some fucking reason it's not working for this day even with "_skip$" suffix in suffixList)
 				else
-				level_id = "level_"..level_id
+					level_id = "level_"..level_id
 				if RichPresenceDefinitive.settings[level_id] == nil then
 					RichPresenceDefinitive.settings[level_id] = level_string
 				end

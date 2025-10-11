@@ -26,6 +26,8 @@
 		"anonymous_desc" : "Убирает текст под PAYDAY 2",
 		"anonymous_tag_title" : "Анонимность с тегом",
 		"anonymous_tag_desc" : "Будет отображаться только тег (т.е. [Vanilla])",
+		"game_state_status_title": "Показывать статус ограбления (Громко или Тихо)",
+		"game_state_status_desc": "Показывать статус ограбление в зависимости от ситуации на ограблении во время игры (будет отображено перед информацией об ограблении)",
 
                 "RPDS_tags_title" : "Тэг",
 		"RPDS_tags_desc" : "",
@@ -48,6 +50,8 @@
                 "ingame_title" : "В игре",
                 "payday_title" : "Подсчет наград",
                 "preplanning_title" : "Препланнинг",
+		"game_state_loud_title": "Громко",
+		"game_state_stealth_title": "Тихо",
 		
 		"RPDS_diffs_title" : "Сложность",
 		"RPDS_diffs_desc" : "",

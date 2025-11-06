@@ -28,7 +28,7 @@ local function set_tag(tag, mod_key)
 end
 
 -- Restoration Mod
-if SC then
+if _G.SC then
 	dohttpreq("https://raw.githubusercontent.com/payday-restoration/restoration-mod/gold/lua/sc/network/base/networkmanager.lua", function(page)
 		set_tag("ResMod", find_key(page, standard_str))
 	end)
@@ -41,7 +41,7 @@ if SC then
 end
 
 -- Hyper Heisting
-if PD2THHSHIN then
+if _G.PD2THHSHIN then
 --MM check disabled because both branches use same key
 --dohttpreq("https://raw.githubusercontent.com/fuglore/PD2-Hyper-Heisting/master/lua/networking/networkmatchmakingsteam.lua", function(page)
 --	set_tag("Hyper Heisting", find_key(page, standard_str))
@@ -50,7 +50,7 @@ if PD2THHSHIN then
 end
 
 -- Crackdown
-if deathvox then
+if _G.deathvox then
 	save_tag("Crackdown")
 	dohttpreq("https://raw.githubusercontent.com/Crackdown-PD2/deathvox/master/coredeathvox.lua", function(page)
 		--set_tag("Crackdown", find_key(page, 'deathvox.mm_key_default = \"'))
@@ -59,7 +59,7 @@ if deathvox then
 end
 
 -- Classic Heisting
-if ch_settings then
+if _G.ch_settings then
 	save_tag("Classic Heisting")
 	dohttpreq("https://raw.githubusercontent.com/gorgbus/Classic-Heisting-Reborn/main/Classic%20Heisting/states/menumainstate.lua", function(page)
 		local mod_key = "payday2_classic_heisting_" .. find_key(page, '_G._new_version = \"')
@@ -69,7 +69,7 @@ if ch_settings then
 end
 
 -- Streamlined Heisting
-if StreamHeist then
+if _G.StreamHeist then
 	save_tag("Streamlined Heisting")
 --[[dohttpreq("https://raw.githubusercontent.com/segabl/pd2-streamlined-heisting/master/mod.txt", function(page)
 	local ext = "_sh_v" .. find_key(page, '"version" : \"')
@@ -91,12 +91,12 @@ end)--]]
 end
 
 -- Original Pack
-if OriginalPackOptions then
+if _G.OriginalPackOptions then
 	save_tag("Original Pack")
 end
 
 --Eclipse
-if EclipseDebug or Eclipse then
+if _G.EclipseDebug or _G.Eclipse then
 	save_tag("Eclipse")
 	--local ext_main = "_eclipse_main"
 	local ext_dev = "_eclipse_dev"
@@ -107,16 +107,16 @@ if EclipseDebug or Eclipse then
 end
 
 --Need add MM check during Heat release (nvm it's fucking DEAD)
-if heat then
+if _G.heat then
 	save_tag("HEAT")
 end
 
-if current_key == "NQR" then
+if _G.NQR then
 	save_tag("NQR")
 end
 
 --BeardLib editor just in case
-if BLE and BLE:RunningFix() then
+if _G.BLE and _G.BLE:RunningFix() then
 	save_tag("BeardLib Editor")
 end
 

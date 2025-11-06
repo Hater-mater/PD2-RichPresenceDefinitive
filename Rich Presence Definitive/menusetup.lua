@@ -106,9 +106,13 @@ if EclipseDebug or Eclipse then
 	set_tag("Eclipse Dev", mod_key_dev)	
 end
 
---Need add MM check during Heat release
+--Need add MM check during Heat release (nvm it's fucking DEAD)
 if heat then
 	save_tag("HEAT")
+end
+
+if current_key == "NQR" then
+	save_tag("NQR")
 end
 
 --BeardLib editor just in case

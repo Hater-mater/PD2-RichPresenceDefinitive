@@ -220,9 +220,6 @@
 			end
 		end
 		
-		function WinPlatformManager:change_game_state_string()
-			
-		end
 
 		function WinPlatformManager:build_status_string(display, state, mode, heist, day, difficulty, group_count, whisper_state)
 			

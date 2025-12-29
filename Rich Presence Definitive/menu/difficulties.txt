@@ -7,6 +7,14 @@
 	"items" : [
 		{
             "type": "input",
+            "id": "ez_input",
+            "title": "ez_title",
+            "description": "how_to",
+            "callback": "ez_save",
+            "value": "ez"
+		},
+		{
+            "type": "input",
             "id": "nrml_input",
             "title": "nrml_title",
             "description": "how_to",

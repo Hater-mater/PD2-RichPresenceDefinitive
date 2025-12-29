@@ -1,3 +1,4 @@
+-- Welcome message when you launch this mod 1st time
 Hooks:PostHook(MenuMainState, "at_enter", "at_enter_RPD", function (self,old_state)
 if RichPresenceDefinitive.settings.show_message then
 	RichPresenceDefinitive.settings.show_message = false

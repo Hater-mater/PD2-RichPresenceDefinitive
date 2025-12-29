@@ -145,9 +145,29 @@
 					end
 				end
 				
-				--Eclipse: change Mayhem string to DW
-				if game_difficulty == "easy_wish" and _G.Eclipse then
-					game_difficulty = "overkill_290"
+				-- Change diffs strings for certain overhauls that change their difficulty quantity
+				-- Eclipse: Easy-> Normal -> Hard -> Overkill -> Death Wish
+				
+				if _G.Eclipse then
+					if game_difficulty == "easy_wish" then
+						game_difficulty = "overkill_290"
+					elseif game_difficulty == "overkill" then
+						game_difficulty = "hard"
+					elseif game_difficulty == "hard" then
+						game_difficulty = "normal"
+					elseif game_difficulty == "normal" then
+						game_difficulty = "easy"
+					end
+				end
+				-- NQR: Easy-> Normal -> Hard -> Overkill
+				if _G.NQR then
+					if game_difficulty == "overkill" then
+						game_difficulty = "hard"
+					elseif game_difficulty == "hard" then
+						game_difficulty = "normal"
+					elseif game_difficulty == "normal" then
+						game_difficulty = "easy"
+					end
 				end
 
 				-- Send our data to Steam
@@ -341,7 +361,7 @@
 				["#Mode_heist_chain"] =			"{#Job_%game:heist%}"..COMA.." "..BRACKET_LEFT_2..RPDC.settings.days..gap2.."%game:heist_day%"..BRACKET_RIGHT_2..COMA.." "..BRACKET_LEFT_3.."{#Difficulty_%game:difficulty%}"..ONE_DOWN_MOD..BRACKET_RIGHT_3,
 
 				-- Difficulties
-				["#Difficulty_easy"] =			"",
+				["#Difficulty_easy"] =			RPDC.settings.ez,
 				["#Difficulty_normal"] =		RPDC.settings.nrml,
 				["#Difficulty_hard"] =			RPDC.settings.hrd,
 				["#Difficulty_overkill"] =		RPDC.settings.vh,
@@ -856,7 +876,7 @@
 
 
 				-- Difficulties
-				["#Difficulty_easy"] =			"",
+				["#Difficulty_easy"] =			RPDC.settings.ez,
 				["#Difficulty_normal"] =		RPDC.settings.nrml,
 				["#Difficulty_hard"] =			RPDC.settings.hrd,
 				["#Difficulty_overkill"] =		RPDC.settings.vh,

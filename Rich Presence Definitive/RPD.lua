@@ -43,6 +43,7 @@ _G.RichPresenceDefinitive = {
 		ho = "[Holdout]",
 
 --	Difficulties	
+		ez = "E", -- Easy difficulty only reserved for overhauls that use "Easy" to name lowest diff
 		nrml = "N",
 		hrd = "H",
 		vh = "VH",
@@ -460,6 +461,10 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 		RichPresenceDefinitive.settings.ho = item:value()
 	end
 
+	MenuCallbackHandler.ez_save = function(self, item)
+		RichPresenceDefinitive.settings.ez = item:value()
+	end
+	
 	MenuCallbackHandler.nrml_save = function(self, item)
 		RichPresenceDefinitive.settings.nrml = item:value()
 	end
@@ -492,6 +497,7 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 		RichPresenceDefinitive.settings.one_down_mod = item:value()
 	end
 	
+	-- Automatically generating settings for available maps that user have
 	Hooks:Add("MenuManagerBuildCustomMenus", "RichPresenceDefinitive_hook_MenuManagerBuildCustomMenus", function(menu_manager, nodes)
 		RichPresenceDefinitive:load_settings()
 		

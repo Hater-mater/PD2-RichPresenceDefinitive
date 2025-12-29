@@ -56,6 +56,7 @@
 		
 		"RPDS_diffs_title" : "Difficulty",
 		"RPDS_diffs_desc" : "",
+		"ez_title" : "Easy",
 		"nrml_title" : "Normal",
 		"hrd_title" : "Hard",
 		"vh_title" : "Very Hard",

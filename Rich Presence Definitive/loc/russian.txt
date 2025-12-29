@@ -55,6 +55,7 @@
 		
 		"RPDS_diffs_title" : "Сложность",
 		"RPDS_diffs_desc" : "",
+		"ez_title" : "Легкий",
 		"nrml_title" : "Нормально",
 		"hrd_title" : "Сложно",
 		"vh_title" : "Очень сложно",

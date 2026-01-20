@@ -36,7 +36,6 @@
 			"callback" : "RichPresenceDefinitive_callback_toggle",
 			"value" : "steammm_tag",
 			"default_value" : true
-		},	
-		
+		}
 	]
 }

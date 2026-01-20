@@ -1,9 +1,9 @@
 {
 	"name" : "Rich Presence Definitive",
 	"description" : "",
-	"author" : "Cocksuck Software",
+	"author" : "Hater",
 	"contact" : "DM Hater or send comment on MWS",
-	"version" : "1.83",
+	"version" : "1.83.1",
 	"image" : "cursed.png",
 "hooks": [
 

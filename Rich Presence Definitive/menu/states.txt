@@ -76,6 +76,6 @@
             "description": "how_to",
             "callback": "RichPresenceDefinitive_callback_string",
             "value": "game_state_stealth"
-		},
+		}
 	]
 }

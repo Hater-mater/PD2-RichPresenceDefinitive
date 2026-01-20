@@ -7,74 +7,74 @@
 	"items" : [
 		{
             "type": "input",
-            "id": "menu_input",
+            "id": "menu",
             "title": "menu_title",
             "description": "how_to",
-            "callback": "menu_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "menu"
 		},
 		{
             "type": "input",
-            "id": "private_input",
+            "id": "private",
             "title": "private_title",
             "description": "how_to",
-            "callback": "private_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "private"
 		},
 		{
             "type": "input",
-            "id": "empty_input",
+            "id": "empty",
             "title": "empty_title",
             "description": "how_to",
-            "callback": "empty_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "empty"
 		},
 	        {
             "type": "input",
-            "id": "lobby_input",
+            "id": "lobby",
             "title": "lobby_title",
             "description": "how_to",
-            "callback": "lobby_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "lobby"
 		},
 	        {
             "type": "input",
-            "id": "ingame_input",
+            "id": "ingame",
             "title": "ingame_title",
             "description": "how_to",
-            "callback": "ingame_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "ingame"
 		},
                 {
             "type": "input",
-            "id": "payday_input",
+            "id": "payday",
             "title": "payday_title",
             "description": "how_to",
-            "callback": "payday_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "payday"
 		},
 		{
             "type": "input",
-            "id": "preplanning_input",
+            "id": "preplanning",
             "title": "preplanning_title",
             "description": "how_to",
-            "callback": "preplanning_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "preplanning"
 		},
 		{
             "type": "input",
-            "id": "game_state_loud_input",
+            "id": "game_state_loud",
             "title": "game_state_loud_title",
             "description": "how_to",
-            "callback": "game_state_loud_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "game_state_loud"
 		},
 		{
             "type": "input",
-            "id": "game_state_stealth_input",
+            "id": "game_state_stealth",
             "title": "game_state_stealth_title",
             "description": "how_to",
-            "callback": "game_state_stealth_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "game_state_stealth"
 		},
 	]

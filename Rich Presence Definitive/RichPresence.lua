@@ -257,9 +257,17 @@
 			local BRACKET_RIGHT_3 = ""
 			local COMA = ""
 			local ONE_DOWN_MOD = ""
-			local ingame_state_status = ""
 			local playerstate = ""
 			local tag_state = ""
+			local steam_mm = ""
+			
+			if RPDC.settings.steammm_tag and SystemInfo:matchmaking() == Idstring("MM_STEAM") then
+				if RPDC.settings.tag == "" then
+					steam_mm = "Steam MM"
+				else
+					steam_mm = " Steam MM"
+				end
+			end
 		
 			if string.len(tostring(RPDC.settings.players)) > 0 then
 				gap = " "
@@ -324,19 +332,16 @@
 			else
 				playerstate = ": {#Mode_%game:mode%}"..COMA.." "..BRACKET_LEFT_1..group_count.."/4"..gap..RPDC.settings.players..BRACKET_RIGHT_1				
 			end
-
 			
-			if RPDC.settings.tagless and not RPDC.settings.anonymous and not RPDC.settings.anonymous_tag then
+			if RPDC.settings.tag_mode == 2 then
 				tag_state = "{#State_%game:state%}"
-			elseif not RPDC.settings.tagless and not RPDC.settings.anonymous and not RPDC.settings.anonymous_tag then
-				tag_state = BRACKET_LEFT_TAG..RPDC.settings.tag..BRACKET_RIGHT_TAG.." {#State_%game:state%}"
-			elseif RPDC.settings.anonymous and not RPDC.settings.anonymous_tag and not RPDC.settings.tagless then
+			elseif RPDC.settings.tag_mode == 3 then
 				tag_state = " "..string.char(10).." " or string.char(10) or " "
-			elseif RPDC.settings.anonymous_tag and not RPDC.settings.anonymous and not RPDC.settings.tagless then
-				tag_state = BRACKET_LEFT_TAG..RPDC.settings.tag..BRACKET_RIGHT_TAG
+			elseif RPDC.settings.tag_mode == 4 then
+				tag_state = BRACKET_LEFT_TAG..RPDC.settings.tag..steam_mm..BRACKET_RIGHT_TAG
 			else
-				tag_state = "{#State_%game:state%}"
-			end
+				tag_state = BRACKET_LEFT_TAG..RPDC.settings.tag..steam_mm..BRACKET_RIGHT_TAG.." {#State_%game:state%}"
+			end			
 			
 			local tokens = {}
 			

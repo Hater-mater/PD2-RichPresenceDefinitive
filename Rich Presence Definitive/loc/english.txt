@@ -5,7 +5,7 @@
 		"RPDS_levels_title" : "Levels (for Crime Spree)",
 
 		"RPDS_greetings_title" : "Hello there. Thank you for installing and using RPD!",
-		"RPDS_greetings_desc" : "WARNING!!!\nThe latest major update generates a list of heist and level names automatically, the names of which can be edited in the mod settings. If you have used this mod before and changed a lot of heist/level names - use \"Heist names -> (Old method) RPD's save file\", because the old way of Steam status formation will be no longer supported",
+		"RPDS_greetings_desc" : "WARNING!!!\nThe 1.7 mod update generates a list of heist and level names automatically, the names of which can be edited in the mod settings. If you have used this mod before and changed a lot of heist/level names - use \"Heist names -> (Old method) RPD's save file\", because the old way of Steam status formation will be no longer supported",
 		"RPDS_greetings_message_confirm":  "Got it",
 		"days_title" : "Day",
 
@@ -14,10 +14,18 @@
 
 		"RPDS_use_save_file_title": "Heist names",
 		"RPDS_use_save_file_desc": "Decide what RPD will use as a source for the names of the heists",
+
+		"RPDS_tag_mode_title": "RPD Mode",
+		"RPDS_tag_mode_desc": "Change the tag and other info showcase.\nDefault - Overhaul/vanilla tag will be displayed, such as [Vanilla]\nNo Tag Mode - Tag is not displayed\nAnonymous Mode - Nothing will be displayed under PAYDAY 2\nAnonymous Mode With Tag - No status mode, nothing except your tag (e.g [Vanilla]) will be displayed",
 		
 		"menu_use_save_file_on" : "RPD's save file",
 		"menu_use_save_file_off" : "Game loc",
 		"menu_use_save_file_old" : "(Old method) RPD's save file",
+
+		"menu_tag_mode_default" : "Default",
+		"menu_tag_mode_tagless" : "No Tag Mode",
+		"menu_tag_mode_anonymous" : "Anonymous Mode",
+		"menu_tag_mode_anonymous_tag" : "Anonymous Mode With Tag",
 		
 		"RPDS_advanced_title" : "Options",
 		"RPDS_advanced_desc" : "",
@@ -29,6 +37,8 @@
 		"anonymous_tag_desc" : "No status mode, nothing except your tag (e.g [Vanilla]) will be displayed",
 		"game_state_status_title": "Show game state (Stealth or Loud)",
 		"game_state_status_desc": "Show heist state depends on in-game situation (will be displayed before heist info)",
+		"steammm_tag_title": "Show Steam MM in tag",
+		"steammm_tag_desc": "Show in tag that you use -steamMM launch option (aka using Steam matchmaking)",
 
                  
                 "RPDS_tags_title" : "Tag",

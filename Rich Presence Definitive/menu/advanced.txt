@@ -5,33 +5,20 @@
 	"description" : "RPDS_advanced_desc",
 	"back_callback" : "RichPresenceDefinitive_callback_save",
 	"items" : [
-		{
-			"type" : "toggle",
-			"id" : "tagless",
-			"title" : "tagless_title",
-			"description" : "tagless_desc",
-			"callback" : "RichPresenceDefinitive_callback_toggle",
-			"value" : "tagless",
-			"default_value" : false
-		},
-		{
-			"type" : "toggle",
-			"id" : "anonymous",
-			"title" : "anonymous_title",
-			"description" : "anonymous_desc",
-			"callback" : "RichPresenceDefinitive_callback_toggle",
-			"value" : "anonymous",
-			"default_value" : false
-		},
-		{
-			"type" : "toggle",
-			"id" : "anonymous_tag",
-			"title" : "anonymous_tag_title",
-			"description" : "anonymous_tag_desc",
-			"callback" : "RichPresenceDefinitive_callback_toggle",
-			"value" : "anonymous_tag",
-			"default_value" : false
-		},
+		{    "type" : "multiple_choice",
+			"id" : "tag_mode",
+			"title" : "RPDS_tag_mode_title",
+			"description" : "RPDS_tag_mode_desc",
+			"callback" : "RichPresenceDefinitive_callback_tag_modechoice",
+			"items" : [
+				"menu_tag_mode_default",
+				"menu_tag_mode_tagless",
+				"menu_tag_mode_anonymous",
+				"menu_tag_mode_anonymous_tag"
+			],
+			"value" : "tag_mode",
+			"default_value" : 1
+		},		
 		{
 			"type" : "toggle",
 			"id" : "game_state_status",
@@ -40,7 +27,16 @@
 			"callback" : "RichPresenceDefinitive_callback_toggle",
 			"value" : "game_state_status",
 			"default_value" : true
-		}
+		},
+		{
+			"type" : "toggle",
+			"id" : "steammm_tag",
+			"title" : "steammm_tag_title",
+			"description" : "steammm_tag_desc",
+			"callback" : "RichPresenceDefinitive_callback_toggle",
+			"value" : "steammm_tag",
+			"default_value" : true
+		},	
 		
 	]
 }

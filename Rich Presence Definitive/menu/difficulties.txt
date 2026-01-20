@@ -7,74 +7,74 @@
 	"items" : [
 		{
             "type": "input",
-            "id": "ez_input",
+            "id": "ez",
             "title": "ez_title",
             "description": "how_to",
-            "callback": "ez_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "ez"
 		},
 		{
             "type": "input",
-            "id": "nrml_input",
+            "id": "nrml",
             "title": "nrml_title",
             "description": "how_to",
-            "callback": "nrml_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "nrml"
 		},
 		{
             "type": "input",
-            "id": "hrd_input",
+            "id": "hrd",
             "title": "hrd_title",
             "description": "how_to",
-            "callback": "hrd_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "hrd"
 		},
 		{
             "type": "input",
-            "id": "vh_input",
+            "id": "vh",
             "title": "vh_title",
             "description": "how_to",
-            "callback": "vh_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "vh"
 		},
 		{
             "type": "input",
-            "id": "ovk_input",
+            "id": "ovk",
             "title": "ovk_title",
             "description": "how_to",
-            "callback": "ovk_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "ovk"
 		},
 		{
             "type": "input",
-            "id": "mh_input",
+            "id": "mh",
             "title": "mh_title",
             "description": "how_to",
-            "callback": "mh_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "mh"
 		},
 		{
             "type": "input",
-            "id": "dw_input",
+            "id": "dw",
             "title": "dw_title",
             "description": "how_to",
-            "callback": "dw_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "dw"
 		},
 		{
             "type": "input",
-            "id": "ds_input",
+            "id": "ds",
             "title": "ds_title",
             "description": "how_to",
-            "callback": "ds_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "ds"
 		},
 		{
             "type": "input",
-            "id": "one_down_mod_input",
+            "id": "one_down_mod",
             "title": "one_down_mod_title",
             "description": "how_to",
-            "callback": "one_down_mod_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "one_down_mod"
 		}
 	]

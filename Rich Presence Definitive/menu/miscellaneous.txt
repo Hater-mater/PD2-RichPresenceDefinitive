@@ -7,42 +7,42 @@
 	"items" : [
 		{
             "type": "input",
-            "id": "days_input",
+            "id": "days",
             "title": "days_title",
             "description": "days_desc",
-            "callback": "days_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "days"
 		},
 		{
             "type": "input",
-            "id": "coma_input",
+            "id": "coma",
             "title": "coma_title",
             "description": "coma_desc",
-            "callback": "coma_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "coma"
 		},
 		{
             "type": "input",
-            "id": "bracket1_input",
+            "id": "bracket1",
             "title": "bracket1_title",
             "description": "bracket_desc",
-            "callback": "bracket1_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "bracket1"
 		},
 		{
             "type": "input",
-            "id": "bracket2_input",
+            "id": "bracket2",
             "title": "bracket2_title",
             "description": "bracket_desc",
-            "callback": "bracket2_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "bracket2"
 		},
 		{
             "type": "input",
-            "id": "players_input",
+            "id": "players",
             "title": "players_title",
             "description": "players_desc",
-            "callback": "players_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "players"
 		},
 		{

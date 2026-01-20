@@ -7,18 +7,18 @@
 	"items" : [
 		{
             "type": "input",
-            "id": "cs_input",
+            "id": "cs",
             "title": "cs_title",
             "description": "how_to",
-            "callback": "cs_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "cs"
 		},
 		{
             "type": "input",
-            "id": "ho_input",
+            "id": "ho",
             "title": "ho_title",
             "description": "how_to",
-            "callback": "ho_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "ho"
 		}
 	]

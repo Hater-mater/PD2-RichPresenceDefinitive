@@ -33,10 +33,9 @@ _G.RichPresenceDefinitive = {
 		bracket_tag = true,
 		
 --	Advanced		
-		tagless = false,
-		anonymous = false,
-		anonymous_tag = false,
+		tag_mode = 1,
 		game_state_status = true,
+		steammm_tag = true,
 
 --	Modes		
 		cs = "[Crime Spree]",
@@ -52,276 +51,6 @@ _G.RichPresenceDefinitive = {
 		dw = "DW",
 		ds = "DS",
 		one_down_mod = "OD",
-
-		--Old reduntant stuff
-
---	Bain		
-		--[[art = "Art Gallery",
-		rand = "Bank Heist: Random",
-		gold = "Bank Heist: Gold",
-		depo = "Bank Heist: Deposit",
-		cash = "Bank Heist: Cash",
-		alesso = "Alesso Heist",
-		cross = "Transport: Crossroads",
-		harbour = "Transport: Harbour",
-		train = "Transport: Train Heist",
-		town = "Transport: Downtown",
-		park = "Transport: Park",
-		pass = "Transport: Underpass",
-		cars = "Car Shop",
-		dstore = "Diamond Store",
-		jewels = "Jewelry Store",
-		shadow = "Shadow Raid",
-		cook = "Cook Off",
-		gobank = "GO Bank",
-		rvd = "Reservoir Dogs",
-
---	Classics		
-		dah = "Diamond Heist",
-		pig = "Slaughterhouse",
-		panic = "Panic room",
-		bridge = "Green Bridge",
-		taxman = "Undercover",
-		mercy = "No Mercy",
-		feit = "Counterfeit",
-		fwb = "First World Bank",
-		heat = "Heat Street",
-		
---	Events	
-		ckr = "Cursed Kill Room",
-		lab = "Lab Rats",
-		prison = "Prison Nightmare",
-		shn = "Safehouse Nightmare",
-
---	Miscellaneous		
-		tut1 = "Tutorial - Stealth",
-		tut2 = "Tutorial - Loud",
-		relax = "Safehouse",
-		combat = "Safehouse Raid",
-
---	Hector
-		fs = "Firestarter",
-		rats = "Rats",
-		wd = "Watchdogs",
-
---	Jimmy		
-		boil = "Boiling Point",
-		station = "Murky Station",
-
---	Jiu Feng and Others	
-		dragon = "Dragon Heist",
-		sand = "The Ukrainian Prisoner",
-        pent = "Mountain Master",
-		ranc = "Midland Ranch",
-		trai = "Lost In Transit",
-		corp = "Hostile Takeover",
-		deep = "Crude Awakening",
-
---	Locke		
-		deal = "Alaskan Deal",
-		mount = "Beneath The Mountain",
-		birth = "Birth Of Sky",
-		crossing = "Border Crossing",
-		crystals = "Border Crystals",
-		tijuana = "Breakfast In Tijuana",
-		feds = "Breakin' Feds",
-		brook = "Brooklyn Bank",
-		hell = "Hell's Island",
-		rock = "Henry's Rock",
-		auction = "Shacklethorne Auction",
-		white = "White House",
-
---	The Butcher		
-		scar = "Scarface Mansion",
-		dock = "The Bomb: Dockyard",
-		forest = "The Bomb: Forest",
-
---	The Continental		
-		tenten = "Brooklyn 10-10",
-		yacht = "Yacht",
-
---	The Dentist		
-		hox = "Hoxton Breakout",
-		hm = "Hotline Miami",
-		ggc = "Golden Grin Casino",
-		reven = "Hoxton Revenge",
-		big = "Big Bank",
-		diam = "The Diamond",
-
---	The Elephant		
-		oil = "Big Oil",
-		day = "Election Day",
-		frame = "Framing Frame",
-		biker = "The Biker Heist",
-
---	Vlad		
-		shock = "Aftershock",
-        chca = "Black Cat",
-		buluc = "Buluc's Mansion",
-		four = "Four Stores",
-		goat = "Goat Simulator",
-		mall = "Mallcrasher",
-		melt = "Meltdown",
-		club = "Nightclub",
-		martin = "San Martin Bank",
-		santa = "Santa's Workshop",
-		stealing = "Stealing Xmas",
-		job = "Ukrainian Job",
-		xmas = "White Xmas",
-		
---	ResMod and Heat
-		feds_xmas = "Breakin' Feds Xmas",
-		hox_xmas = "Hoxton Breakout Xmas",
-		burn = "Burnout",
-		wet = "Wetwork",
-		dog = "Doghouse",
-        junk = "Watchful Eyes",
-        bluewave = "Bluewave",
-		narr_friday = "Crashing Capitol",
-		nightmare_lvl = "The Old Safehouse",
-		skmc_mad = "DRAK R&D Laboratories",
-		bex_heat = "San Martin Remixed",
-		firestarter_heat = "Firestarter Remixed",
-		alex_remix = "Rats Remixed",
-		ukrainian_job_prof = "Ukrainian Job Remixed",
-		four_stores_remixed = "Four Stores: Remixed",
-		welcome_to_the_jungle_wrapper_prof_remix = "Big Oil Remixed",
-		train_rant = "Train Heist: Encore",
-		
---	Crackdown
-		branchbank_cash_cd = "Bank Heist Cash: Cracked",
-		family_cd = "Diamond Store: Cracked",
-		kosugi_cd = "Shadow Raid: Cracked",
-		jolly_cd = "Aftershock: Cracked",
-		spa_cd = "Brooklyn 10-10: Cracked",
-		no_mercy_ranted_290 = "No Mercy: Cracked",
-		wwh_cd = "Alaskan Deal: Cracked",
-
---	OG Pack
-		op_bank_gold = "Bank Heist: Gold",
-		op_bank = "Bank Heist",
-		op_harbour = "Transport: Harbour",
-		op_park = "Transport: Park",
-		op_town = "Transport: Downtown",
-		op_pass = "Transport: Underpass",
-		op_cross = "Transport: Crossroads",
-		op_watchdogs = "Watchdogs",
-		op_ukrainian = "Ukrainian Job",
-		op_fire = "Firestarter",
-		op_rats = "Rats",
-		op_frame = "Framing Frame",
-		op_oil = "Big Oil",
-		op_election = "Election Day",
-		op_mia = "Hotline Miami",
-		op_hox = "Hoxton Breakout",
-		op_peta = "Goat Simulator",
-		op_born = "Birth Of The Sky",
-		op_kenaz = "Golden Grin Casino",
-		op_rvd = "Reservoir Dogs",
-		op_kosugi = "Shadow Raid",
-
---	Custom
-		ghill = "All Ghilled Up",
-		zm_kino =					"Kino Der Minetoten",
-		zm_house =					"Zombie House",
-		broken_arrow =			"Broken Arrow",
-		zm_the_forest =			"Wald Der Untoten",
-		hb_zombies =	"Zombie Breakout",
-		zm_arena =					"Zombies Arena",
-		zm_dah =					"Garnet Group Tower",			
-		tlhs = "The Late Holiday Special",
-		virtual =					"Ready Player None",
-		mc_jewlerystore =			"Jewelry Crafters",
-		mcparkour =				"Simple Fun Platforming",
-		eclipse =					"Project Eclipse", 
-		eclipse_research_facility = "Project Eclipse: Eclipse Research Facility",
-		ascension =				"Project Eclipse: Ascension",
-		infinitebank =				"First World Tower",
-		heist_runner =				"Diamond Runners",
-		fourmorestores =		"Four More Stores",
-		daymare =					"Hells Nightmare",
-		tonisn1 =					"Grand Harvest",
-		ub =		"Underground_Bargains",
-		red_money =				"Red Money",
-		lpb = "Local Postal Bank",
-		hidden_vault =				"Hidden Vault", 
-		prove = "Proving Grounds",        
-		stalk = "Stalk Fraud",
-		spawner = "Enemy Spawner",
-		funds = "Election Funds",
-		south = "Harvest & Trustee: Southern Branch",
-		north = "Harvest & Trustee: Northern Branch",
-		csoffice = "Office Strike",
-		dwn = "Deep Inside",
-		snp = "Sniper Assassin",
-		trop = "Tropical Treasure",
-		toncont = "Armored Transport: Atrium Redux",
-		tonis2 = "Triple Threat",
-		hardware_store = "Hardware Store",
-		avalonshadow = "Avalon's Shadow",
-		jambank = "The Botched Bank Heist",
-		vrc = "A Very Richie Christmas",
-		tonmapjam22n = "Hard Cash",
-		despacito2redux = "A Strange Underpass",
-		just_uno = "Legally I Cannot Call This UNO",
-		just_uno_comfy = "LICCT UNO Comfy Edition",
-		physics = "Boworks",
-		parable = "The Pain Parable",
-		santa_pain = "The Late Holiday Special",
-		alley = "Armsdeal: Alleyway",
-		cargo = "Cragoship Raid",
-		raiders = "Safehouse Raiders",
-		lotus = "Golden Lotus Bank",
-		liang = "An End To Liang",
-		knock = "Knockover: Jewelry Store",
-		rogue = "Rogue Company",
-		blood = "Blood Money",
-		fuel = "Fueled Feud",
-		triad = "Triad Takedown Yacht Heist",
-		lit = "California Heat",
-		lit_bonus = "Almir's Games",
-		gensecraid = "GenSec HQ Raid",
-		bnktower = "GenSec H.I.V.E",
-		skmc_ovengrill = "Ovengrill Hardware",
-		ganado = "The Village",
-		shore_deal_bank = "Shore Deal Bank",
-		agencyrun = "Rundown Agency",
-		ahop = "A House Of Pleasure",
-		constantine_mobsterclub_nar = "Aurora Club",
-		constantine_butcher_nar = "Butchers Bay",
-		rusd = "Cold Stones",
-		deadcargo = "Deadly Cargo",
-		constantine_apartment_nar = "Concrete Jungle",
-		crimepunish = "Crime And Punishment",
-		constantine_mex_nar = "End Of An Era",
-		flatline_nar = "Flatline",
-		constantine_harbor_nar = "Harboring A Grudge",
-		Hunter_narrative = "Hunter And Hunted",
-		rusw = "Scorched Earth",
-		constantine_smackdown_nar = "Smackdown",
-		constantine_clubhouse_nar = "Smugglers Den",
-		constantine_bank_nar = "The Pacific Bank",
-		ttr_yct_nar = "Triad Takedown",
-		constantine_smackdown2_nar = "Truck Hustle",
-		constantine_ondisplay_nar = "On Display",
-		constantine_policestation_nar = "Precinct Raid",
-		constantine_mansion_nar = "Kozlov's Mansion",
-		constantine_gunrunnerclubhouse_nar = "Gunrunner Clubhouse",
-		constantine_gold_nar = "Golden Shakedown",
-		constantine_restaurant_nar = "Blood In The Water",
-		constantine_wintersniper_nar = "In The Crosshairs",
-		constantine_murkyairport_nar = "Murky Airport",
-		constantine_resort_nar = "Scarlett Resort",
-		constantine_penthouse_nar = "Penthouse Crasher",
-		constantine_jungle_nar = "Welcome To The Jungle",
-		constantine_cart_con_nar = "Cartel Transport: Construction Site",
-		constantine_cart_dwn_nar = "Cartel Transport: Downtown",
-		constantine_cart_train_nar = "Cartel Transport: Train",
-		constantine_dwtd_nar = "Dance With The Devil",
-		constantine_suburbia_nar = "Early Birds",
-		constantine_fiesta_nar = "Fiesta",
-		constantine_yacht_nar = "Showdown",
-		--]]
 	},
 }
 -- Save/Load functions
@@ -371,7 +100,15 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 	MenuCallbackHandler.RichPresenceDefinitive_callback_savefilechoice = function(self, item)
 		RichPresenceDefinitive.settings.use_save_file = item:value()
 	end
-
+	
+	MenuCallbackHandler.RichPresenceDefinitive_callback_tag_modechoice = function(self, item)
+		RichPresenceDefinitive.settings.tag_mode = item:value()
+	end	
+	
+	MenuCallbackHandler.RichPresenceDefinitive_callback_string = function(self, item)
+		RichPresenceDefinitive.settings[item:name()] = item:value()
+	end
+	
 	MenuCallbackHandler.RichPresenceDefinitive_callback_save = function(self, item)
 		RichPresenceDefinitive:save_settings()
 	end
@@ -385,117 +122,6 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 	MenuHelper:LoadFromJsonFile(RichPresenceDefinitive.mod_path.."menu/miscellaneous.txt", RichPresenceDefinitive, RichPresenceDefinitive.settings)
 	MenuHelper:LoadFromJsonFile(RichPresenceDefinitive.mod_path.."menu/tags.txt", RichPresenceDefinitive, RichPresenceDefinitive.settings)
 	
-	MenuCallbackHandler.heist_save = function(self, item)
-		RichPresenceDefinitive.settings[item:name()] = item:value()
-	end
-	
-	MenuCallbackHandler.use_save_file = function(self, item)
-		RichPresenceDefinitive.settings.use_save_file = item:value()
-	end
-	
-	MenuCallbackHandler.menu_save = function(self, item)
-		RichPresenceDefinitive.settings.menu = item:value()
-	end
-
-	MenuCallbackHandler.private_save = function(self, item)
-		RichPresenceDefinitive.settings.private = item:value()
-	end
-	
-	MenuCallbackHandler.empty_save = function(self, item)
-		RichPresenceDefinitive.settings.empty = item:value()
-	end
-	
-	MenuCallbackHandler.lobby_save = function(self, item)
-		RichPresenceDefinitive.settings.lobby = item:value()
-	end
-	
-	MenuCallbackHandler.ingame_save = function(self, item)
-		RichPresenceDefinitive.settings.ingame = item:value()
-	end
-	
-	MenuCallbackHandler.payday_save = function(self, item)
-		RichPresenceDefinitive.settings.payday = item:value()
-	end
-	
-	MenuCallbackHandler.preplanning_save = function(self, item)
-		RichPresenceDefinitive.settings.preplanning = item:value()
-	end
-	
-	MenuCallbackHandler.game_state_loud_save = function(self, item)
-		RichPresenceDefinitive.settings.game_state_loud = item:value()
-	end
-	
-	MenuCallbackHandler.game_state_stealth_save = function(self, item)
-		RichPresenceDefinitive.settings.game_state_stealth = item:value()
-	end
-	
-	MenuCallbackHandler.customtag_save = function(self, item)
-		RichPresenceDefinitive.settings.customtag = item:value()
-	end
-
-	MenuCallbackHandler.days_save = function(self, item)
-		RichPresenceDefinitive.settings.days = item:value()
-	end
-	
-	MenuCallbackHandler.coma_save = function(self, item)
-		RichPresenceDefinitive.settings.coma = item:value()
-	end
-
-	MenuCallbackHandler.bracket1_save = function(self, item)
-		RichPresenceDefinitive.settings.bracket1 = item:value()
-	end
-	
-	MenuCallbackHandler.bracket2_save = function(self, item)
-		RichPresenceDefinitive.settings.bracket2 = item:value()
-	end
-	
-	MenuCallbackHandler.players_save = function(self, item)
-		RichPresenceDefinitive.settings.players = item:value()
-	end	
-
-	MenuCallbackHandler.cs_save = function(self, item)
-		RichPresenceDefinitive.settings.cs = item:value()
-	end
-	
-	MenuCallbackHandler.ho_save = function(self, item)
-		RichPresenceDefinitive.settings.ho = item:value()
-	end
-
-	MenuCallbackHandler.ez_save = function(self, item)
-		RichPresenceDefinitive.settings.ez = item:value()
-	end
-	
-	MenuCallbackHandler.nrml_save = function(self, item)
-		RichPresenceDefinitive.settings.nrml = item:value()
-	end
-	
-	MenuCallbackHandler.hrd_save = function(self, item)
-		RichPresenceDefinitive.settings.hrd = item:value()
-	end
-	
-	MenuCallbackHandler.vh_save = function(self, item)
-		RichPresenceDefinitive.settings.vh = item:value()
-	end
-	
-	MenuCallbackHandler.ovk_save = function(self, item)
-		RichPresenceDefinitive.settings.ovk = item:value()
-	end
-	
-	MenuCallbackHandler.mh_save = function(self, item)
-		RichPresenceDefinitive.settings.mh = item:value()
-	end
-	
-	MenuCallbackHandler.dw_save = function(self, item)
-		RichPresenceDefinitive.settings.dw = item:value()
-	end
-
-	MenuCallbackHandler.ds_save = function(self, item)
-		RichPresenceDefinitive.settings.ds = item:value()
-	end
-	
-	MenuCallbackHandler.one_down_mod_save = function(self, item)
-		RichPresenceDefinitive.settings.one_down_mod = item:value()
-	end
 	
 	-- Automatically generating settings for available maps that user have
 	Hooks:Add("MenuManagerBuildCustomMenus", "RichPresenceDefinitive_hook_MenuManagerBuildCustomMenus", function(menu_manager, nodes)
@@ -547,7 +173,7 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 					id = job_id,
 					title = job_data.name_id,
 					desc = "how_to",
-					callback = "heist_save",
+					callback = "RichPresenceDefinitive_callback_string",
 					value = custom_job_name,
 					menu_id = menu_id
 				})
@@ -581,7 +207,7 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 					id = level_id,
 					title = level.name_id,
 					desc = "how_to",
-					callback = "heist_save",
+					callback = "RichPresenceDefinitive_callback_string",
 					value = custom_level_name,
 					menu_id = "RPDS_levels_options"
 				})

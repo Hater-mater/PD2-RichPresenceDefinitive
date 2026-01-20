@@ -23,10 +23,10 @@
 		},
 		{
             "type": "input",
-            "id": "customtag_input",
+            "id": "customtag",
             "title": "customtag_title",
             "description": "how_to",
-            "callback": "customtag_save",
+            "callback": "RichPresenceDefinitive_callback_string",
             "value": "customtag"
 		}
 		

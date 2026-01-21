@@ -3,7 +3,7 @@
 	"description" : "",
 	"author" : "Hater",
 	"contact" : "DM Hater or send comment on MWS",
-	"version" : "1.83.2",
+	"version" : "1.832",
 	"image" : "cursed.png",
 "hooks": [
 
@@ -24,4 +24,5 @@
 		}
 	]
 }
+
 

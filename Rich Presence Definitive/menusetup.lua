@@ -115,10 +115,5 @@ if _G.NQR then
 	save_tag("NQR")
 end
 
---BeardLib editor just in case
-if _G.BLE and _G.BLE:RunningFix() then
-	save_tag("BeardLib Editor")
-end
-
 else save_tag(tostring(RichPresenceDefinitive.settings.customtag))
 end

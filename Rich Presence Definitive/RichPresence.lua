@@ -1,5 +1,6 @@
 -- Define different difficulty showcase table here
 local difficulty_showcase_stars = {
+	"",
 	"☆☆☆☆☆☆",
 	"★☆☆☆☆☆",
 	"★★☆☆☆☆",

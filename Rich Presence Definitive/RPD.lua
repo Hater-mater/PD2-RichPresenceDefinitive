@@ -5,6 +5,8 @@ _G.RichPresenceDefinitive = {
 	settings = {
 		show_message = true,
 		use_save_file = 1,
+		difficulty_showcase = 1,
+		od_showcase = 1,
 --	Overhauls tags
 		tag = "",
 		autotag = true,
@@ -99,6 +101,14 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 	
 	MenuCallbackHandler.RichPresenceDefinitive_callback_savefilechoice = function(self, item)
 		RichPresenceDefinitive.settings.use_save_file = item:value()
+	end
+	
+	MenuCallbackHandler.RichPresenceDefinitive_callback_difficultyshowcase = function(self, item)
+		RichPresenceDefinitive.settings.difficulty_showcase = item:value()
+	end
+	
+	MenuCallbackHandler.RichPresenceDefinitive_callback_od_showcase = function(self, item)
+		RichPresenceDefinitive.settings.od_showcase = item:value()
 	end
 	
 	MenuCallbackHandler.RichPresenceDefinitive_callback_tag_modechoice = function(self, item)

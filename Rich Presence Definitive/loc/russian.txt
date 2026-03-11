@@ -13,18 +13,32 @@
 
 		"RPDS_use_save_file_title": "Имена ограблений",
 		"RPDS_use_save_file_desc": "Выберите, что RPD будет использовать в качестве источника названий ограблений",
-
-		"RPDS_tag_mode_title": "Режим RPD",
-		"RPDS_tag_mode_desc": "Меняет отображение тега и другой информации.\nСтандартный - Показывает тег ваниллы/оверхолов, например [Vanilla]\nБез тега - Убирает тег\nАнонимный - Убирает текст под PAYDAY 2\nАнонимный с тегом - Будет отображаться только тег (т.е. [Vanilla])",
-
+		
 		"menu_use_save_file_on" : "Сейв RPD",
 		"menu_use_save_file_off" : "Локализация игры",
 		"menu_use_save_file_old" : "(Старый метод) Сейв RPD",
+
+		"RPDS_tag_mode_title": "Режим RPD",
+		"RPDS_tag_mode_desc": "Меняет отображение тега и другой информации.\nСтандартный - Показывает тег ваниллы/оверхолов, например [Vanilla]\nБез тега - Убирает тег\nАнонимный - Убирает текст под PAYDAY 2\nАнонимный с тегом - Будет отображаться только тег (т.е. [Vanilla])",
 
 		"menu_tag_mode_default" : "Стандартный",
 		"menu_tag_mode_tagless" : "Без тега",
 		"menu_tag_mode_anonymous" : "Анонимный",
 		"menu_tag_mode_anonymous_tag" : "Анонимный с тегом",
+		
+		"RPDS_difficulty_showcase_title": "Отображение сложности",
+		"RPDS_difficulty_showcase_desc": "Выберите, как RPD будет отображать сложность",
+		
+		"menu_difficulty_showcase_text" : "Текст",
+		"menu_difficulty_showcase_stars" : "Звезды",
+		
+		"RPDS_od_showcase_title": "Отображение One Down",
+		"RPDS_od_showcase_desc": "Выберите, как RPD будет отображать модификатор One Down",
+		
+		"menu_difficulty_showcase_text" : "Текст",
+		"menu_difficulty_showcase_skull_and_bones" : "Череп и кости",
+		"menu_difficulty_showcase_sunglasses" : "Солнечные очки",
+		
 		
 		"RPDS_advanced_title" : "Опции",
 		"RPDS_advanced_desc" : "",
@@ -39,7 +53,7 @@
 		"steammm_tag_title": "Показывать Steam MM в теге",
 		"steammm_tag_desc": "В теге будет отображаться, что Вы используете опцию параметра запуска -steamMM (Используете только Steam матчмекинг)",
 
-                "RPDS_tags_title" : "Тэг",
+        "RPDS_tags_title" : "Тэг",
 		"RPDS_tags_desc" : "",
 		"autotag_title" : "Автотэг",
 		"autotag_desc" : "Мод будет сам ставить тэг, в зависимости в какой оверхол Вы сейчас играете (или ваниллу)",
@@ -56,10 +70,10 @@
 		"menu_title" : "Главное меню",
 		"private_title" : "Приватное лобби",
 		"empty_title" : "Пустое лобби",
-                "lobby_title" : "Лобби",
-                "ingame_title" : "В игре",
-                "payday_title" : "Подсчет наград",
-                "preplanning_title" : "Препланнинг",
+        "lobby_title" : "Лобби",
+        "ingame_title" : "В игре",
+        "payday_title" : "Подсчет наград",
+        "preplanning_title" : "Препланнинг",
 		"game_state_loud_title": "Громко",
 		"game_state_stealth_title": "Тихо",
 		

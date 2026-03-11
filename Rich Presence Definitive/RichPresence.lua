@@ -1,3 +1,37 @@
+-- Define different difficulty showcase table here
+local difficulty_showcase_stars = {
+	"☆☆☆☆☆☆",
+	"★☆☆☆☆☆",
+	"★★☆☆☆☆",
+	"★★★☆☆☆",
+	"★★★★☆☆",
+	"★★★★★☆",
+	"★★★★★★"
+}
+
+if _G.Eclipse then
+	difficulty_showcase_stars = {
+		"☆☆☆☆",
+		"★☆☆☆",
+		"★★☆☆",
+		"★★★☆",
+		"★★★☆",
+		"★★★★",
+		"★★★★",
+	}
+elseif _G.NQR then
+	difficulty_showcase_stars = {
+		"☆☆☆",
+		"★☆☆",
+		"★★☆",
+		"★★★",
+		"★★★",
+		"★★★",
+		"★★★"
+	}
+end
+
+
 	if RequiredScript == "lib/managers/platformmanager" then
 		core:module("PlatformManager")
 
@@ -326,6 +360,17 @@
 			else
 			    ONE_DOWN_MOD = ""
 			end
+			
+			-- OD replacement if playing in Resmod/Eclipse with PJ modifier and OD string is default one
+			if ONE_DOWN_MOD == " OD" and ( _G.Eclipse or _G.SC) then
+				ONE_DOWN_MOD = " PJ"
+			end
+			
+			if RPDC.settings.od_showcase == 2 and Global.game_settings.one_down then
+				ONE_DOWN_MOD = " 🕱"
+			elseif RPDC.settings.od_showcase == 3 and Global.game_settings.one_down then
+				ONE_DOWN_MOD = " 🕶"
+			end
 
 			if Global.game_settings.single_player then
 				playerstate = ": {#Mode_%game:mode%}"
@@ -341,7 +386,25 @@
 				tag_state = BRACKET_LEFT_TAG..RPDC.settings.tag..steam_mm..BRACKET_RIGHT_TAG
 			else
 				tag_state = BRACKET_LEFT_TAG..RPDC.settings.tag..steam_mm..BRACKET_RIGHT_TAG.." {#State_%game:state%}"
-			end			
+			end
+			
+			local difficulties_table = {
+				RPDC.settings.ez,
+				RPDC.settings.nrml,
+				RPDC.settings.hrd,
+				RPDC.settings.vh,
+				RPDC.settings.ovk,
+				RPDC.settings.mh,
+				RPDC.settings.dw,
+				RPDC.settings.ds,
+			}		
+
+			-- Different difficulty showcase
+			if RPDC.settings.difficulty_showcase == 2 and difficulty then
+				for i = 1, 8 do
+					difficulties_table[i] = difficulty_showcase_stars[i]
+				end
+			end
 			
 			local tokens = {}
 			
@@ -366,14 +429,14 @@
 				["#Mode_heist_chain"] =			"{#Job_%game:heist%}"..COMA.." "..BRACKET_LEFT_2..RPDC.settings.days..gap2.."%game:heist_day%"..BRACKET_RIGHT_2..COMA.." "..BRACKET_LEFT_3.."{#Difficulty_%game:difficulty%}"..ONE_DOWN_MOD..BRACKET_RIGHT_3,
 
 				-- Difficulties
-				["#Difficulty_easy"] =			RPDC.settings.ez,
-				["#Difficulty_normal"] =		RPDC.settings.nrml,
-				["#Difficulty_hard"] =			RPDC.settings.hrd,
-				["#Difficulty_overkill"] =		RPDC.settings.vh,
-				["#Difficulty_overkill_145"] =	RPDC.settings.ovk,
-				["#Difficulty_easy_wish"] =		RPDC.settings.mh,
-				["#Difficulty_overkill_290"] =	RPDC.settings.dw,
-				["#Difficulty_sm_wish"] =		RPDC.settings.ds,
+				["#Difficulty_easy"] =			difficulties_table[1],
+				["#Difficulty_normal"] =		difficulties_table[2],
+				["#Difficulty_hard"] =			difficulties_table[3],
+				["#Difficulty_overkill"] =		difficulties_table[4],
+				["#Difficulty_overkill_145"] =	difficulties_table[5],
+				["#Difficulty_easy_wish"] =		difficulties_table[6],
+				["#Difficulty_overkill_290"] =	difficulties_table[7],
+				["#Difficulty_sm_wish"] =		difficulties_table[8],
 
 				["#Job_short"] = 				"The Basics",
 				["#Job_short1"] = 				RPDC.settings.tut1,
@@ -881,14 +944,14 @@
 
 
 				-- Difficulties
-				["#Difficulty_easy"] =			RPDC.settings.ez,
-				["#Difficulty_normal"] =		RPDC.settings.nrml,
-				["#Difficulty_hard"] =			RPDC.settings.hrd,
-				["#Difficulty_overkill"] =		RPDC.settings.vh,
-				["#Difficulty_overkill_145"] =	RPDC.settings.ovk,
-				["#Difficulty_easy_wish"] =		RPDC.settings.mh,
-				["#Difficulty_overkill_290"] =	RPDC.settings.dw,
-				["#Difficulty_sm_wish"] =		RPDC.settings.ds,
+				["#Difficulty_easy"] =			difficulties_table[1],
+				["#Difficulty_normal"] =		difficulties_table[2],
+				["#Difficulty_hard"] =			difficulties_table[3],
+				["#Difficulty_overkill"] =		difficulties_table[4],
+				["#Difficulty_overkill_145"] =	difficulties_table[5],
+				["#Difficulty_easy_wish"] =		difficulties_table[6],
+				["#Difficulty_overkill_290"] =	difficulties_table[7],
+				["#Difficulty_sm_wish"] =		difficulties_table[8],
 			}
 			
 			end

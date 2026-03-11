@@ -16,6 +16,31 @@
 			],
 			"value" : "use_save_file",
 			"default_value" : 1
+	},
+	{    "type" : "multiple_choice",
+			"id" : "difficulty_showcase",
+			"title" : "RPDS_difficulty_showcase_title",
+			"description" : "RPDS_difficulty_showcase_desc",
+			"callback" : "RichPresenceDefinitive_callback_difficultyshowcase",
+			"items" : [
+				"menu_difficulty_showcase_text",
+				"menu_difficulty_showcase_stars"
+			],
+			"value" : "difficulty_showcase",
+			"default_value" : 1
+	},
+	{    "type" : "multiple_choice",
+			"id" : "od_showcase",
+			"title" : "RPDS_od_showcase_title",
+			"description" : "RPDS_od_showcase_desc",
+			"callback" : "RichPresenceDefinitive_callback_od_showcase",
+			"items" : [
+				"menu_difficulty_showcase_text",
+				"menu_difficulty_showcase_skull_and_bones",
+				"menu_difficulty_showcase_sunglasses"
+			],
+			"value" : "od_showcase",
+			"default_value" : 1
 	}
 	]
 }

@@ -15,17 +15,31 @@
 		"RPDS_use_save_file_title": "Heist names",
 		"RPDS_use_save_file_desc": "Decide what RPD will use as a source for the names of the heists",
 
-		"RPDS_tag_mode_title": "RPD Mode",
-		"RPDS_tag_mode_desc": "Change the tag and other info showcase.\nDefault - Overhaul/vanilla tag will be displayed, such as [Vanilla]\nNo Tag Mode - Tag is not displayed\nAnonymous Mode - Nothing will be displayed under PAYDAY 2\nAnonymous Mode With Tag - No status mode, nothing except your tag (e.g [Vanilla]) will be displayed",
-		
 		"menu_use_save_file_on" : "RPD's save file",
 		"menu_use_save_file_off" : "Game loc",
 		"menu_use_save_file_old" : "(Old method) RPD's save file",
-
+		
+		"RPDS_tag_mode_title": "RPD Mode",
+		"RPDS_tag_mode_desc": "Change the tag and other info showcase.\nDefault - Overhaul/vanilla tag will be displayed, such as [Vanilla]\nNo Tag Mode - Tag is not displayed\nAnonymous Mode - Nothing will be displayed under PAYDAY 2\nAnonymous Mode With Tag - No status mode, nothing except your tag (e.g [Vanilla]) will be displayed",
+		
 		"menu_tag_mode_default" : "Default",
 		"menu_tag_mode_tagless" : "No Tag Mode",
 		"menu_tag_mode_anonymous" : "Anonymous Mode",
 		"menu_tag_mode_anonymous_tag" : "Anonymous Mode With Tag",
+		
+		"RPDS_difficulty_showcase_title": "Difficulty Showcase",
+		"RPDS_difficulty_showcase_desc": "Decide what RPD will use for showcasing difficulty",
+		
+		"menu_difficulty_showcase_text" : "Text",
+		"menu_difficulty_showcase_stars" : "Stars",
+		
+		"RPDS_od_showcase_title": "One Down showcase",
+		"RPDS_od_showcase_desc": "Decide what RPD will use for showcasing One Down modifier",
+		
+		"menu_difficulty_showcase_text" : "Text",
+		"menu_difficulty_showcase_skull_and_bones" : "Skull and Bones",
+		"menu_difficulty_showcase_sunglasses" : "Sunglasses",
+		
 		
 		"RPDS_advanced_title" : "Options",
 		"RPDS_advanced_desc" : "",
@@ -40,8 +54,8 @@
 		"steammm_tag_title": "Show Steam MM in tag",
 		"steammm_tag_desc": "Show in tag that you use -steamMM launch option (aka using Steam matchmaking)",
 
-                 
-                "RPDS_tags_title" : "Tag",
+
+        "RPDS_tags_title" : "Tag",
 		"RPDS_tags_desc" : "",
 		"autotag_title" : "Auto tag",
 		"autotag_desc" : "The mod will put the tag itself, depending on which overhaul you are playing (or vanilla)",

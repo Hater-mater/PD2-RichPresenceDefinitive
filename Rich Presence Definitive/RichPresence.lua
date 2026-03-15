@@ -151,7 +151,7 @@ end
 				
 				local whisper_state = ""
 				if game_state == "playing" and RPDC.settings.game_state_status then
-					if managers and managers.groupai then
+					if managers and managers.groupai and not managers.skirmish:is_skirmish() then
 						if managers.groupai:state():whisper_mode() then
 							whisper_state = " ("..RPDC.settings.game_state_stealth..") "
 						else

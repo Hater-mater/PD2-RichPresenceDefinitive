@@ -3,7 +3,7 @@
 	"description" : "Customize your PD2 Steam Rich Presence",
 	"author" : "Hater",
 	"contact" : "hater_mater in Discord",
-	"version" : "1.841",
+	"version" : "1.842",
 	"image" : "cursed.png",
 	"hooks": [
 		{"hook_id": "lib/states/menumainstate",	"script_path": "RPD.lua"},

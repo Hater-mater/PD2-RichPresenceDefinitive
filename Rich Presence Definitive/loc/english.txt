@@ -71,10 +71,10 @@
 		"menu_title" : "Main Menu",
 		"private_title" : "Private Lobby",
 		"empty_title" : "Empty Lobby",
-                "lobby_title" : "Lobby",
-                "ingame_title" : "In-game",
-                "payday_title" : "Payday",
-                "preplanning_title" : "Preplanning",
+        "lobby_title" : "Lobby",
+        "ingame_title" : "In-game",
+        "payday_title" : "Payday",
+        "preplanning_title" : "Preplanning",
 		"game_state_loud_title": "Loud",
 		"game_state_stealth_title": "Stealth",
 		
@@ -93,6 +93,7 @@
 		"RPDS_modes_title" : "Modes",
 		"RPDS_modes_desc" : "",
 		"cs_title" : "Crime Spree",
+		"cs_rank_title" : "CS Rank",
 		"ho_title" : "Holdout",
 		
 		

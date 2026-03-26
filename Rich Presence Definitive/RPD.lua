@@ -41,6 +41,7 @@ _G.RichPresenceDefinitive = {
 
 --	Modes		
 		cs = "[Crime Spree]",
+		cs_rank = "Rank",
 		ho = "[Holdout]",
 
 --	Difficulties	
@@ -234,24 +235,6 @@ Hooks:Add("MenuManagerInitialize", "RichPresenceDefinitive_hook_MenuManagerIniti
 		nodes["RPDS_skirmish_options"] = MenuHelper:BuildMenu("RPDS_skirmish_options", {back_callback = "RichPresenceDefinitive_callback_save"})
 		MenuHelper:AddMenuItem(nodes["custom_names_editor"], "RPDS_skirmish_options", "menu_cn_skirmish")
 	end)
-	
-	
-	--[[MenuCallbackHandler.RPDC_OP_info_clbk = function(self)
-		local op_info_title_id
-		local op_info_desc_id
-		if managers.player then
-			op_info_title_id = "op_info_title"
-			op_info_desc_id = "op_info_desc"
-		end
-		
-		QuickMenu:new(managers.localization:text(op_info_title_id),managers.localization:text(op_info_desc_id),{
-			{
-				text = "Close",
-				is_cancel_button = true
-			}
-		},true)
-	end--]]	
-
 end)
 
 --Loading loc files dynamically

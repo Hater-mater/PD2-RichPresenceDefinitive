@@ -71,16 +71,14 @@ end
 						local num_players = managers.network:session():amount_of_alive_players()
 
 						-- Determine game state
-						if _G.game_state_machine and (_G.game_state_machine:current_state_name() == "menu_main" or _G.game_state_machine:current_state_name() == "ingame_lobby_menu") then
+						if self._current_rich_presence == "MPLobby" then
 							game_state = "lobby"
 						elseif self._current_rich_presence == "SPEnd" or self._current_rich_presence == "MPEnd" then
 							game_state = "payday"
 						elseif num_players > 0 then
 							game_state = "playing"
-							
 						else game_state = "preplanning"
 						end
-						
 
 						-- Popululate gamemode, heist and difficulty
 						if RPDC.settings.use_save_file == 1 or RPDC.settings.use_save_file == 3 then -- RPD Save File
@@ -306,60 +304,39 @@ end
 		
 			if string.len(tostring(RPDC.settings.players)) > 0 then
 				gap = " "
-			else
-				gap = ""
 			end
 
 			if string.len(tostring(RPDC.settings.days)) > 1 then
 				gap2 = " "
-			else
-				gap2 = ""
-			end
-			
+			end			
 			
 			if RPDC.settings.bracket_tag then
 				BRACKET_LEFT_TAG = RPDC.settings.bracket1
 				BRACKET_RIGHT_TAG = RPDC.settings.bracket2
-			else
-				BRACKET_LEFT_TAG = ""
-				BRACKET_RIGHT_TAG = ""
 			end
 
 			if RPDC.settings.bracket_counter then
 				BRACKET_LEFT_1 = RPDC.settings.bracket1
 				BRACKET_RIGHT_1 = RPDC.settings.bracket2
-			else
-				BRACKET_LEFT_1 = ""
-				BRACKET_RIGHT_1 = ""
 			end
 			
 			if RPDC.settings.bracket_days then
 				BRACKET_LEFT_2 = RPDC.settings.bracket1
 				BRACKET_RIGHT_2 = RPDC.settings.bracket2
-			else
-				BRACKET_LEFT_2 = ""
-				BRACKET_RIGHT_2 = ""
 			end
 			
 			if RPDC.settings.bracket_diffs then
 				BRACKET_LEFT_3 = RPDC.settings.bracket1
 				BRACKET_RIGHT_3 = RPDC.settings.bracket2
-			else
-				BRACKET_LEFT_3 = ""
-				BRACKET_RIGHT_3 = ""
 			end
 		
 			if RPDC.settings.coma ~= "" then
 				COMA = " "..RPDC.settings.coma
-			else
-				COMA = ""
 			end
 			
 			
 			if Global.game_settings.one_down and RPDC.settings.one_down_mod ~= "" then 
 			    ONE_DOWN_MOD = " "..RPDC.settings.one_down_mod
-			else
-			    ONE_DOWN_MOD = ""
 			end
 			
 			-- OD replacement if playing in Resmod/Eclipse with PJ modifier and OD string is default one
@@ -424,7 +401,7 @@ end
 				["#State_preplanning"] =		RPDC.settings.preplanning..playerstate,
 
 				-- Game modes
-				["#Mode_crime_spree"] =			RPDC.settings.cs..COMA.." {#Level_%game:heist%}"..COMA.." ".."(Lvl. %game:difficulty%)",
+				["#Mode_crime_spree"] =			RPDC.settings.cs..COMA.." {#Level_%game:heist%}"..COMA.." ".."(Rank %game:difficulty%)",
 				["#Mode_skirmish"] =			RPDC.settings.ho..COMA.." {#Level_%game:heist%}", --RPDC.settings.ho..COMA.." {#Level_%game:heist%}"..COMA.." ".."(Wave %game:difficulty%)",
 				["#Mode_heist"] =				"{#Job_%game:heist%}"..COMA.." "..BRACKET_LEFT_3.."{#Difficulty_%game:difficulty%}"..ONE_DOWN_MOD..BRACKET_RIGHT_3,
 				["#Mode_heist_chain"] =			"{#Job_%game:heist%}"..COMA.." "..BRACKET_LEFT_2..RPDC.settings.days..gap2.."%game:heist_day%"..BRACKET_RIGHT_2..COMA.." "..BRACKET_LEFT_3.."{#Difficulty_%game:difficulty%}"..ONE_DOWN_MOD..BRACKET_RIGHT_3,
@@ -938,7 +915,7 @@ end
 
 				-- Game modes
 			
-				["#Mode_crime_spree"] =			RPDC.settings.cs..COMA.." %game:heist%"..COMA.." ".."(Lvl. %game:difficulty%)",
+				["#Mode_crime_spree"] =			RPDC.settings.cs..COMA.." %game:heist%"..COMA.." ("..RPDC.settings.cs_rank.." %game:difficulty%)",
 				["#Mode_skirmish"] =			RPDC.settings.ho..COMA.." %game:heist%", --RPDC.settings.ho..COMA.." {#Level_%game:heist%}"..COMA.." ".."(Wave %game:difficulty%)",
 				["#Mode_heist"] =				"%game:heist%"..COMA.." "..BRACKET_LEFT_3.."{#Difficulty_%game:difficulty%}"..ONE_DOWN_MOD..BRACKET_RIGHT_3,
 				["#Mode_heist_chain"] =			"%game:heist%"..COMA.." "..BRACKET_LEFT_2..RPDC.settings.days..gap2.."%game:heist_day%"..BRACKET_RIGHT_2..COMA.." "..BRACKET_LEFT_3.."{#Difficulty_%game:difficulty%}"..ONE_DOWN_MOD..BRACKET_RIGHT_3,

@@ -93,6 +93,13 @@ end
 							game_difficulty = string.format("%i/%i", managers.skirmish:current_wave_number() or 1, tweak_data and #tweak_data.skirmish.ransom_amounts or 9)
 						elseif managers.job:has_active_job() then								-- Heists
 							game_heist = self:get_current_job_id()
+							if game_heist == nil then  -- Retarded way to fix Bomb Forest heist is not appearing
+								if RPDC.settings.use_save_file == 1 then
+									game_heist = RPDC.settings.crojob
+								elseif RPDC.settings.use_save_file == 3 then
+									game_heist = RPDC.settings.forest
+								end
+							end
 
 							if #(managers.job:current_job_chain_data() or {}) > 1 then
 								game_mode = "heist_chain"

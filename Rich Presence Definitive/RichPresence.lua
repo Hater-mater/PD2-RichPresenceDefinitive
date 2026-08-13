@@ -299,15 +299,7 @@ end
 			local ONE_DOWN_MOD = ""
 			local playerstate = ""
 			local tag_state = ""
-			local steam_mm = ""
 			
-			if RPDC.settings.steammm_tag and SystemInfo:matchmaking() == Idstring("MM_STEAM") then
-				if RPDC.settings.tag == "" then
-					steam_mm = "Steam MM"
-				else
-					steam_mm = " Steam MM"
-				end
-			end
 		
 			if string.len(tostring(RPDC.settings.players)) > 0 then
 				gap = " "
@@ -368,9 +360,9 @@ end
 			elseif RPDC.settings.tag_mode == 3 then
 				tag_state = " "..string.char(10).." " or string.char(10) or " "
 			elseif RPDC.settings.tag_mode == 4 then
-				tag_state = BRACKET_LEFT_TAG..RPDC.settings.tag..steam_mm..BRACKET_RIGHT_TAG
+				tag_state = BRACKET_LEFT_TAG..RPDC.settings.tag..BRACKET_RIGHT_TAG
 			else
-				tag_state = BRACKET_LEFT_TAG..RPDC.settings.tag..steam_mm..BRACKET_RIGHT_TAG.." {#State_%game:state%}"
+				tag_state = BRACKET_LEFT_TAG..RPDC.settings.tag..BRACKET_RIGHT_TAG.." {#State_%game:state%}"
 			end
 			
 			local difficulties_table = {

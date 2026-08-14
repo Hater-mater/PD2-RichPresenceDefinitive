@@ -110,15 +110,10 @@ end
 if _G.heat then
 	save_tag("HEAT")
 end
--- NQR
+
 if _G.NQR then
 	save_tag("NQR")
 end
--- Fray
-if _G.PD2FRAY then
-	save_tag("Fray")
-end
-
 
 --BeardLib editor just in case
 if _G.BLE and _G.BLE:RunningFix() then

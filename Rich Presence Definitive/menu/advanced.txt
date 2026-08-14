@@ -27,6 +27,15 @@
 			"callback" : "RichPresenceDefinitive_callback_toggle",
 			"value" : "game_state_status",
 			"default_value" : true
+		},
+		{
+			"type" : "toggle",
+			"id" : "steammm_tag",
+			"title" : "steammm_tag_title",
+			"description" : "steammm_tag_desc",
+			"callback" : "RichPresenceDefinitive_callback_toggle",
+			"value" : "steammm_tag",
+			"default_value" : true
 		}
 	]
 }

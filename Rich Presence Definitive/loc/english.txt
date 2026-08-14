@@ -51,6 +51,8 @@
 		"anonymous_tag_desc" : "No status mode, nothing except your tag (e.g [Vanilla]) will be displayed",
 		"game_state_status_title": "Show game state (Stealth or Loud)",
 		"game_state_status_desc": "Show heist state depends on in-game situation (will be displayed before heist info)",
+		"steammm_tag_title": "Show Steam MM in tag",
+		"steammm_tag_desc": "Show in tag that you use -steamMM launch option (aka using Steam matchmaking)",
 
 
         "RPDS_tags_title" : "Tag",

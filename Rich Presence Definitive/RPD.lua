@@ -37,6 +37,7 @@ _G.RichPresenceDefinitive = {
 --	Advanced		
 		tag_mode = 1,
 		game_state_status = true,
+		steammm_tag = true,
 
 --	Modes		
 		cs = "[Crime Spree]",

@@ -101,9 +101,11 @@ if _G.EclipseDebug or _G.Eclipse then
 	--local ext_main = "_eclipse_main"
 	local ext_dev = "_eclipse_dev"
 	--local mod_key_main = current_key:gsub(ext_main, "")..ext_main
-	local mod_key_dev = current_key:gsub(ext_dev, "")..ext_dev
+	if current_key:gmatch(ext_dev) then
+		save_tag("Eclipse Dev")
+	end
 	--set_tag("Eclipse", mod_key_main)
-	set_tag("Eclipse Dev", mod_key_dev)	
+	--set_tag("Eclipse Dev", mod_key_dev)	
 end
 
 --Need add MM check during Heat release (nvm it's fucking DEAD)
